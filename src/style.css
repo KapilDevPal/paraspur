@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fff9eb;
+  --color-primary-100: #ffefc6;
+  --color-primary-200: #ffd98a;
+  --color-primary-300: #ffbc4e;
+  --color-primary-400: #ffa122;
+  --color-primary-500: #f97e07;
+  --color-primary-600: #dd5d02;
+  --color-primary-700: #b74306;
+  --color-primary-800: #94340b;
+  --color-primary-900: #7a2c0d;
+  --color-primary-950: #461402;
+
+  --color-secondary-50: #f2fcf3;
+  --color-secondary-100: #e1f9e5;
+  --color-secondary-200: #c5f2ce;
+  --color-secondary-300: #96e4a8;
+  --color-secondary-400: #5ecd7a;
+  --color-secondary-500: #3aaa55;
+  --color-secondary-600: #2b8a41;
+  --color-secondary-700: #266d37;
+  --color-secondary-800: #235730;
+  --color-secondary-900: #1f482a;
+  --color-secondary-950: #0d2814;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-slate-900 bg-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg shadow-md hover:bg-primary-700 transition duration-300 active:transform active:scale-95;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300;
+  }
+  .hero-gradient {
+    background: linear-gradient(135deg, #f97e07 0%, #dd5d02 100%);
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl;
+  }
+}

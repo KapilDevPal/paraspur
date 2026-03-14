@@ -22,6 +22,7 @@ export default defineConfig({
         privacy: resolve(__dirname, 'privacy-policy.html'),
         about_website: resolve(__dirname, 'about-website.html'),
         villages_list: resolve(__dirname, 'villages/index.html'),
+        blog_tulsidas: resolve(__dirname, 'blog/tulsidas-ayodhya-paraspur-connection.html'),
         v_aata: resolve(__dirname, 'villages/aata.html'),
         v_abhayipur: resolve(__dirname, 'villages/abhayipur.html'),
         v_akohari: resolve(__dirname, 'villages/akohari.html'),

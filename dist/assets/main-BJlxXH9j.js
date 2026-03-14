@@ -74,8 +74,9 @@
         <h4 class="text-white font-bold mb-6">Quick Links</h4>
         <ul class="space-y-4 text-sm">
           <li><a href="/info/pin-code.html" class="hover:text-primary-400 transition">Pin Code (271504)</a></li>
-          <li><a href="/directory/libraries.html" class="hover:text-primary-400 transition">Local Libraries</a></li>
-          <li><a href="/directory/businesses.html" class="hover:text-primary-400 transition">Market Guide</a></li>
+          <li><a href="/villages/index.html" class="hover:text-primary-500 transition">All 91 Villages</a></li>
+          <li><a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-primary-500 transition">Tulsidas & Paraspur</a></li>
+          <li><a href="/directory/businesses.html" class="hover:text-primary-500 transition">Market Guide</a></li>
           <li><a href="/info/population.html" class="hover:text-primary-400 transition">Population Data</a></li>
           <li><a href="/info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
           <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>

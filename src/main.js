@@ -5,8 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const headerContainer = document.querySelector('#header-container');
   const footerContainer = document.querySelector('#footer-container');
 
-  if (headerContainer) headerContainer.innerHTML = Header + AdBanner;
-  if (footerContainer) footerContainer.innerHTML = Footer;
+  // Fix for GitHub Pages subfolder 404s
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  const repoName = '/paraspur';
+  const basePath = isGitHubPages ? repoName : '';
+
+  const processLinks = (html) => html.replace(/href="\//g, `href="${basePath}/`);
+
+  if (headerContainer) headerContainer.innerHTML = processLinks(Header + AdBanner);
+  if (footerContainer) footerContainer.innerHTML = processLinks(Footer);
 
   // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('#mobile-menu-btn');

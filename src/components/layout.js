@@ -14,19 +14,19 @@ export const Header = `
         </button>
         <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
           <div class="py-2">
-            <a href="/directory/schools.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Schools</a>
-            <a href="/directory/hospitals.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Hospitals</a>
-            <a href="/directory/colleges.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Colleges</a>
-            <a href="/directory/temples.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Temples</a>
-            <a href="/directory/banks.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Banks</a>
-            <a href="/directory/libraries.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Libraries</a>
-            <a href="/directory/businesses.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Businesses & Shops</a>
-            <a href="/villages/index.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Village Directory</a>
+            <a href="directory/schools.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Schools</a>
+            <a href="directory/hospitals.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Hospitals</a>
+            <a href="directory/colleges.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Colleges</a>
+            <a href="directory/temples.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Temples</a>
+            <a href="directory/banks.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Banks</a>
+            <a href="directory/libraries.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Libraries</a>
+            <a href="directory/businesses.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Businesses & Shops</a>
+            <a href="villages/index.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Village Directory</a>
           </div>
         </div>
       </div>
-      <a href="/info/news.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">Local News</a>
-      <a href="/info/history.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">History</a>
+      <a href="info/news.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">Local News</a>
+      <a href="info/history.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">History</a>
     </nav>
     <div class="md:hidden">
       <button id="mobile-menu-btn" class="p-2 text-slate-600">
@@ -67,23 +67,23 @@ export const Footer = `
       <div>
         <h4 class="text-white font-bold mb-6">Directory</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="/directory/schools.html" class="hover:text-primary-400 transition">Schools in Paraspur</a></li>
-          <li><a href="/directory/hospitals.html" class="hover:text-primary-400 transition">Hospitals in Paraspur</a></li>
-          <li><a href="/directory/colleges.html" class="hover:text-primary-400 transition">Colleges in Paraspur</a></li>
-          <li><a href="/directory/temples.html" class="hover:text-primary-400 transition">Temples & Tourism</a></li>
-          <li><a href="/villages/index.html" class="hover:text-primary-400 transition">All 91 Villages</a></li>
+          <li><a href="directory/schools.html" class="hover:text-primary-400 transition">Schools in Paraspur</a></li>
+          <li><a href="directory/hospitals.html" class="hover:text-primary-400 transition">Hospitals in Paraspur</a></li>
+          <li><a href="directory/colleges.html" class="hover:text-primary-400 transition">Colleges in Paraspur</a></li>
+          <li><a href="directory/temples.html" class="hover:text-primary-400 transition">Temples & Tourism</a></li>
+          <li><a href="villages/index.html" class="hover:text-primary-400 transition">All 91 Villages</a></li>
         </ul>
       </div>
       <div>
         <h4 class="text-white font-bold mb-6">Quick Links</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="/info/pin-code.html" class="hover:text-primary-400 transition">Pin Code (271504)</a></li>
-          <li><a href="/villages/index.html" class="hover:text-primary-500 transition">All 91 Villages</a></li>
-          <li><a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-primary-500 transition">Tulsidas & Paraspur</a></li>
-          <li><a href="/directory/businesses.html" class="hover:text-primary-500 transition">Market Guide</a></li>
-          <li><a href="/info/population.html" class="hover:text-primary-400 transition">Population Data</a></li>
-          <li><a href="/info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
-          <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
+          <li><a href="info/pin-code.html" class="hover:text-primary-400 transition">Pin Code (271504)</a></li>
+          <li><a href="villages/index.html" class="hover:text-primary-500 transition">All 91 Villages</a></li>
+          <li><a href="blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-primary-500 transition">Tulsidas & Paraspur</a></li>
+          <li><a href="directory/businesses.html" class="hover:text-primary-500 transition">Market Guide</a></li>
+          <li><a href="info/population.html" class="hover:text-primary-400 transition">Population Data</a></li>
+          <li><a href="info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
+          <li><a href="contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
         </ul>
       </div>
       <div>
@@ -98,9 +98,9 @@ export const Footer = `
     <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs">
       <p>&copy; 2026 Paraspur.com. All rights reserved. Designed for Gonda, Uttar Pradesh.</p>
       <div class="flex space-x-6 mt-4 md:mt-0">
-        <a href="/privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a>
-        <a href="/about-website.html" class="hover:text-primary-400">About Website</a>
-        <a href="/sitemap.xml" class="hover:text-primary-400">Sitemap</a>
+        <a href="privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a>
+        <a href="about-website.html" class="hover:text-primary-400">About Website</a>
+        <a href="sitemap.xml" class="hover:text-primary-400">Sitemap</a>
       </div>
     </div>
   </div>

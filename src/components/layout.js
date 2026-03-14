@@ -21,6 +21,9 @@ export const Header = `
             <a href="/directory/banks.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Banks</a>
             <a href="/directory/libraries.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Libraries</a>
             <a href="/directory/businesses.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Businesses & Shops</a>
+            <a href="/directory/best-beauty-parlour-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Beauty Parlours</a>
+            <a href="/directory/best-ladies-boutique-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Ladies Boutique</a>
+            <a href="/directory/wedding-shopping-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Wedding Shopping</a>
             <a href="/villages/index.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Village Directory</a>
           </div>
         </div>
@@ -71,6 +74,8 @@ export const Footer = `
           <li><a href="/directory/hospitals.html" class="hover:text-primary-400 transition">Hospitals in Paraspur</a></li>
           <li><a href="/directory/colleges.html" class="hover:text-primary-400 transition">Colleges in Paraspur</a></li>
           <li><a href="/directory/temples.html" class="hover:text-primary-400 transition">Temples & Tourism</a></li>
+          <li><a href="/directory/best-beauty-parlour-in-paraspur.html" class="hover:text-primary-400 transition">Beauty Parlours</a></li>
+          <li><a href="/directory/best-ladies-boutique-in-paraspur.html" class="hover:text-primary-400 transition">Ladies Boutique</a></li>
           <li><a href="/villages/index.html" class="hover:text-primary-400 transition">All 91 Villages</a></li>
         </ul>
       </div>

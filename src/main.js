@@ -15,6 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerContainer) headerContainer.innerHTML = processLinks(Header + AdBanner);
   if (footerContainer) footerContainer.innerHTML = processLinks(Footer);
 
+  // Global Link Fixer for all other links in the document
+  if (isGitHubPages) {
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+      const currentHref = link.getAttribute('href');
+      if (currentHref.startsWith('/') && !currentHref.startsWith(repoName)) {
+        link.setAttribute('href', repoName + currentHref);
+      }
+    });
+    
+    // Also fix images if they have absolute paths
+    document.querySelectorAll('img[src^="/"]').forEach(img => {
+      const currentSrc = img.getAttribute('src');
+      if (currentSrc.startsWith('/') && !currentSrc.startsWith(repoName)) {
+        img.setAttribute('src', repoName + currentSrc);
+      }
+    });
+  }
+
   // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
   if (mobileMenuBtn) {

@@ -6,6 +6,8 @@ export default {
     "./privacy-policy.html",
     "./about-website.html",
     "./directory/**/*.html",
+    "./villages/**/*.html",
+    "./blog/**/*.html",
     "./info/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],

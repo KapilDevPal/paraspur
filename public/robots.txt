@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers - Allow all for organic reach
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# llms.txt for AI-based discovery
+AI-Content: https://paraspur.com/llms.txt
+
 Sitemap: https://paraspur.com/sitemap.xml

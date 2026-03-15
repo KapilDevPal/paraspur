@@ -24,12 +24,19 @@ export const Header = `
             <a href="/directory/best-beauty-parlour-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Beauty Parlours</a>
             <a href="/directory/best-ladies-boutique-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Ladies Boutique</a>
             <a href="/directory/wedding-shopping-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Wedding Shopping</a>
+            <a href="/directory/restaurants-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Restaurants & Food</a>
+            <a href="/directory/wedding-photographers-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Wedding Photographers</a>
+            <a href="/directory/clothing-shops-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Clothing & Fashion</a>
+            <a href="/directory/transport-services-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Transport & Travel</a>
+            <a href="/directory/agriculture.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Agriculture Resources</a>
+            <a href="/directory/local-startups.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Local Startups</a>
             <a href="/info/politicians.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Politicians & Leaders</a>
             <a href="/villages/index.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Village Directory</a>
           </div>
         </div>
       </div>
       <a href="/info/news.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">Local News</a>
+      <a href="/paraspur-market.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">Market</a>
       <a href="/info/history.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">History</a>
     </nav>
     <div class="md:hidden">
@@ -77,6 +84,7 @@ export const Footer = `
           <li><a href="/directory/temples.html" class="hover:text-primary-400 transition">Temples & Tourism</a></li>
           <li><a href="/directory/best-beauty-parlour-in-paraspur.html" class="hover:text-primary-400 transition">Beauty Parlours</a></li>
           <li><a href="/directory/best-ladies-boutique-in-paraspur.html" class="hover:text-primary-400 transition">Ladies Boutique</a></li>
+          <li><a href="/paraspur-market.html" class="hover:text-primary-400 transition font-bold text-white">Paraspur Market</a></li>
           <li><a href="/villages/index.html" class="hover:text-primary-400 transition">All 91 Villages</a></li>
         </ul>
       </div>
@@ -89,6 +97,8 @@ export const Footer = `
           <li><a href="/directory/businesses.html" class="hover:text-primary-500 transition">Market Guide</a></li>
           <li><a href="/info/population.html" class="hover:text-primary-400 transition">Population Data</a></li>
           <li><a href="/info/politicians.html" class="hover:text-primary-400 transition font-bold text-white">Politicians & Leaders</a></li>
+          <li><a href="/directory/restaurants-paraspur.html" class="hover:text-primary-400 transition">Food & Restaurants</a></li>
+          <li><a href="/directory/local-startups.html" class="hover:text-primary-400 transition">Local Startups</a></li>
           <li><a href="/info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
           <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
         </ul>

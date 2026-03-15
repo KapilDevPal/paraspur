@@ -23,6 +23,7 @@ export default defineConfig({
         pincode: resolve(__dirname, 'info/pin-code.html'),
         history: resolve(__dirname, 'info/history.html'),
         news: resolve(__dirname, 'info/news.html'),
+        politicians: resolve(__dirname, 'info/politicians.html'),
         contact: resolve(__dirname, 'contact.html'),
         privacy: resolve(__dirname, 'privacy-policy.html'),
         about_website: resolve(__dirname, 'about-website.html'),

@@ -24,6 +24,7 @@ export const Header = `
             <a href="/directory/best-beauty-parlour-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Beauty Parlours</a>
             <a href="/directory/best-ladies-boutique-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Ladies Boutique</a>
             <a href="/directory/wedding-shopping-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Wedding Shopping</a>
+            <a href="/info/politicians.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Politicians & Leaders</a>
             <a href="/villages/index.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Village Directory</a>
           </div>
         </div>
@@ -87,6 +88,7 @@ export const Footer = `
           <li><a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-primary-500 transition">Tulsidas & Paraspur</a></li>
           <li><a href="/directory/businesses.html" class="hover:text-primary-500 transition">Market Guide</a></li>
           <li><a href="/info/population.html" class="hover:text-primary-400 transition">Population Data</a></li>
+          <li><a href="/info/politicians.html" class="hover:text-primary-400 transition font-bold text-white">Politicians & Leaders</a></li>
           <li><a href="/info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
           <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
         </ul>

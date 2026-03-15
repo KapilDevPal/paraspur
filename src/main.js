@@ -6,11 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerContainer = document.querySelector('#footer-container');
 
   // Fix for GitHub Pages subfolder 404s
-  const isGitHubPages = window.location.hostname.includes('github.io');
+  const hostname = window.location.hostname;
+  const pathname = window.location.pathname;
+  const isGitHubPages = hostname.includes('github.io') || pathname.includes('/paraspur/');
   const repoName = '/paraspur';
-  const basePath = isGitHubPages ? repoName : '';
+  const basePath = isGitHubPages && pathname.includes(repoName) ? repoName : '';
 
-  const processLinks = (html) => html.replace(/href="\//g, `href="${basePath}/`);
+  const processLinks = (html) => {
+    if (!basePath) return html;
+    // Replace absolute links with repo-relative links
+    return html.replace(/href="\/(?!http|https|#)/g, `href="${basePath}/`);
+  };
 
   if (headerContainer) headerContainer.innerHTML = processLinks(Header + AdBanner);
   if (footerContainer) footerContainer.innerHTML = processLinks(Footer);

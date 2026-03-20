@@ -45,6 +45,33 @@ export const Header = `
       </button>
     </div>
   </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-full shadow-2xl z-50 transition-all duration-300 origin-top">
+    <nav class="flex flex-col px-6 py-6 space-y-6 max-h-[80vh] overflow-y-auto">
+      <a href="/" class="text-lg font-semibold text-slate-800 hover:text-primary-600">Home</a>
+      
+      <div class="border-t border-slate-100 pt-6">
+        <span class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 block">Directory</span>
+        <div class="grid grid-cols-2 gap-y-4 gap-x-4">
+          <a href="/directory/schools.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Schools</a>
+          <a href="/directory/hospitals.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Hospitals</a>
+          <a href="/directory/colleges.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Colleges</a>
+          <a href="/directory/temples.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Temples</a>
+          <a href="/directory/banks.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Banks</a>
+          <a href="/directory/businesses.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Businesses</a>
+          <a href="/directory/agriculture.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Agriculture</a>
+          <a href="/villages/index.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Villages</a>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-100 pt-6 flex flex-col space-y-4">
+        <a href="/info/news.html" class="text-lg font-semibold text-slate-800 hover:text-primary-600">Local News</a>
+        <a href="/paraspur-market.html" class="text-lg font-semibold text-slate-800 hover:text-primary-600">Market</a>
+        <a href="/info/history.html" class="text-lg font-semibold text-slate-800 hover:text-primary-600">History</a>
+      </div>
+    </nav>
+  </div>
 </header>
 `;
 

@@ -41,11 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
-  if (mobileMenuBtn) {
+  const mobileMenu = document.querySelector('#mobile-menu');
+  if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-      // Toggle logic would go here if needed, 
-      // but for now let's keep it simple or use a CSS-based dropdown
-      alert('Mobile menu feature coming soon!');
+      mobileMenu.classList.toggle('hidden');
     });
   }
 

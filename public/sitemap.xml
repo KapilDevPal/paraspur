@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://paraspur.com/</loc><priority>1.0</priority></url>
   <!-- Main Directory -->
+  <url><loc>https://paraspur.com/directory/pbc-makeup-studio-paraspur.html</loc><priority>0.3</priority></url>
   <url><loc>https://paraspur.com/directory/schools.html</loc><priority>0.9</priority></url>
   <url><loc>https://paraspur.com/directory/hospitals.html</loc><priority>0.9</priority></url>
   <url><loc>https://paraspur.com/directory/colleges.html</loc><priority>0.8</priority></url>
@@ -33,7 +34,7 @@
   <!-- Villages Index -->
   <url><loc>https://paraspur.com/villages/index.html</loc><priority>0.8</priority></url>
   <!-- Individual Villages (Upgraded Only) -->
-  <url><loc>https://paraspur.com/villages/aata.html</loc><priority>0.7</priority></url>
+  <!-- <url><loc>https://paraspur.com/villages/aata.html</loc><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/villages/abhayipur.html</loc><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/villages/anta.html</loc><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/villages/bhauri-ganj.html</loc><priority>0.7</priority></url>
@@ -41,7 +42,7 @@
   <url><loc>https://paraspur.com/villages/paraspur.html</loc><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/villages/pasaka.html</loc><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/villages/pure-lali.html</loc><priority>0.7</priority></url>
-  <url><loc>https://paraspur.com/villages/sakraur.html</loc><priority>0.7</priority></url>
+  <url><loc>https://paraspur.com/villages/sakraur.html</loc><priority>0.7</priority></url> -->
   <url><loc>https://paraspur.com/villages/tulsipur.html</loc><priority>0.7</priority></url>
   <!-- Legal -->
   <url><loc>https://paraspur.com/about-website.html</loc><priority>0.4</priority></url>

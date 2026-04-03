@@ -25,6 +25,7 @@ export default defineConfig({
         history: resolve(__dirname, 'info/history.html'),
         news: resolve(__dirname, 'info/news.html'),
         politicians: resolve(__dirname, 'info/politicians.html'),
+        durauni_chauraha: resolve(__dirname, 'info/durauni-chauraha.html'),
         clothing_shops: resolve(__dirname, 'directory/clothing-shops-paraspur.html'),
         restaurants: resolve(__dirname, 'directory/restaurants-paraspur.html'),
         photographers: resolve(__dirname, 'directory/wedding-photographers-paraspur.html'),

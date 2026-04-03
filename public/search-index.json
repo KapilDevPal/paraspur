@@ -1,0 +1,23 @@
+[
+  { "title": "Home", "url": "/", "category": "General", "keywords": "paraspur gonda parapur" },
+  { "title": "Schools in Paraspur", "url": "/directory/schools.html", "category": "Directory", "keywords": "education best schools primary secondary" },
+  { "title": "Hospitals in Paraspur", "url": "/directory/hospitals.html", "category": "Directory", "keywords": "health clinic medical doctor" },
+  { "title": "Colleges in Paraspur", "url": "/directory/colleges.html", "category": "Directory", "keywords": "degree higher education study university" },
+  { "title": "Temples in Paraspur", "url": "/directory/temples.html", "category": "Directory", "keywords": "religious spirituality mandir tulsidas sangam" },
+  { "title": "Banks in Paraspur", "url": "/directory/banks.html", "category": "Directory", "keywords": "finance money atm sbi union bank" },
+  { "title": "Businesses in Paraspur", "url": "/directory/businesses.html", "category": "Directory", "keywords": "market shops economy local trade" },
+  { "title": "Local News", "url": "/info/news.html", "category": "Information", "keywords": "updates latest rss feed events" },
+  { "title": "Pin Code 271504", "url": "/info/pin-code.html", "category": "Information", "keywords": "address postal delivery area" },
+  { "title": "Tulsidas & Paraspur Connection", "url": "/blog/tulsidas-ayodhya-paraspur-connection.html", "category": "Blog", "keywords": "ramcharitmanas sukarkhet birth place culture heritage" },
+  { "title": "Durauni Chauraha", "url": "/info/durauni-chauraha.html", "category": "Information", "keywords": "hub crossroads transit commerce banuwa road" },
+  { "title": "Pasaka Village", "url": "/villages/pasaka.html", "category": "Village", "keywords": "sangam sarayu ghaghara confluence tulsidas temple" },
+  { "title": "Durauni Village", "url": "/villages/durauni.html", "category": "Village", "keywords": "chauraha population block development" },
+  { "title": "Sakraur Village", "url": "/villages/sakraur.html", "category": "Village", "keywords": "hanuman temple spirituality population" },
+  { "title": "All 91 Villages Index", "url": "/villages/index.html", "category": "Directory", "keywords": "list map paraspur block search" },
+  { "title": "Paraspur Market Guide", "url": "/paraspur-market.html", "category": "Guide", "keywords": "shops bazaar central market" },
+  { "title": "History of Paraspur", "url": "/info/history.html", "category": "Information", "keywords": "ancient roots heritage evolution" },
+  { "title": "Local Blogs", "url": "/blog/index.html", "category": "General", "keywords": "articles stories news guide" },
+  { "title": "Beauty Parlours", "url": "/directory/best-beauty-parlour-in-paraspur.html", "category": "Directory", "keywords": "salons bridal makeup grooming" },
+  { "title": "Restaurants in Paraspur", "url": "/directory/restaurants-paraspur.html", "category": "Directory", "keywords": "food dining cafe dhaba sweets" },
+  { "title": "Transport Services", "url": "/directory/transport-services-paraspur.html", "category": "Directory", "keywords": "travel auto bus taxi booking" }
+]

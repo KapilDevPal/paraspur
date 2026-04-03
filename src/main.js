@@ -63,6 +63,75 @@ document.addEventListener('DOMContentLoaded', () => {
   if (newsContainer) {
     fetchNews(newsContainer);
   }
+
+  // Search Logic
+  const initSearch = async () => {
+    const searchInput = document.querySelector('#global-search-input');
+    const searchResults = document.querySelector('#search-results');
+    const searchResultsList = document.querySelector('#search-results-list');
+    
+    if (!searchInput || !searchResults || !searchResultsList) return;
+
+    let index = [];
+    try {
+      const response = await fetch(`${basePath}/search-index.json`);
+      index = await response.json();
+    } catch (err) {
+      console.error('Failed to load search index', err);
+    }
+
+    const showResults = (matches) => {
+      if (matches.length === 0) {
+        searchResults.classList.add('hidden');
+        return;
+      }
+
+      searchResultsList.innerHTML = matches.map(item => `
+        <a href="${item.url}" class="flex flex-col px-4 py-3 hover:bg-slate-50 transition border-b border-slate-50 last:border-none">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-slate-900">${item.title}</span>
+            <span class="text-[9px] font-black uppercase tracking-widest text-primary-500 bg-primary-50 px-2 py-0.5 rounded-full">${item.category}</span>
+          </div>
+          <span class="text-[10px] text-slate-400 truncate">${item.url}</span>
+        </a>
+      `).join('');
+      
+      searchResults.classList.remove('hidden');
+    };
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      if (query.length < 2) {
+        searchResults.classList.add('hidden');
+        return;
+      }
+
+      const matches = index.filter(item => 
+        item.title.toLowerCase().includes(query) || 
+        item.keywords.toLowerCase().includes(query) ||
+        item.category.toLowerCase().includes(query)
+      ).slice(0, 6);
+
+      showResults(matches);
+    });
+
+    // Close results when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!document.querySelector('#search-root').contains(e.target)) {
+        searchResults.classList.add('hidden');
+      }
+    });
+
+    // ESC to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchResults.classList.add('hidden');
+        searchInput.blur();
+      }
+    });
+  };
+
+  initSearch();
 });
 
 async function fetchNews(container) {

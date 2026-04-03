@@ -39,6 +39,7 @@ export default defineConfig({
         villages_list: resolve(__dirname, 'villages/index.html'),
         blog_tulsidas: resolve(__dirname, 'blog/tulsidas-ayodhya-paraspur-connection.html'),
         blog_villages: resolve(__dirname, 'blog/all-villages-in-paraspur-block.html'),
+        blog_index: resolve(__dirname, 'blog/index.html'),
         beauty_blog: resolve(__dirname, 'blog/beauty-parlours-in-paraspur-gonda.html'),
         v_aata: resolve(__dirname, 'villages/aata.html'),
         v_abhayipur: resolve(__dirname, 'villages/abhayipur.html'),

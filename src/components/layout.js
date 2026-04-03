@@ -5,44 +5,54 @@ export const Header = `
       <span class="text-2xl font-display font-black text-primary-600">PARASPUR</span>
       <span class="text-xs font-bold text-slate-500 tracking-widest uppercase mt-1">Gonda, UP</span>
     </a>
-    <nav class="hidden md:flex items-center space-x-8">
-      <a href="/" class="text-sm font-semibold text-slate-600 hover:text-primary-600">Home</a>
+    <nav class="hidden lg:flex items-center space-x-6">
+      <a href="/" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Home</a>
       <div class="relative group">
-        <button class="text-sm font-semibold text-slate-600 hover:text-primary-600 flex items-center">
+        <button class="text-xs font-bold text-slate-600 hover:text-primary-600 flex items-center uppercase tracking-wider transition">
           Directory
-          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="Bug19 9l-7 7-7-7"></path></svg>
+          <svg class="ml-1 w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
-        <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-          <div class="py-2">
-            <a href="/directory/schools.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Schools</a>
-            <a href="/directory/hospitals.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Hospitals</a>
-            <a href="/directory/colleges.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Colleges</a>
-            <a href="/directory/temples.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Temples</a>
-            <a href="/directory/banks.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Banks</a>
-            <a href="/directory/libraries.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Libraries</a>
-            <a href="/directory/businesses.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Businesses & Shops</a>
-            <a href="/directory/best-beauty-parlour-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Beauty Parlours</a>
-            <a href="/directory/best-ladies-boutique-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Ladies Boutique</a>
-            <a href="/directory/wedding-shopping-in-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Wedding Shopping</a>
-            <a href="/directory/restaurants-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Restaurants & Food</a>
-            <a href="/directory/wedding-photographers-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Wedding Photographers</a>
-            <a href="/directory/clothing-shops-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Clothing & Fashion</a>
-            <a href="/directory/transport-services-paraspur.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Transport & Travel</a>
-            <a href="/directory/agriculture.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Agriculture Resources</a>
-            <a href="/directory/local-startups.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Local Startups</a>
-            <a href="/info/politicians.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Politicians & Leaders</a>
-            <a href="/villages/index.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600">Village Directory</a>
+        <div class="absolute top-full left-0 mt-2 w-56 bg-white shadow-2xl rounded-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left scale-95 group-hover:scale-100">
+          <div class="py-3 px-1 max-h-[70vh] overflow-y-auto custom-scrollbar">
+            <a href="/directory/schools.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Schools</a>
+            <a href="/directory/hospitals.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Hospitals</a>
+            <a href="/directory/colleges.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Colleges</a>
+            <a href="/directory/temples.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Temples</a>
+            <a href="/directory/banks.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Banks</a>
+            <a href="/directory/businesses.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Businesses & Shops</a>
+            <a href="/paraspur-market.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Market Guide</a>
+            <a href="/villages/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 border-t border-slate-50 mt-2 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Village Directory</a>
           </div>
         </div>
       </div>
-      <a href="/info/news.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">Local News</a>
-      <a href="/paraspur-market.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">Market</a>
-      <a href="/info/history.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600">History</a>
+      <a href="/blog/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Blogs</a>
+      <a href="/info/news.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">News</a>
     </nav>
-    <div class="md:hidden">
-      <button id="mobile-menu-btn" class="p-2 text-slate-600">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+
+    <!-- Search Bar -->
+    <div class="flex-1 max-w-sm mx-8 relative hidden md:block" id="search-root">
+      <div class="relative group">
+        <input 
+          type="text" 
+          id="global-search-input"
+          placeholder="Search villages, schools, news..." 
+          class="w-full h-11 pl-11 pr-4 bg-slate-50 border-none rounded-2xl text-xs font-medium focus:ring-2 focus:ring-primary-500/20 focus:bg-white transition-all"
+        >
+        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary-500 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </span>
+      </div>
+      <!-- Search Results Dropdown -->
+      <div id="search-results" class="absolute top-full left-0 right-0 mt-3 bg-white border border-slate-100 shadow-2xl rounded-2xl overflow-hidden hidden animate-in fade-in slide-in-from-top-2 duration-300 z-[100]">
+        <div class="py-2" id="search-results-list"></div>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <button id="mobile-menu-btn" class="p-2.5 text-slate-600 bg-slate-50 rounded-xl lg:hidden hover:bg-primary-50 hover:text-primary-600 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
       </button>
+      <a href="/contact.html" class="hidden sm:inline-flex px-6 py-3 bg-primary-600 text-white text-[11px] font-black uppercase tracking-widest rounded-xl hover:bg-primary-700 shadow-lg shadow-primary-500/20 transition-all hover:-translate-y-0.5">Contact Us</a>
     </div>
   </div>
   
@@ -131,11 +141,20 @@ export const Footer = `
         </ul>
       </div>
       <div>
+        <h4 class="text-white font-bold mb-6">Latest blogs</h4>
+        <ul class="space-y-4 text-sm">
+          <li><a href="/blog/index.html" class="hover:text-primary-400 transition">All Local Blogs</a></li>
+          <li><a href="/blog/all-villages-in-paraspur-block.html" class="hover:text-primary-400 transition">Detailed Village Guide</a></li>
+          <li><a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-primary-400 transition">Tulsidas & Sukarkhet</a></li>
+          <li><a href="/blog/beauty-parlours-in-paraspur-gonda.html" class="hover:text-primary-400 transition">Beauty Salon Guide</a></li>
+        </ul>
+      </div>
+      <div>
         <h4 class="text-white font-bold mb-6">Connect</h4>
         <p class="text-sm mb-4">Subscribe to our newsletter for latest local updates.</p>
         <div class="flex">
           <input type="email" placeholder="Email address" class="bg-slate-800 border-none rounded-l-lg px-4 py-2 w-full focus:ring-1 focus:ring-primary-500">
-          <button class="bg-primary-600 px-4 py-2 rounded-r-lg hover:bg-primary-700">Go</button>
+          <button class="bg-primary-600 px-4 py-2 rounded-r-lg hover:bg-primary-700 transition">Go</button>
         </div>
       </div>
     </div>

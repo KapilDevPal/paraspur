@@ -64,13 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchNews(newsContainer);
   }
 
+  // Mobile search toggle
+  const mobileSearchBtn = document.querySelector('#mobile-search-btn');
+  const mobileSearchBar = document.querySelector('#mobile-search-bar');
+  if (mobileSearchBtn && mobileSearchBar) {
+    mobileSearchBtn.addEventListener('click', () => {
+      mobileSearchBar.classList.toggle('hidden');
+      const input = mobileSearchBar.querySelector('input');
+      if (!mobileSearchBar.classList.contains('hidden')) {
+        input.focus();
+      }
+    });
+  }
+
   // Search Logic
   const initSearch = async () => {
-    const searchInput = document.querySelector('#global-search-input');
-    const searchResults = document.querySelector('#search-results');
-    const searchResultsList = document.querySelector('#search-results-list');
+    const searchPairs = [
+      {
+        input: document.querySelector('#global-search-input'),
+        results: document.querySelector('#search-results'),
+        list: document.querySelector('#search-results-list'),
+        root: document.querySelector('#search-root')
+      },
+      {
+        input: document.querySelector('#mobile-search-input'),
+        results: document.querySelector('#mobile-search-results'),
+        list: document.querySelector('#mobile-search-results-list'),
+        root: document.querySelector('#mobile-search-root')
+      }
+    ];
     
-    if (!searchInput || !searchResults || !searchResultsList) return;
+    // Filter out missing elements
+    const activePairs = searchPairs.filter(p => p.input && p.results && p.list);
+    if (activePairs.length === 0) return;
 
     let index = [];
     try {
@@ -80,53 +106,58 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Failed to load search index', err);
     }
 
-    const showResults = (matches) => {
-      if (matches.length === 0) {
-        searchResults.classList.add('hidden');
-        return;
-      }
+    activePairs.forEach(pair => {
+      const showResults = (matches) => {
+        if (matches.length === 0) {
+          pair.results.classList.add('hidden');
+          return;
+        }
 
-      searchResultsList.innerHTML = matches.map(item => `
-        <a href="${item.url}" class="flex flex-col px-4 py-3 hover:bg-slate-50 transition border-b border-slate-50 last:border-none">
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs font-bold text-slate-900">${item.title}</span>
-            <span class="text-[9px] font-black uppercase tracking-widest text-primary-500 bg-primary-50 px-2 py-0.5 rounded-full">${item.category}</span>
-          </div>
-          <span class="text-[10px] text-slate-400 truncate">${item.url}</span>
-        </a>
-      `).join('');
-      
-      searchResults.classList.remove('hidden');
-    };
+        pair.list.innerHTML = matches.map(item => `
+          <a href="${item.url}" class="flex flex-col px-4 py-3 hover:bg-slate-50 transition border-b border-slate-50 last:border-none">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold text-slate-900">${item.title}</span>
+              <span class="text-[9px] font-black uppercase tracking-widest text-primary-500 bg-primary-50 px-2 py-0.5 rounded-full">${item.category}</span>
+            </div>
+            <span class="text-[10px] text-slate-400 truncate">${item.url}</span>
+          </a>
+        `).join('');
+        
+        pair.results.classList.remove('hidden');
+      };
 
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      if (query.length < 2) {
-        searchResults.classList.add('hidden');
-        return;
-      }
+      pair.input.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        if (query.length < 2) {
+          pair.results.classList.add('hidden');
+          return;
+        }
 
-      const matches = index.filter(item => 
-        item.title.toLowerCase().includes(query) || 
-        item.keywords.toLowerCase().includes(query) ||
-        item.category.toLowerCase().includes(query)
-      ).slice(0, 6);
+        const matches = index.filter(item => 
+          item.title.toLowerCase().includes(query) || 
+          item.keywords.toLowerCase().includes(query) ||
+          item.category.toLowerCase().includes(query)
+        ).slice(0, 6);
 
-      showResults(matches);
+        showResults(matches);
+      });
+
+      // Close results when clicking outside
+      document.addEventListener('click', (e) => {
+        if (pair.root && !pair.root.contains(e.target) && e.target !== pair.input) {
+          pair.results.classList.add('hidden');
+        }
+      });
     });
 
-    // Close results when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!document.querySelector('#search-root').contains(e.target)) {
-        searchResults.classList.add('hidden');
-      }
-    });
-
-    // ESC to close
+    // ESC to close all
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        searchResults.classList.add('hidden');
-        searchInput.blur();
+        activePairs.forEach(pair => {
+          pair.results.classList.add('hidden');
+          pair.input.blur();
+        });
+        if (mobileSearchBar) mobileSearchBar.classList.add('hidden');
       }
     });
   };

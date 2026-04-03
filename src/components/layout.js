@@ -48,11 +48,33 @@ export const Header = `
       </div>
     </div>
 
-    <div class="flex items-center space-x-4">
+    <div class="flex items-center space-x-2">
+      <button id="mobile-search-btn" class="p-2.5 text-slate-600 bg-slate-50 rounded-xl md:hidden hover:bg-primary-50 hover:text-primary-600 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </button>
       <button id="mobile-menu-btn" class="p-2.5 text-slate-600 bg-slate-50 rounded-xl lg:hidden hover:bg-primary-50 hover:text-primary-600 transition">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
       </button>
       <a href="/contact.html" class="hidden sm:inline-flex px-6 py-3 bg-primary-600 text-white text-[11px] font-black uppercase tracking-widest rounded-xl hover:bg-primary-700 shadow-lg shadow-primary-500/20 transition-all hover:-translate-y-0.5">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Mobile Search Bar -->
+  <div id="mobile-search-bar" class="hidden md:hidden bg-white border-t border-slate-100 p-4 animate-in slide-in-from-top duration-300">
+    <div class="relative" id="mobile-search-root">
+      <input 
+        type="text" 
+        id="mobile-search-input"
+        placeholder="Search villages, schools..." 
+        class="w-full h-11 pl-11 pr-4 bg-slate-50 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary-500/20 rotate-0 transition-all font-medium"
+      >
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </span>
+      <!-- Mobile Search Results -->
+      <div id="mobile-search-results" class="absolute top-full left-0 right-0 mt-3 bg-white border border-slate-100 shadow-2xl rounded-2xl overflow-hidden hidden z-[100]">
+        <div class="py-2" id="mobile-search-results-list"></div>
+      </div>
     </div>
   </div>
   

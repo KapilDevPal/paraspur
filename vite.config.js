@@ -41,6 +41,7 @@ export default defineConfig({
         blog_villages: resolve(__dirname, 'blog/all-villages-in-paraspur-block.html'),
         blog_index: resolve(__dirname, 'blog/index.html'),
         beauty_blog: resolve(__dirname, 'blog/beauty-parlours-in-paraspur-gonda.html'),
+        blog_scpm_nursing: resolve(__dirname, 'blog/scpm-college-of-nursing-bhulbhuliya.html'),
         v_aata: resolve(__dirname, 'villages/aata.html'),
         v_abhayipur: resolve(__dirname, 'villages/abhayipur.html'),
         v_akohari: resolve(__dirname, 'villages/akohari.html'),

@@ -132,6 +132,7 @@ export default defineConfig({
         v_utraula: resolve(__dirname, 'villages/utraula.html'),
         gonda_history: resolve(__dirname, 'gonda/history.html'),
         gonda_index: resolve(__dirname, 'gonda/index.html'),
+        veerexa_blog: resolve(__dirname, 'gonda/veerexa-blog.html'),
       }
     }
   }

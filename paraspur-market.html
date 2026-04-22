@@ -79,14 +79,14 @@
   <main class="container mx-auto px-4 pb-24">
 
     <!-- Category Filter Pills -->
-    <div class="flex flex-wrap gap-3 mb-12">
-      <span class="px-4 py-2 bg-primary-600 text-white text-xs font-black uppercase tracking-widest rounded-full cursor-pointer">All Shops</span>
-      <span class="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Kirana / Grocery</span>
-      <span class="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Electronics</span>
-      <span class="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Jewellers</span>
-      <span class="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Clothing</span>
-      <span class="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Medicine</span>
-      <span class="px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Hardware</span>
+    <div class="flex flex-wrap gap-3 mb-12" id="market-filters">
+      <button data-target="all" class="filter-btn px-4 py-2 bg-primary-600 text-white text-xs font-black uppercase tracking-widest rounded-full cursor-pointer transition">All Shops</button>
+      <button data-target="kirana" class="filter-btn px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Kirana / Grocery</button>
+      <button data-target="electronics" class="filter-btn px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Electronics</button>
+      <button data-target="jewellers" class="filter-btn px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Jewellers</button>
+      <button data-target="clothing" class="filter-btn px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Clothing</button>
+      <button data-target="medicine" class="filter-btn px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Medicine</button>
+      <button data-target="hardware" class="filter-btn px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-full cursor-pointer hover:border-primary-600 hover:text-primary-600 transition">Hardware</button>
     </div>
 
     <!-- ========== SECTION: KIRANA & GROCERY ========== -->
@@ -314,6 +314,51 @@
       </div>
     </section>
 
+    <!-- ========== SECTION: MEDICINE ========== -->
+    <section id="medicine" class="mb-20">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-12 h-12 bg-red-100 text-red-700 rounded-2xl flex items-center justify-center text-2xl">💊</div>
+        <div>
+          <h2 class="text-3xl font-display font-black text-slate-900">Medical Stores & Pharmacies</h2>
+          <p class="text-slate-500 text-sm">Medicines, healthcare products, and clinical equipment</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="card p-6 group border-t-4 border-t-red-500">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-3xl">⚕️</span>
+            <div>
+              <h3 class="text-lg font-bold text-slate-800">Shukla Medical Store</h3>
+              <p class="text-xs text-slate-500">Paraspur CHC Road</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">Allopathic medicines, baby care products, and surgical items.</p>
+          <a href="https://www.google.com/maps/search/Shukla+Medical+Store+Paraspur" target="_blank" class="text-xs font-black text-primary-600 hover:underline uppercase">📍 Map</a>
+        </div>
+
+        <div class="card p-6 group border-t-4 border-t-red-500">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-3xl">⚕️</span>
+            <div>
+              <h3 class="text-lg font-bold text-slate-800">Gupta Pharma</h3>
+              <p class="text-xs text-slate-500">Paraspur Market</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">Ayurvedic, homeopathic and allopathic medicine distribution center.</p>
+          <a href="https://www.google.com/maps/search/Gupta+Pharma+Paraspur" target="_blank" class="text-xs font-black text-primary-600 hover:underline uppercase">📍 Map</a>
+        </div>
+
+        <div class="card p-6 group">
+          <h3 class="text-lg font-bold text-slate-800 mb-1">Arogya Medical Store</h3>
+          <p class="text-xs text-slate-500 mb-3">Main Chauraha</p>
+          <p class="text-sm text-slate-600 mb-4">24/7 emergency medicines and clinical support products.</p>
+          <span class="px-2 py-0.5 bg-red-100 text-red-700 text-[10px] font-black uppercase rounded">Pharmacy</span>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ========== SECTION: HARDWARE & CONSTRUCTION ========== -->
     <section id="hardware" class="mb-20">
       <div class="flex items-center gap-4 mb-8">
@@ -477,6 +522,56 @@
     </section>
 
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const sections = {
+        'kirana': document.getElementById('kirana'),
+        'electronics': document.getElementById('electronics'),
+        'jewellers': document.getElementById('jewellers'),
+        'clothing': document.getElementById('clothing'),
+        'medicine': document.getElementById('medicine'),
+        'hardware': document.getElementById('hardware')
+      };
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-primary-600', 'text-white');
+            b.classList.add('bg-white', 'text-slate-600');
+          });
+          btn.classList.remove('bg-white', 'text-slate-600');
+          btn.classList.add('bg-primary-600', 'text-white');
+
+          const target = btn.dataset.target;
+
+          Object.keys(sections).forEach(key => {
+            if (sections[key]) {
+              if (target === 'all' || target === key) {
+                sections[key].style.display = 'block';
+              } else {
+                sections[key].style.display = 'none';
+              }
+            }
+          });
+
+          // Also handle agriculture and services to hide when filtering specific categories
+          const extraSections = ['agriculture', 'services'];
+          extraSections.forEach(key => {
+            const el = document.getElementById(key);
+            if (el) {
+              if (target === 'all') {
+                el.style.display = 'block';
+              } else {
+                el.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
 
   <div id="footer-container"></div>
   <script type="module" src="./src/main.js"></script>

@@ -1,6 +1,13 @@
 import './style.css';
 import { Header, Footer, AdBanner } from './components/layout.js';
 
+// Global AdSense Injector
+const adsenseScript = document.createElement('script');
+adsenseScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3476842786908483";
+adsenseScript.async = true;
+adsenseScript.crossOrigin = "anonymous";
+document.head.appendChild(adsenseScript);
+
 document.addEventListener('DOMContentLoaded', () => {
   const headerContainer = document.querySelector('#header-container');
   const footerContainer = document.querySelector('#footer-container');

@@ -159,6 +159,7 @@ export const Footer = `
           <li><a href="/directory/restaurants-paraspur.html" class="hover:text-primary-400 transition">Food & Restaurants</a></li>
           <li><a href="/directory/local-startups.html" class="hover:text-primary-400 transition">Local Startups</a></li>
           <li><a href="/info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
+          <li><a href="/gonda/history.html" class="hover:text-primary-400 transition">History of Gonda</a></li>
           <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
         </ul>
       </div>

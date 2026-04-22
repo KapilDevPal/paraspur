@@ -130,6 +130,7 @@ export default defineConfig({
         v_tulsipur: resolve(__dirname, 'villages/tulsipur.html'),
         v_tyorasi: resolve(__dirname, 'villages/tyorasi.html'),
         v_utraula: resolve(__dirname, 'villages/utraula.html'),
+        gonda_history: resolve(__dirname, 'gonda/history.html'),
       }
     }
   }

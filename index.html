@@ -176,29 +176,50 @@
             <div class="mt-8 flex items-center font-bold text-sm text-primary-600">
               Find Services <svg class="ml-2 w-4 h-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </div>
-          </div>
           <!-- Decorative element -->
           <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary-600/5 rounded-full blur-2xl"></div>
         </a>
       </div>
     </section>
 
-    <!-- Gonda District Section -->
+    <!-- Regional Guides Section (Gonda & Lucknow) -->
     <section class="container mx-auto px-4 py-12">
-      <div class="bg-slate-900 rounded-[3rem] overflow-hidden relative group">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-        <div class="relative z-10 p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12">
-          <div class="max-w-2xl">
-            <span class="inline-block px-4 py-1 bg-primary-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full mb-6">New Section</span>
-            <h2 class="text-4xl md:text-6xl font-display font-black text-white leading-tight mb-6">Explore the Entire <br><span class="text-primary-400">Gonda District</span></h2>
-            <p class="text-slate-400 text-lg mb-8">Beyond Paraspur, Gonda is home to incredible tourist sites, historical landmarks, and top-tier educational institutions. Discover the heart of Awadh.</p>
-            <a href="/gonda/index.html" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-primary-500 hover:text-white transition-all shadow-2xl">Visit Gonda Guide</a>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Gonda District Card -->
+        <div class="bg-slate-900 rounded-[3rem] overflow-hidden relative group p-12 md:p-16 flex flex-col justify-between min-h-[400px]">
+          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+          <div class="relative z-10">
+            <span class="inline-block px-4 py-1 bg-primary-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full mb-6">Regional Hub</span>
+            <h2 class="text-4xl md:text-5xl font-display font-black text-white leading-tight mb-4">Gonda District</h2>
+            <p class="text-slate-400 text-base mb-8 max-w-md">Beyond Paraspur, Gonda is home to ancient spiritual sites, revolutionary history, and a vibrant cultural heritage. Discover the heart of Devi Patan Division.</p>
           </div>
-          <div class="flex-shrink-0 grid grid-cols-2 gap-4">
-            <div class="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center text-3xl">🕌</div>
-            <div class="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center text-3xl">📜</div>
-            <div class="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center text-3xl">🎓</div>
-            <div class="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center text-3xl">🌳</div>
+          <div class="relative z-10 flex flex-wrap items-center justify-between gap-6">
+            <a href="/gonda/index.html" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-primary-500 hover:text-white transition-all shadow-2xl">Explore Gonda Guide</a>
+            <div class="flex gap-2">
+              <span class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl" title="Spiritual Sites">🕌</span>
+              <span class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl" title="Education">🎓</span>
+              <span class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl" title="Nature">🌳</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lucknow Capital Card -->
+        <div class="bg-slate-900 rounded-[3rem] overflow-hidden relative group p-12 md:p-16 flex flex-col justify-between min-h-[400px]">
+          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+          <!-- Subtle warm highlight blur -->
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-amber-500 rounded-full blur-3xl opacity-10"></div>
+          <div class="relative z-10">
+            <span class="inline-block px-4 py-1 bg-amber-500 text-slate-950 text-[10px] font-black uppercase tracking-widest rounded-full mb-6">State Capital</span>
+            <h2 class="text-4xl md:text-5xl font-display font-black text-white leading-tight mb-4">Lucknow Guide</h2>
+            <p class="text-slate-400 text-base mb-8 max-w-md">Explore Lucknow, the Golden City of the East and capital of Uttar Pradesh. Renowned for its rich history, exquisite Nawabi cuisine, poetry, and top-tier institutions.</p>
+          </div>
+          <div class="relative z-10 flex flex-wrap items-center justify-between gap-6">
+            <a href="/lucknow/index.html" class="inline-flex items-center gap-3 px-8 py-4 bg-amber-500 text-slate-950 font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-white hover:text-slate-900 transition-all shadow-2xl">Explore Lucknow Guide</a>
+            <div class="flex gap-2">
+              <span class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl" title="Heritage & Architecture">🏛️</span>
+              <span class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl" title="Exquisite Food">🍛</span>
+              <span class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl" title="Administrative Hub">🏛️</span>
+            </div>
           </div>
         </div>
       </div>

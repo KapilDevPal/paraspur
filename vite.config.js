@@ -133,6 +133,9 @@ export default defineConfig({
         gonda_history: resolve(__dirname, 'gonda/history.html'),
         gonda_index: resolve(__dirname, 'gonda/index.html'),
         veerexa_blog: resolve(__dirname, 'gonda/veerexa-blog.html'),
+        lucknow_history: resolve(__dirname, 'lucknow/history.html'),
+        lucknow_index: resolve(__dirname, 'lucknow/index.html'),
+        lucknow_blog: resolve(__dirname, 'lucknow/veerexa-blog.html'),
       }
     }
   }

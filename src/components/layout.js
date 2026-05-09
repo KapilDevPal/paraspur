@@ -21,13 +21,15 @@ export const Header = `
             <a href="/directory/banks.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Banks</a>
             <a href="/directory/businesses.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Businesses & Shops</a>
             <a href="/gonda/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-primary-600 hover:bg-primary-50 rounded-xl transition">Gonda District Guide</a>
+            <a href="/lucknow/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-amber-600 hover:bg-primary-50 rounded-xl transition">Lucknow Capital Guide</a>
             <a href="/paraspur-market.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Market Guide</a>
             <a href="/villages/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 border-t border-slate-50 mt-2 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Village Directory</a>
           </div>
         </div>
       </div>
       <a href="/blog/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Blogs</a>
-      <a href="/gonda/index.html" class="text-xs font-black text-primary-600 hover:text-primary-700 uppercase tracking-widest transition border-b-2 border-primary-600 pb-1">Gonda Guide</a>
+      <a href="/gonda/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Gonda Guide</a>
+      <a href="/lucknow/index.html" class="text-xs font-bold text-slate-600 hover:text-amber-500 uppercase tracking-wider transition">Lucknow Guide</a>
       <a href="/info/news.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">News</a>
     </nav>
 
@@ -163,6 +165,8 @@ export const Footer = `
           <li><a href="/info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
           <li><a href="/gonda/index.html" class="hover:text-primary-400 transition font-bold text-primary-400">Gonda District Guide</a></li>
           <li><a href="/gonda/history.html" class="hover:text-primary-400 transition">History of Gonda</a></li>
+          <li><a href="/lucknow/index.html" class="hover:text-amber-400 transition font-bold text-amber-400">Lucknow Capital Guide</a></li>
+          <li><a href="/lucknow/history.html" class="hover:text-amber-400 transition">History of Lucknow</a></li>
           <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
         </ul>
       </div>

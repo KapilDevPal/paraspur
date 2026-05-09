@@ -30,6 +30,7 @@ export const Header = `
       <a href="/blog/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Blogs</a>
       <a href="/gonda/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Gonda Guide</a>
       <a href="/lucknow/index.html" class="text-xs font-bold text-slate-600 hover:text-amber-500 uppercase tracking-wider transition">Lucknow Guide</a>
+      <a href="/agriculture/index.html" class="text-xs font-bold text-green-600 hover:text-green-500 uppercase tracking-wider transition">Agriculture</a>
       <a href="/info/news.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">News</a>
     </nav>
 
@@ -167,6 +168,8 @@ export const Footer = `
           <li><a href="/gonda/history.html" class="hover:text-primary-400 transition">History of Gonda</a></li>
           <li><a href="/lucknow/index.html" class="hover:text-amber-400 transition font-bold text-amber-400">Lucknow Capital Guide</a></li>
           <li><a href="/lucknow/history.html" class="hover:text-amber-400 transition">History of Lucknow</a></li>
+          <li><a href="/agriculture/index.html" class="hover:text-green-400 transition font-bold text-green-400">Agriculture Hub</a></li>
+          <li><a href="/agriculture/mandi-bhav.html" class="hover:text-green-400 transition">Daily Mandi Bhav</a></li>
           <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
         </ul>
       </div>

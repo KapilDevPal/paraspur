@@ -136,6 +136,9 @@ export default defineConfig({
         lucknow_history: resolve(__dirname, 'lucknow/history.html'),
         lucknow_index: resolve(__dirname, 'lucknow/index.html'),
         lucknow_blog: resolve(__dirname, 'lucknow/veerexa-blog.html'),
+        agri_index: resolve(__dirname, 'agriculture/index.html'),
+        agri_mandi: resolve(__dirname, 'agriculture/mandi-bhav.html'),
+        agri_gonda: resolve(__dirname, 'agriculture/seeds-gonda.html'),
       }
     }
   }

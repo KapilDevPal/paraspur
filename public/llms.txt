@@ -67,6 +67,17 @@ It covers schools, hospitals, colleges, temples, businesses, markets, politician
 
 ---
 
+## Our Network & Partner Projects
+
+- **ISRO Space Hub**: Active Orbital Assets, Heavy Lift Vehicles, and Satellite Tracking.
+  - URL: https://space.veerexa.com/
+- **Upcoming Rocket Launches**: Real-time schedule of upcoming ISRO and global space missions.
+  - URL: https://space.veerexa.com/upcoming-launches
+- **Veerexa Media**: Parent network for local and technical information portals.
+  - URL: https://veerexa.com/
+
+---
+
 ## Quick Facts About Paraspur
 
 - **Block:** Paraspur Block

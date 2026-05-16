@@ -183,6 +183,14 @@ export const Footer = `
         </ul>
       </div>
       <div>
+        <h4 class="text-white font-bold mb-6">Our Network</h4>
+        <ul class="space-y-4 text-sm">
+          <li><a href="https://space.veerexa.com/" class="hover:text-primary-400 transition font-bold text-white">ISRO Space Hub</a></li>
+          <li><a href="https://space.veerexa.com/upcoming-launches" class="hover:text-primary-400 transition">Upcoming Rocket Launches</a></li>
+          <li><a href="https://veerexa.com/" class="hover:text-primary-400 transition">Veerexa Media</a></li>
+        </ul>
+      </div>
+      <div>
         <h4 class="text-white font-bold mb-6">Connect</h4>
         <p class="text-sm mb-4">Subscribe to our newsletter for latest local updates.</p>
         <div class="flex">

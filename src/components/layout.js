@@ -188,6 +188,8 @@ export const Footer = `
           <li><a href="https://space.veerexa.com/" class="hover:text-primary-400 transition font-bold text-white">ISRO Space Hub</a></li>
           <li><a href="https://space.veerexa.com/upcoming-launches" class="hover:text-primary-400 transition">Upcoming Rocket Launches</a></li>
           <li><a href="https://veerexa.com/" class="hover:text-primary-400 transition">Veerexa Media</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.indiaspacehub" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">India Space Hub App (Google Play)</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.hanuman_chalisa" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">Hanuman Chalisa App (Google Play)</a></li>
         </ul>
       </div>
       <div>

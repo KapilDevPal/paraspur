@@ -119,8 +119,8 @@ export const AdBanner = `
       <span class="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase mr-2">Ad Placement</span>
       Want to promote your business or school here? Place your ad now!
     </p>
-    <a href="mailto:admin@veerexa.com" class="mt-2 md:mt-0 text-sm font-black underline hover:text-primary-100 transition">
-      Contact: admin@veerexa.com
+    <a href="mailto:veerexa0@gmail.com" class="mt-2 md:mt-0 text-sm font-black underline hover:text-primary-100 transition">
+      Contact: veerexa0@gmail.com
     </a>
   </div>
 </div>

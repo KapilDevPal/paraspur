@@ -183,13 +183,12 @@ export const Footer = `
         </ul>
       </div>
       <div>
-        <h4 class="text-white font-bold mb-6">Our Network</h4>
+        <h4 class="text-white font-bold mb-6">Space & Tech Apps</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="https://space.veerexa.com/" class="hover:text-primary-400 transition font-bold text-white">ISRO Space Hub</a></li>
-          <li><a href="https://space.veerexa.com/upcoming-launches" class="hover:text-primary-400 transition">Upcoming Rocket Launches</a></li>
-          <li><a href="https://veerexa.com/" class="hover:text-primary-400 transition">Veerexa Media</a></li>
-          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.indiaspacehub" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">India Space Hub App (Google Play)</a></li>
-          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.hanuman_chalisa" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">Hanuman Chalisa App (Google Play)</a></li>
+          <li><a href="https://indianspacehub.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">India Space Hub Website</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.indiaspacehub" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-amber-400">🚀 India Space Hub App (Google Play)</a></li>
+          <li><a href="https://space.veerexa.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">ISRO Mission Tracker</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.hanuman_chalisa" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">Hanuman Chalisa App</a></li>
         </ul>
       </div>
       <div>
@@ -201,12 +200,15 @@ export const Footer = `
         </div>
       </div>
     </div>
-    <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs">
-      <p>&copy; 2026 Paraspur.com. All rights reserved. Designed for Gonda, Uttar Pradesh.</p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <a href="/privacy-policy.html" class="hover:text-primary-400">Privacy Policy</a>
-        <a href="/about-website.html" class="hover:text-primary-400">About Website</a>
-        <a href="/sitemap.xml" class="hover:text-primary-400">Sitemap</a>
+    <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
+      <p>&copy; 2026 Paraspur.com. All rights reserved. Regional Local Information Portal for Gonda, Uttar Pradesh.</p>
+      <div class="flex flex-wrap gap-4 mt-4 md:mt-0 justify-center">
+        <a href="/privacy-policy.html" class="hover:text-primary-400 transition">Privacy Policy</a>
+        <a href="/terms.html" class="hover:text-primary-400 transition">Terms of Service</a>
+        <a href="/disclaimer.html" class="hover:text-primary-400 transition">Disclaimer</a>
+        <a href="/about-website.html" class="hover:text-primary-400 transition">About Us</a>
+        <a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a>
+        <a href="/sitemap.xml" class="hover:text-primary-400 transition">Sitemap</a>
       </div>
     </div>
   </div>

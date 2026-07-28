@@ -35,6 +35,8 @@ export default defineConfig({
         paraspur_market: resolve(__dirname, 'paraspur-market.html'),
         contact: resolve(__dirname, 'contact.html'),
         privacy: resolve(__dirname, 'privacy-policy.html'),
+        terms: resolve(__dirname, 'terms.html'),
+        disclaimer: resolve(__dirname, 'disclaimer.html'),
         about_website: resolve(__dirname, 'about-website.html'),
         villages_list: resolve(__dirname, 'villages/index.html'),
         blog_tulsidas: resolve(__dirname, 'blog/tulsidas-ayodhya-paraspur-connection.html'),

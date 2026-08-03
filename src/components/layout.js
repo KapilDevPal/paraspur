@@ -18,6 +18,10 @@ export const Header = `
             <a href="/directory/hospitals.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Hospitals</a>
             <a href="/directory/colleges.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Colleges</a>
             <a href="/directory/temples.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Temples</a>
+            <a href="/devotional/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-amber-600 hover:bg-primary-50 rounded-xl transition">Bhakti & Devotional Hub</a>
+            <a href="/devotional/hanuman-chalisa.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Hanuman Chalisa</a>
+            <a href="/devotional/durga-chalisa.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Durga Chalisa</a>
+            <a href="/devotional/aarti-collection.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Aarti Collection</a>
             <a href="/directory/banks.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Banks</a>
             <a href="/directory/businesses.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Businesses & Shops</a>
             <a href="/gonda/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-primary-600 hover:bg-primary-50 rounded-xl transition">Gonda District Guide</a>
@@ -27,6 +31,7 @@ export const Header = `
           </div>
         </div>
       </div>
+      <a href="/devotional/index.html" class="text-xs font-bold text-amber-600 hover:text-amber-700 uppercase tracking-wider transition">Bhakti Corner</a>
       <a href="/blog/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Blogs</a>
       <a href="/gonda/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Gonda Guide</a>
       <a href="/lucknow/index.html" class="text-xs font-bold text-slate-600 hover:text-amber-500 uppercase tracking-wider transition">Lucknow Guide</a>

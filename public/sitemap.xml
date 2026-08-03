@@ -5,11 +5,19 @@
 
   <!-- Core Pages -->
   <url><loc>https://paraspur.com/about-website.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://paraspur.com/contact.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://paraspur.com/contact.html</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/privacy-policy.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/terms.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/disclaimer.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/paraspur-market.html</loc><lastmod>2026-07-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Devotional Section -->
+  <url><loc>https://paraspur.com/devotional/index.html</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://paraspur.com/devotional/hanuman-chalisa.html</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://paraspur.com/devotional/durga-chalisa.html</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://paraspur.com/devotional/aarti-collection.html</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://paraspur.com/devotional/hanuman-jayanti.html</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://paraspur.com/devotional/hanuman-puja-vidhi.html</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Blog Section -->
   <url><loc>https://paraspur.com/blog/index.html</loc><lastmod>2026-04-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -46,7 +54,7 @@
 
   <!-- Info Pages -->
   <url><loc>https://paraspur.com/info/history.html</loc><lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://paraspur.com/info/news.html</loc><lastmod>2026-04-02</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paraspur.com/info/news.html</loc><lastmod>2026-08-03</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://paraspur.com/info/pin-code.html</loc><lastmod>2026-04-02</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/info/politicians.html</loc><lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://paraspur.com/info/population.html</loc><lastmod>2026-04-02</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>

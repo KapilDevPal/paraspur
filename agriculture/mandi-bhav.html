@@ -140,38 +140,38 @@
         </p>
       </div>
 
-      <!-- Quick Summary Cards (Dynamically Computed) -->
+      <!-- Quick Summary Cards (Dynamically Computed via Live API) -->
       <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         <!-- Wheat Card -->
         <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
           <div class="text-3xl mb-2">🌾</div>
           <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Wheat (गेहूँ भाव)</p>
-          <p id="stat-wheat-price" class="text-2xl font-black text-slate-900">₹2,450<span class="text-xs font-normal text-slate-500">/कुंतल</span></p>
-          <span id="stat-wheat-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Gonda Mandi</span>
+          <p id="stat-wheat-price" class="text-xl sm:text-2xl font-black text-slate-900">Loading...</p>
+          <span id="stat-wheat-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Live API</span>
         </div>
 
         <!-- Mustard Card -->
         <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
           <div class="text-3xl mb-2">🌼</div>
           <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Mustard (सरसों भाव)</p>
-          <p id="stat-mustard-price" class="text-2xl font-black text-slate-900">₹6,700<span class="text-xs font-normal text-slate-500">/कुंतल</span></p>
-          <span id="stat-mustard-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Nawabganj APMC</span>
+          <p id="stat-mustard-price" class="text-xl sm:text-2xl font-black text-slate-900">Loading...</p>
+          <span id="stat-mustard-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Live API</span>
         </div>
 
         <!-- Tomato Card -->
         <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
           <div class="text-3xl mb-2">🍅</div>
           <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Tomato (टमाटर भाव)</p>
-          <p id="stat-tomato-price" class="text-2xl font-black text-slate-900">₹2,000<span class="text-xs font-normal text-slate-500">/कुंतल</span></p>
-          <span id="stat-tomato-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Local Mandi</span>
+          <p id="stat-tomato-price" class="text-xl sm:text-2xl font-black text-slate-900">Loading...</p>
+          <span id="stat-tomato-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Live API</span>
         </div>
 
         <!-- Onion Card -->
         <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
           <div class="text-3xl mb-2">🧅</div>
           <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Onion (प्याज भाव)</p>
-          <p id="stat-onion-price" class="text-2xl font-black text-slate-900">₹1,500<span class="text-xs font-normal text-slate-500">/कुंतल</span></p>
-          <span id="stat-onion-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Gonda Region</span>
+          <p id="stat-onion-price" class="text-xl sm:text-2xl font-black text-slate-900">Loading...</p>
+          <span id="stat-onion-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Live API</span>
         </div>
       </div>
 
@@ -385,27 +385,46 @@
     }
 
     function updateSummaryCards(records) {
-      // Find Wheat, Mustard, Tomato, Onion in records
-      const wheat = records.find(r => r.commodity.toLowerCase().includes('wheat'));
-      const mustard = records.find(r => r.commodity.toLowerCase().includes('mustard'));
-      const tomato = records.find(r => r.commodity.toLowerCase().includes('tomato'));
-      const onion = records.find(r => r.commodity.toLowerCase().includes('onion'));
+      const findCrop = (name) => {
+        return records.find(r => r.commodity.toLowerCase().includes(name)) ||
+               allRecords.find(r => r.commodity.toLowerCase().includes(name));
+      };
+
+      const wheat = findCrop('wheat');
+      const mustard = findCrop('mustard');
+      const tomato = findCrop('tomato');
+      const onion = findCrop('onion');
 
       if (wheat) {
         document.getElementById('stat-wheat-price').innerHTML = `₹${wheat.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
-        document.getElementById('stat-wheat-mandi').textContent = wheat.market;
+        document.getElementById('stat-wheat-mandi').textContent = `${wheat.market} (${wheat.district})`;
+      } else {
+        document.getElementById('stat-wheat-price').innerHTML = `—`;
+        document.getElementById('stat-wheat-mandi').textContent = `Local Mandi`;
       }
+
       if (mustard) {
         document.getElementById('stat-mustard-price').innerHTML = `₹${mustard.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
-        document.getElementById('stat-mustard-mandi').textContent = mustard.market;
+        document.getElementById('stat-mustard-mandi').textContent = `${mustard.market} (${mustard.district})`;
+      } else {
+        document.getElementById('stat-mustard-price').innerHTML = `—`;
+        document.getElementById('stat-mustard-mandi').textContent = `Local Mandi`;
       }
+
       if (tomato) {
         document.getElementById('stat-tomato-price').innerHTML = `₹${tomato.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
-        document.getElementById('stat-tomato-mandi').textContent = tomato.market;
+        document.getElementById('stat-tomato-mandi').textContent = `${tomato.market} (${tomato.district})`;
+      } else {
+        document.getElementById('stat-tomato-price').innerHTML = `—`;
+        document.getElementById('stat-tomato-mandi').textContent = `Local Mandi`;
       }
+
       if (onion) {
         document.getElementById('stat-onion-price').innerHTML = `₹${onion.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
-        document.getElementById('stat-onion-mandi').textContent = onion.market;
+        document.getElementById('stat-onion-mandi').textContent = `${onion.market} (${onion.district})`;
+      } else {
+        document.getElementById('stat-onion-price').innerHTML = `—`;
+        document.getElementById('stat-onion-mandi').textContent = `Local Mandi`;
       }
     }
 

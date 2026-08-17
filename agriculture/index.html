@@ -524,26 +524,46 @@
     }
 
     function updateIndexStats(records) {
-      const wheat = records.find(r => r.commodity.toLowerCase().includes('wheat'));
-      const mustard = records.find(r => r.commodity.toLowerCase().includes('mustard'));
-      const tomato = records.find(r => r.commodity.toLowerCase().includes('tomato'));
-      const onion = records.find(r => r.commodity.toLowerCase().includes('onion'));
+      const findCrop = (name) => {
+        return records.find(r => r.commodity.toLowerCase().includes(name)) ||
+               indexRecords.find(r => r.commodity.toLowerCase().includes(name));
+      };
+
+      const wheat = findCrop('wheat');
+      const mustard = findCrop('mustard');
+      const tomato = findCrop('tomato');
+      const onion = findCrop('onion');
 
       if (wheat) {
-        document.getElementById('index-stat-wheat').innerHTML = `₹${wheat.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
-        document.getElementById('index-stat-wheat-mandi').textContent = `${wheat.market}`;
+        document.getElementById('index-stat-wheat').innerHTML = `₹${wheat.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
+        document.getElementById('index-stat-wheat-mandi').textContent = `${wheat.market} (${wheat.district})`;
+      } else {
+        document.getElementById('index-stat-wheat').innerHTML = `—`;
+        document.getElementById('index-stat-wheat-mandi').textContent = `Local Mandi`;
       }
+
       if (mustard) {
-        document.getElementById('index-stat-mustard').innerHTML = `₹${mustard.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
-        document.getElementById('index-stat-mustard-mandi').textContent = `${mustard.market}`;
+        document.getElementById('index-stat-mustard').innerHTML = `₹${mustard.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
+        document.getElementById('index-stat-mustard-mandi').textContent = `${mustard.market} (${mustard.district})`;
+      } else {
+        document.getElementById('index-stat-mustard').innerHTML = `—`;
+        document.getElementById('index-stat-mustard-mandi').textContent = `Local Mandi`;
       }
+
       if (tomato) {
-        document.getElementById('index-stat-tomato').innerHTML = `₹${tomato.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
-        document.getElementById('index-stat-tomato-mandi').textContent = `${tomato.market}`;
+        document.getElementById('index-stat-tomato').innerHTML = `₹${tomato.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
+        document.getElementById('index-stat-tomato-mandi').textContent = `${tomato.market} (${tomato.district})`;
+      } else {
+        document.getElementById('index-stat-tomato').innerHTML = `—`;
+        document.getElementById('index-stat-tomato-mandi').textContent = `Local Mandi`;
       }
+
       if (onion) {
-        document.getElementById('index-stat-onion').innerHTML = `₹${onion.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
-        document.getElementById('index-stat-onion-mandi').textContent = `${onion.market}`;
+        document.getElementById('index-stat-onion').innerHTML = `₹${onion.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/कुंतल</span>`;
+        document.getElementById('index-stat-onion-mandi').textContent = `${onion.market} (${onion.district})`;
+      } else {
+        document.getElementById('index-stat-onion').innerHTML = `—`;
+        document.getElementById('index-stat-onion-mandi').textContent = `Local Mandi`;
       }
     }
 

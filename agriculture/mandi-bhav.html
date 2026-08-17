@@ -3,167 +3,446 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mandi Bhav Today - Daily Agriculture Market Prices & MSP Rates</title>
-  <meta name="description" content="Check today's Mandi Bhav for Tomato, Onion, Potato, Wheat, and Mustard. Get live agriculture market prices, daily arrivals, and government MSP data.">
+  <title>Mandi Bhav Today - Live Agriculture Market Prices & Government API Data</title>
+  <meta name="description" content="Check today's Mandi Bhav for Wheat, Mustard, Tomato, Onion, and Potato across Gonda, Paraspur, and Uttar Pradesh mandis. Real-time rates powered by data.gov.in API.">
+  <meta name="keywords" content="Mandi Bhav Today, Mandi Bhav Gonda, Mandi Bhav Paraspur, Wheat Price Today, Tomato Price Today, Onion Rate Gonda, Potato Mandi Bhav, Mustard Price UP, data.gov.in Mandi API, गोंडा मंडी भाव, परसपुर मंडी भाव, गेहूं का रेट गोंडा" />
   <link rel="canonical" href="https://paraspur.com/agriculture/mandi-bhav.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mandi Bhav Today - Live Agriculture Market Prices | Gonda & Paraspur" />
+  <meta property="og:description" content="Check live daily Mandi Bhav for Wheat, Mustard, Tomato, Onion, and Potato across Gonda, Colonelganj, Nawabganj, and UP markets powered by data.gov.in API." />
+  <meta property="og:url" content="https://paraspur.com/agriculture/mandi-bhav.html" />
+  <meta property="og:site_name" content="Paraspur.com" />
+  <meta property="og:image" content="https://paraspur.com/paraspur-market-banner.jpg" />
+
+  <!-- Twitter / X Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mandi Bhav Today - Live Market Rates in Gonda & UP" />
+  <meta name="twitter:description" content="Real-time daily Mandi rates, arrival volumes, and modal prices powered by official Ministry of Agriculture data.gov.in API." />
+  <meta name="twitter:image" content="https://paraspur.com/paraspur-market-banner.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
   
-  <!-- AI Search Optimized JSON-LD Schema (Dataset & FAQ) -->
+  <!-- SEO & AEO Structured Data Schema (JSON-LD Graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Mandi Bhav Today",
-    "description": "Daily updated agriculture commodity prices including Tomato, Onion, and Wheat rates.",
-    "mainEntity": {
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is the tomato price today?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The modal price of tomatoes today in local mandis ranges between ₹1,800 to ₹2,200 per quintal depending on quality and arrival volume."
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://paraspur.com/agriculture/mandi-bhav.html#webpage",
+        "url": "https://paraspur.com/agriculture/mandi-bhav.html",
+        "name": "Mandi Bhav Today - Live Agriculture Market Prices",
+        "description": "Daily updated live agriculture commodity prices from Gonda, Paraspur, and Uttar Pradesh mandis via official data.gov.in API.",
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://paraspur.com/agriculture/mandi-bhav.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://paraspur.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Agriculture Hub",
+            "item": "https://paraspur.com/agriculture/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Mandi Bhav Today",
+            "item": "https://paraspur.com/agriculture/mandi-bhav.html"
+          }
+        ]
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://paraspur.com/agriculture/mandi-bhav.html#dataset",
+        "name": "Current Daily Price of Various Commodities from Various Markets (Mandi)",
+        "description": "Daily market prices, arrival quantities, and modal prices across Indian APMCs sourced from Ministry of Agriculture data.gov.in.",
+        "license": "https://data.gov.in/",
+        "isAccessibleForFree": true,
+        "publisher": {
+          "@type": "GovernmentOrganization",
+          "name": "Ministry of Agriculture and Farmers Welfare, India"
         }
-      }, {
-        "@type": "Question",
-        "name": "What is the MSP of Wheat in India?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Minimum Support Price (MSP) for Wheat announced by the government for the current rabi marketing season is ₹2,275 per quintal."
-        }
-      }]
-    }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://paraspur.com/agriculture/mandi-bhav.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Mandi Bhav of Wheat in Gonda today?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The modal price of Wheat in Gonda district mandis (including Colonelganj APMC) ranges between ₹2,400 to ₹2,500 per quintal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are Mandi prices updated on Paraspur.com?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Paraspur.com connects directly to the Ministry of Agriculture's data.gov.in API (Resource ID 9ef84268-d588-465a-a308-a864a43d0070) to fetch live daily market arrival rates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Modal Price in Mandi Bhav?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Modal Price is the most frequently occurring rate at which the maximum quantity of an agricultural commodity is traded in a mandi on a given day."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
   <div id="header-container"></div>
 
-  <main class="py-20">
+  <main class="py-12 md:py-20">
     <div class="container mx-auto px-4 max-w-6xl">
-      <!-- Header -->
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 bg-amber-100 text-amber-800 text-[10px] font-black uppercase tracking-[0.3em] rounded-full mb-6">Market Tracker</span>
-        <h1 class="text-5xl md:text-7xl font-display font-black text-slate-900 mb-6">Daily <span class="text-amber-600">Mandi Bhav</span></h1>
-        <p class="text-xl text-slate-500 max-w-3xl mx-auto">
-          Live tracking of agricultural commodity prices, market arrivals, and MSP rates across Uttar Pradesh and major Indian markets.
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-8 overflow-x-auto whitespace-nowrap">
+        <a href="/" class="hover:text-primary-600 transition">Home</a>
+        <span>/</span>
+        <a href="/agriculture/index.html" class="hover:text-primary-600 transition">Agriculture Hub</a>
+        <span>/</span>
+        <span class="text-slate-900 font-bold">Live Mandi Bhav</span>
+      </nav>
+
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 bg-amber-100 text-amber-800 text-xs font-black uppercase tracking-widest rounded-full mb-4">
+          <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
+          <span>Live API Data • data.gov.in</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-black text-slate-900 leading-tight mb-4">
+          Daily <span class="text-amber-600">Mandi Bhav</span> Today
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+          Real-time daily market rates, min/max prices, and arrival volumes from <strong>Colonelganj, Nawabganj, Gonda APMCs</strong>, and major markets across Uttar Pradesh.
         </p>
       </div>
 
-      <!-- Quick Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-center">
-          <div class="text-2xl mb-2">🌾</div>
-          <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Wheat MSP</p>
-          <p class="text-2xl font-black text-slate-900">₹2,275<span class="text-sm font-normal text-slate-500">/qtl</span></p>
+      <!-- Quick Summary Cards (Dynamically Computed) -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <!-- Wheat Card -->
+        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
+          <div class="text-3xl mb-2">🌾</div>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Wheat (गेहूँ)</p>
+          <p id="stat-wheat-price" class="text-2xl font-black text-slate-900">₹2,450<span class="text-xs font-normal text-slate-500">/qtl</span></p>
+          <span id="stat-wheat-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Gonda Mandi</span>
         </div>
-        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-center">
-          <div class="text-2xl mb-2">🍅</div>
-          <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Tomato Modal</p>
-          <p class="text-2xl font-black text-slate-900">₹1,850<span class="text-sm font-normal text-slate-500">/qtl</span></p>
+
+        <!-- Mustard Card -->
+        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
+          <div class="text-3xl mb-2">🌼</div>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Mustard (सरसों)</p>
+          <p id="stat-mustard-price" class="text-2xl font-black text-slate-900">₹6,700<span class="text-xs font-normal text-slate-500">/qtl</span></p>
+          <span id="stat-mustard-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Nawabganj APMC</span>
         </div>
-        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-center">
-          <div class="text-2xl mb-2">🧅</div>
-          <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Onion Rate</p>
-          <p class="text-2xl font-black text-slate-900">₹2,100<span class="text-sm font-normal text-slate-500">/qtl</span></p>
+
+        <!-- Tomato Card -->
+        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
+          <div class="text-3xl mb-2">🍅</div>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Tomato (टमाटर)</p>
+          <p id="stat-tomato-price" class="text-2xl font-black text-slate-900">₹2,000<span class="text-xs font-normal text-slate-500">/qtl</span></p>
+          <span id="stat-tomato-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Local Mandi</span>
         </div>
-        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-center">
-          <div class="text-2xl mb-2">🥔</div>
-          <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Potato Rate</p>
-          <p class="text-2xl font-black text-slate-900">₹1,400<span class="text-sm font-normal text-slate-500">/qtl</span></p>
+
+        <!-- Onion Card -->
+        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm text-center relative overflow-hidden group">
+          <div class="text-3xl mb-2">🧅</div>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Onion (प्याज)</p>
+          <p id="stat-onion-price" class="text-2xl font-black text-slate-900">₹1,500<span class="text-xs font-normal text-slate-500">/qtl</span></p>
+          <span id="stat-onion-mandi" class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full inline-block mt-2">Gonda Region</span>
         </div>
       </div>
 
-      <!-- Live Market Table -->
-      <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden mb-20">
-        <div class="p-8 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center flex-wrap gap-4">
-          <div>
-            <h2 class="text-2xl font-display font-black text-slate-900">Market Price & Arrival</h2>
-            <p class="text-sm text-slate-500 mt-1">Rates updated daily. All prices in ₹ per Quintal.</p>
+      <!-- Main Interactive Controls & Live Table Container -->
+      <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden mb-16">
+        
+        <!-- Table Toolbar Header -->
+        <div class="p-6 sm:p-8 bg-slate-50/80 border-b border-slate-200">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-display font-black text-slate-900 flex items-center gap-2">
+                <span>Live Agriculture Market Prices</span>
+              </h2>
+              <p id="mandi-status-bar" class="text-xs text-slate-500 mt-1 font-medium">
+                Connected to Open Government Data (data.gov.in API) • Resource ID: 9ef84268-d588-465a-a308-a864a43d0070
+              </p>
+            </div>
+
+            <!-- Region & Filter Controls -->
+            <div class="flex flex-wrap items-center gap-3">
+              <!-- District Selector -->
+              <select id="mandi-region-select" class="px-4 py-2.5 bg-white border border-slate-300 text-xs font-bold text-slate-800 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none shadow-sm">
+                <option value="Gonda">📍 Gonda District (Local)</option>
+                <option value="UP">🏛️ Uttar Pradesh (All Mandis)</option>
+                <option value="ALL">🌐 All India Markets</option>
+              </select>
+
+              <!-- Search Input -->
+              <div class="relative flex-1 sm:w-64">
+                <input type="text" id="mandi-search-input" placeholder="Search commodity or mandi..." 
+                       class="w-full pl-9 pr-4 py-2.5 bg-white border border-slate-300 text-xs text-slate-800 font-medium rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none shadow-sm" />
+                <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+
+              <!-- Sync Refresh Button -->
+              <button id="mandi-refresh-btn" class="px-4 py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition flex items-center space-x-1 shadow-md">
+                <svg id="refresh-spinner" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                <span>Refresh Live</span>
+              </button>
+            </div>
           </div>
-          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
-            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Live Update
-          </span>
         </div>
+
+        <!-- Table Display -->
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
-              <tr class="bg-slate-50 text-slate-500 text-sm font-bold uppercase tracking-wider">
-                <th class="p-6">Commodity</th>
-                <th class="p-6">Market/Mandi</th>
-                <th class="p-6">Arrival (Tonnes)</th>
-                <th class="p-6">Min Price</th>
-                <th class="p-6">Max Price</th>
-                <th class="p-6 text-amber-600">Modal Price</th>
+              <tr class="bg-slate-100/70 text-slate-600 text-xs font-bold uppercase tracking-wider border-b border-slate-200">
+                <th class="p-4 sm:p-5">Commodity (फसल)</th>
+                <th class="p-4 sm:p-5">Market / Mandi (मंडी)</th>
+                <th class="p-4 sm:p-5">District / State</th>
+                <th class="p-4 sm:p-5">Arrival Date</th>
+                <th class="p-4 sm:p-5">Min Price</th>
+                <th class="p-4 sm:p-5">Max Price</th>
+                <th class="p-4 sm:p-5 text-amber-700">Modal Price (₹/Quintal)</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-slate-50 transition">
-                <td class="p-6 font-bold text-slate-900 flex items-center gap-3"><span class="text-2xl">🍅</span> Tomato</td>
-                <td class="p-6 text-slate-600">Lucknow (Deva)</td>
-                <td class="p-6 text-slate-600">120.5</td>
-                <td class="p-6 text-slate-600">₹1,600</td>
-                <td class="p-6 text-slate-600">₹2,100</td>
-                <td class="p-6 font-bold text-amber-600">₹1,850</td>
-              </tr>
-              <tr class="hover:bg-slate-50 transition">
-                <td class="p-6 font-bold text-slate-900 flex items-center gap-3"><span class="text-2xl">🧅</span> Onion</td>
-                <td class="p-6 text-slate-600">Gonda</td>
-                <td class="p-6 text-slate-600">85.0</td>
-                <td class="p-6 text-slate-600">₹1,900</td>
-                <td class="p-6 text-slate-600">₹2,400</td>
-                <td class="p-6 font-bold text-amber-600">₹2,100</td>
-              </tr>
-              <tr class="hover:bg-slate-50 transition">
-                <td class="p-6 font-bold text-slate-900 flex items-center gap-3"><span class="text-2xl">🥔</span> Potato</td>
-                <td class="p-6 text-slate-600">Paraspur</td>
-                <td class="p-6 text-slate-600">45.2</td>
-                <td class="p-6 text-slate-600">₹1,200</td>
-                <td class="p-6 text-slate-600">₹1,600</td>
-                <td class="p-6 font-bold text-amber-600">₹1,400</td>
-              </tr>
-              <tr class="hover:bg-slate-50 transition">
-                <td class="p-6 font-bold text-slate-900 flex items-center gap-3"><span class="text-2xl">🌾</span> Wheat</td>
-                <td class="p-6 text-slate-600">Bahraich</td>
-                <td class="p-6 text-slate-600">300.0</td>
-                <td class="p-6 text-slate-600">₹2,275</td>
-                <td class="p-6 text-slate-600">₹2,400</td>
-                <td class="p-6 font-bold text-amber-600">₹2,300</td>
-              </tr>
-              <tr class="hover:bg-slate-50 transition">
-                <td class="p-6 font-bold text-slate-900 flex items-center gap-3"><span class="text-2xl">🌼</span> Mustard</td>
-                <td class="p-6 text-slate-600">Basti</td>
-                <td class="p-6 text-slate-600">60.8</td>
-                <td class="p-6 text-slate-600">₹5,000</td>
-                <td class="p-6 text-slate-600">₹5,400</td>
-                <td class="p-6 font-bold text-amber-600">₹5,150</td>
+            <tbody id="mandi-table-body" class="divide-y divide-slate-100 text-xs sm:text-sm font-medium text-slate-700">
+              <!-- JS Injected Row Content -->
+              <tr>
+                <td colspan="7" class="p-12 text-center text-slate-400 font-semibold">
+                  <div class="inline-block animate-spin text-2xl mb-2">⏳</div>
+                  <p>Fetching real-time Mandi Bhav from data.gov.in API...</p>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
 
-      <!-- FAQ Section (AI Optimized) -->
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-display font-black text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-            <h3 class="font-bold text-slate-900 mb-2">What is the tomato price today?</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Today's tomato modal price in UP markets averages around ₹1,850 per quintal. Prices range from ₹1,600 (min) to ₹2,100 (max) depending on the arrival quantity and quality.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-            <h3 class="font-bold text-slate-900 mb-2">What is the MSP price of wheat?</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">The Minimum Support Price (MSP) for Wheat is fixed at ₹2,275 per quintal. Government procurement centers operate at this base rate.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-            <h3 class="font-bold text-slate-900 mb-2">How is the Mandi Modal Price calculated?</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">The Modal Price is the most frequently occurring rate at which the maximum quantity of a commodity is sold in the mandi on a given day. It gives a more accurate market trend than a simple average.</p>
-          </div>
+        <!-- Table Footer Info -->
+        <div class="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <span>Data Source: Ministry of Agriculture and Farmers Welfare • Open Government Data (data.gov.in)</span>
+          <span id="record-count-badge" class="font-bold text-slate-700">Showing 0 records</span>
         </div>
       </div>
+
+      <!-- FAQ Section (AEO & Voice Search Friendly) -->
+      <section class="max-w-4xl mx-auto mb-16">
+        <h2 class="text-2xl sm:text-3xl font-display font-black text-slate-900 mb-8 text-center">
+          Frequently Asked Questions on Mandi Bhav
+        </h2>
+
+        <div class="space-y-4">
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="font-bold text-slate-900 text-base mb-2">What is the Modal Price (मॉडल भाव)?</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              The <strong>Modal Price</strong> is the most common price at which the largest volume of a particular agricultural commodity is traded in a mandi on a given day. It is more representative than a average price.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="font-bold text-slate-900 text-base mb-2">Which Mandis in Gonda district are covered by this API?</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Official data covers major Agricultural Produce Market Committees (APMCs) in Gonda district including <strong>Colonelganj APMC, Nawabganj APMC, and Gonda APMC</strong>, alongside surrounding regional markets in Bahraich, Basti, and Lucknow.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="font-bold text-slate-900 text-base mb-2">How frequently are Mandi prices updated?</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Mandi prices are updated daily by APMC market secretaries directly to the Ministry of Agriculture portal and pulled live via Paraspur.com's integration with data.gov.in.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
   <div id="footer-container"></div>
+
+  <!-- Vite Script Entry -->
   <script type="module" src="../src/main.js"></script>
+
+  <!-- Live Mandi Bhav API Execution Script -->
+  <script type="module">
+    import { fetchMandiBhav, getFallbackMandiData } from '../src/mandi-api.js';
+
+    let allRecords = [];
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const regionSelect = document.getElementById('mandi-region-select');
+      const searchInput = document.getElementById('mandi-search-input');
+      const refreshBtn = document.getElementById('mandi-refresh-btn');
+
+      // Initial fetch for Gonda district
+      await loadMandiData('Gonda');
+
+      // Region selection change handler
+      if (regionSelect) {
+        regionSelect.addEventListener('change', async (e) => {
+          const region = e.target.value;
+          if (region === 'Gonda') {
+            await loadMandiData('Gonda');
+          } else if (region === 'UP') {
+            await loadMandiData('', 'Uttar Pradesh');
+          } else {
+            await loadMandiData('', '');
+          }
+        });
+      }
+
+      // Live search input filtering
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          renderTable(filterRecords(searchInput.value));
+        });
+      }
+
+      // Refresh button
+      if (refreshBtn) {
+        refreshBtn.addEventListener('click', async () => {
+          const region = regionSelect ? regionSelect.value : 'Gonda';
+          if (region === 'Gonda') await loadMandiData('Gonda');
+          else if (region === 'UP') await loadMandiData('', 'Uttar Pradesh');
+          else await loadMandiData('', '');
+        });
+      }
+    });
+
+    async function loadMandiData(district = 'Gonda', state = 'Uttar Pradesh') {
+      const tbody = document.getElementById('mandi-table-body');
+      const spinner = document.getElementById('refresh-spinner');
+      const statusBar = document.getElementById('mandi-status-bar');
+
+      if (spinner) spinner.classList.add('animate-spin');
+      if (tbody) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" class="p-10 text-center text-slate-500 font-semibold">
+              <div class="inline-block animate-spin text-2xl mb-2">🔄</div>
+              <p>Fetching current daily prices from data.gov.in API...</p>
+            </td>
+          </tr>
+        `;
+      }
+
+      const res = await fetchMandiBhav({ district, state, limit: 100 });
+
+      if (spinner) spinner.classList.remove('animate-spin');
+
+      if (res && res.records && res.records.length > 0) {
+        allRecords = res.records;
+        if (statusBar) {
+          statusBar.innerHTML = res.success 
+            ? `🟢 Live Feed Active • Source: data.gov.in (Updated: ${res.updatedDate ? new Date(res.updatedDate).toLocaleDateString() : 'Today'})`
+            : `⚠️ API Notice: Displaying latest verified market data.`;
+        }
+      } else {
+        allRecords = getFallbackMandiData();
+        if (statusBar) {
+          statusBar.innerHTML = `⚠️ Fallback Feed Active • Displaying latest verified rates.`;
+        }
+      }
+
+      updateSummaryCards(allRecords);
+      renderTable(allRecords);
+    }
+
+    function filterRecords(query = '') {
+      if (!query.trim()) return allRecords;
+      const q = query.toLowerCase();
+      return allRecords.filter(r => 
+        r.commodity.toLowerCase().includes(q) ||
+        r.market.toLowerCase().includes(q) ||
+        r.district.toLowerCase().includes(q) ||
+        r.variety.toLowerCase().includes(q)
+      );
+    }
+
+    function updateSummaryCards(records) {
+      // Find Wheat, Mustard, Tomato, Onion in records
+      const wheat = records.find(r => r.commodity.toLowerCase().includes('wheat'));
+      const mustard = records.find(r => r.commodity.toLowerCase().includes('mustard'));
+      const tomato = records.find(r => r.commodity.toLowerCase().includes('tomato'));
+      const onion = records.find(r => r.commodity.toLowerCase().includes('onion'));
+
+      if (wheat) {
+        document.getElementById('stat-wheat-price').innerHTML = `₹${wheat.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('stat-wheat-mandi').textContent = wheat.market;
+      }
+      if (mustard) {
+        document.getElementById('stat-mustard-price').innerHTML = `₹${mustard.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('stat-mustard-mandi').textContent = mustard.market;
+      }
+      if (tomato) {
+        document.getElementById('stat-tomato-price').innerHTML = `₹${tomato.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('stat-tomato-mandi').textContent = tomato.market;
+      }
+      if (onion) {
+        document.getElementById('stat-onion-price').innerHTML = `₹${onion.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('stat-onion-mandi').textContent = onion.market;
+      }
+    }
+
+    function renderTable(records) {
+      const tbody = document.getElementById('mandi-table-body');
+      const countBadge = document.getElementById('record-count-badge');
+
+      if (countBadge) countBadge.textContent = `Showing ${records.length} records`;
+
+      if (!tbody) return;
+
+      if (records.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" class="p-8 text-center text-slate-400 font-semibold">
+              No mandi records found matching your search. Try selecting a different region or search query.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = records.map(r => `
+        <tr class="hover:bg-slate-50 transition border-b border-slate-100 last:border-0">
+          <td class="p-4 sm:p-5 font-bold text-slate-900 flex items-center space-x-2">
+            <span class="text-xl">${r.emoji}</span>
+            <div>
+              <span class="block">${r.commodity}</span>
+              <span class="text-[11px] text-slate-400 font-normal">Var: ${r.variety}</span>
+            </div>
+          </td>
+          <td class="p-4 sm:p-5 font-semibold text-slate-800">${r.market}</td>
+          <td class="p-4 sm:p-5 text-slate-600">${r.district}, ${r.state}</td>
+          <td class="p-4 sm:p-5 text-slate-500 text-xs">${r.arrivalDate}</td>
+          <td class="p-4 sm:p-5 text-slate-600">₹${r.minPrice.toLocaleString()}</td>
+          <td class="p-4 sm:p-5 text-slate-600">₹${r.maxPrice.toLocaleString()}</td>
+          <td class="p-4 sm:p-5 font-black text-amber-600 text-base">₹${r.modalPrice.toLocaleString()}</td>
+        </tr>
+      `).join('');
+    }
+  </script>
 </body>
 </html>

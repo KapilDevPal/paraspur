@@ -38,6 +38,7 @@ export default defineConfig({
         terms: resolve(__dirname, 'terms.html'),
         disclaimer: resolve(__dirname, 'disclaimer.html'),
         about_website: resolve(__dirname, 'about-website.html'),
+        itr_filing: resolve(__dirname, 'services/itr-filing-gonda-paraspur.html'),
         villages_list: resolve(__dirname, 'villages/index.html'),
         blog_tulsidas: resolve(__dirname, 'blog/tulsidas-ayodhya-paraspur-connection.html'),
         blog_villages: resolve(__dirname, 'blog/all-villages-in-paraspur-block.html'),

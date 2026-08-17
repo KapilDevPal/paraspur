@@ -252,9 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchNews(container) {
   try {
-    // Note: In a real production environment, you might need a proxy for external RSS
-    // For this demonstration, we'll simulate the TOI feed or use a placeholder
-    const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://timesofindia.indiatimes.com/rssfeeds/-2128819658.cms');
+    const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=Paraspur+Gonda+when:1d&hl=hi&gl=IN&ceid=IN:hi');
+    const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`);
     const data = await response.json();
     
     if (data.status === 'ok') {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agriculture Marketplace & Live Mandi Bhav - Paraspur & Gonda Hub</title>
   <meta name="description" content="Check live Mandi Bhav for Gonda, Colonelganj, Nawabganj, and Paraspur. Discover top high-yield hybrid seeds, daily MSP rates, and local agriculture stores in UP.">
-  <meta name="keywords" content="Mandi Bhav Paraspur, Mandi Bhav Gonda, Colonelganj Mandi Rate, Wheat Price Gonda, Tomato Rate Mandi, Agriculture Seeds Gonda, Kisan Portal UP" />
+  <meta name="keywords" content="Mandi Bhav Paraspur, Mandi Bhav Gonda, Colonelganj Mandi Rate, Wheat Price Gonda, Tomato Rate Mandi, Agriculture Seeds Gonda, Kisan Portal UP, गोंडा मंडी भाव, परसपुर मंडी भाव, गेहूं का रेट" />
   <link rel="canonical" href="https://paraspur.com/agriculture/index.html" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
@@ -122,9 +122,9 @@
         <!-- Live Quick Search Bar -->
         <div class="max-w-2xl mx-auto bg-white p-2.5 rounded-2xl shadow-2xl flex items-center border border-green-400/30">
           <input type="text" id="agri-main-search" 
-                 placeholder="Search Mandi Bhav (e.g. 'Wheat', 'Tomato') or seeds..." 
+                 placeholder="Search Mandi Bhav (Hindi/English e.g., 'टमाटर', 'Wheat')..." 
                  class="flex-1 px-4 sm:px-6 py-3 text-slate-800 bg-transparent placeholder-slate-400 font-medium text-sm sm:text-base outline-none w-full" />
-          <button id="agri-main-search-btn" class="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition shadow-md shrink-0">
+          <button id="agri-main-search-btn" type="button" class="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition shadow-md shrink-0">
             Search
           </button>
         </div>
@@ -175,10 +175,10 @@
               <span class="text-xs text-slate-500 font-semibold">Paraspur & Nearby Mandis</span>
             </div>
             <h2 class="text-3xl md:text-4xl font-display font-black text-slate-900">
-              Live Agriculture Market Prices (मंडी भाव)
+              Live Agriculture Market Prices (आज का मंडी भाव)
             </h2>
             <p class="text-sm text-slate-600 mt-1 font-medium">
-              Real-time daily prices from <strong>Colonelganj APMC, Nawabganj APMC, Gonda APMC</strong>, and nearby markets. Zero static/dummy data.
+              Real-time daily prices from <strong>Colonelganj APMC, Nawabganj APMC, Gonda APMC</strong>, and nearby markets. Multilingual search supported (Hindi & English).
             </p>
           </div>
 
@@ -237,8 +237,8 @@
             </div>
 
             <!-- Table Search -->
-            <div class="relative w-full sm:w-64">
-              <input type="text" id="index-table-search" placeholder="Search commodity..." 
+            <div class="relative w-full sm:w-72">
+              <input type="text" id="index-table-search" placeholder="Search (Hindi/Eng: टमाटर, Wheat, Gonda)..." 
                      class="w-full pl-8 pr-4 py-2 bg-white border border-slate-300 text-xs text-slate-800 font-medium rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none" />
               <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
@@ -249,7 +249,7 @@
             <table class="w-full text-left border-collapse">
               <thead>
                 <tr class="bg-slate-100/80 text-slate-600 text-xs font-bold uppercase tracking-wider border-b border-slate-200">
-                  <th class="p-4">Commodity (फसल)</th>
+                  <th class="p-4">Commodity (फसल नाम)</th>
                   <th class="p-4">Market / Mandi (मंडी)</th>
                   <th class="p-4">District</th>
                   <th class="p-4">Arrival Date</th>
@@ -426,7 +426,7 @@
   <!-- Vite Script Entry -->
   <script type="module" src="../src/main.js"></script>
 
-  <!-- Live Mandi Bhav Integration Script -->
+  <!-- Live Mandi Bhav Multilingual Search & Table Script -->
   <script type="module">
     import { fetchNearbyMandis } from '../src/mandi-api.js';
 
@@ -452,14 +452,25 @@
         });
       }
 
-      if (mainSearchBtn && mainSearch) {
-        mainSearchBtn.addEventListener('click', () => {
-          const val = mainSearch.value.trim();
-          if (val && searchInput) {
-            searchInput.value = val;
-            document.getElementById('live-mandi-section')?.scrollIntoView({ behavior: 'smooth' });
-            renderIndexTable(applyFilters());
-          }
+      const runHeroSearch = () => {
+        const query = mainSearch ? mainSearch.value.trim() : '';
+        if (searchInput) searchInput.value = query;
+        document.getElementById('live-mandi-section')?.scrollIntoView({ behavior: 'smooth' });
+        renderIndexTable(applyFilters());
+      };
+
+      if (mainSearchBtn) {
+        mainSearchBtn.addEventListener('click', runHeroSearch);
+      }
+
+      if (mainSearch) {
+        mainSearch.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') runHeroSearch();
+        });
+        mainSearch.addEventListener('input', () => {
+          const query = mainSearch.value.trim();
+          if (searchInput) searchInput.value = query;
+          renderIndexTable(applyFilters());
         });
       }
     });
@@ -479,6 +490,7 @@
     function applyFilters() {
       const filterSelect = document.getElementById('index-mandi-filter');
       const searchInput = document.getElementById('index-table-search');
+      const mainSearch = document.getElementById('agri-main-search');
 
       let records = [...indexRecords];
 
@@ -493,13 +505,18 @@
         records = records.filter(r => r.market.toLowerCase().includes('gonda'));
       }
 
-      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
-      if (q) {
+      const qTable = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      const qMain = mainSearch ? mainSearch.value.trim().toLowerCase() : '';
+      const query = qTable || qMain;
+
+      if (query) {
         records = records.filter(r => 
-          r.commodity.toLowerCase().includes(q) ||
-          r.market.toLowerCase().includes(q) ||
-          r.district.toLowerCase().includes(q) ||
-          r.variety.toLowerCase().includes(q)
+          r.commodity.toLowerCase().includes(query) ||
+          (r.commodityHindi && r.commodityHindi.toLowerCase().includes(query)) ||
+          (r.displayCommodity && r.displayCommodity.toLowerCase().includes(query)) ||
+          r.market.toLowerCase().includes(query) ||
+          r.district.toLowerCase().includes(query) ||
+          r.variety.toLowerCase().includes(query)
         );
       }
 
@@ -541,7 +558,7 @@
         tbody.innerHTML = `
           <tr>
             <td colspan="7" class="p-8 text-center text-slate-400 font-semibold">
-              No mandi records matching your current filter. Try selecting "All Mandis Near Paraspur".
+              No mandi records matching your current search. Try typing in Hindi (e.g., 'टमाटर', 'गेहूं') or English (e.g., 'Tomato', 'Wheat').
             </td>
           </tr>
         `;
@@ -551,18 +568,20 @@
       tbody.innerHTML = records.map(r => `
         <tr class="hover:bg-slate-50 transition border-b border-slate-100 last:border-0">
           <td class="p-4 font-bold text-slate-900 flex items-center space-x-2">
-            <span class="text-xl">${r.emoji}</span>
+            <span class="text-2xl">${r.emoji}</span>
             <div>
-              <span class="block">${r.commodity}</span>
+              <span class="block text-slate-900 font-bold text-sm sm:text-base">
+                ${r.commodity} ${r.commodityHindi ? `<span class="text-emerald-700 font-extrabold text-xs sm:text-sm bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">(${r.commodityHindi})</span>` : ''}
+              </span>
               <span class="text-[11px] text-slate-400 font-normal">Variety: ${r.variety}</span>
             </div>
           </td>
           <td class="p-4 font-semibold text-slate-800">${r.market}</td>
           <td class="p-4 text-slate-600">${r.district}</td>
           <td class="p-4 text-slate-500 text-xs">${r.arrivalDate}</td>
-          <td class="p-4 text-slate-600">₹${r.minPrice.toLocaleString()}</td>
-          <td class="p-4 text-slate-600">₹${r.maxPrice.toLocaleString()}</td>
-          <td class="p-4 font-black text-amber-600 text-base">₹${r.modalPrice.toLocaleString()}</td>
+          <td class="p-4 text-slate-600 font-medium">₹${r.minPrice.toLocaleString()}</td>
+          <td class="p-4 text-slate-600 font-medium">₹${r.maxPrice.toLocaleString()}</td>
+          <td class="p-4 font-black text-amber-600 text-base sm:text-lg">₹${r.modalPrice.toLocaleString()}</td>
         </tr>
       `).join('');
     }

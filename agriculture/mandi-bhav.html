@@ -375,6 +375,8 @@
       const q = query.toLowerCase();
       return allRecords.filter(r => 
         r.commodity.toLowerCase().includes(q) ||
+        (r.commodityHindi && r.commodityHindi.toLowerCase().includes(q)) ||
+        (r.displayCommodity && r.displayCommodity.toLowerCase().includes(q)) ||
         r.market.toLowerCase().includes(q) ||
         r.district.toLowerCase().includes(q) ||
         r.variety.toLowerCase().includes(q)
@@ -418,7 +420,7 @@
         tbody.innerHTML = `
           <tr>
             <td colspan="7" class="p-8 text-center text-slate-400 font-semibold">
-              No mandi records found matching your search. Try selecting a different region or search query.
+              No mandi records found matching your search. Try searching in Hindi (e.g. 'टमाटर', 'गेहूं') or English (e.g. 'Tomato', 'Wheat').
             </td>
           </tr>
         `;
@@ -428,18 +430,20 @@
       tbody.innerHTML = records.map(r => `
         <tr class="hover:bg-slate-50 transition border-b border-slate-100 last:border-0">
           <td class="p-4 sm:p-5 font-bold text-slate-900 flex items-center space-x-2">
-            <span class="text-xl">${r.emoji}</span>
+            <span class="text-2xl">${r.emoji}</span>
             <div>
-              <span class="block">${r.commodity}</span>
-              <span class="text-[11px] text-slate-400 font-normal">Var: ${r.variety}</span>
+              <span class="block text-slate-900 font-bold text-sm sm:text-base">
+                ${r.commodity} ${r.commodityHindi ? `<span class="text-emerald-700 font-extrabold text-xs sm:text-sm bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">(${r.commodityHindi})</span>` : ''}
+              </span>
+              <span class="text-[11px] text-slate-400 font-normal">Variety: ${r.variety}</span>
             </div>
           </td>
           <td class="p-4 sm:p-5 font-semibold text-slate-800">${r.market}</td>
           <td class="p-4 sm:p-5 text-slate-600">${r.district}, ${r.state}</td>
           <td class="p-4 sm:p-5 text-slate-500 text-xs">${r.arrivalDate}</td>
-          <td class="p-4 sm:p-5 text-slate-600">₹${r.minPrice.toLocaleString()}</td>
-          <td class="p-4 sm:p-5 text-slate-600">₹${r.maxPrice.toLocaleString()}</td>
-          <td class="p-4 sm:p-5 font-black text-amber-600 text-base">₹${r.modalPrice.toLocaleString()}</td>
+          <td class="p-4 sm:p-5 text-slate-600 font-medium">₹${r.minPrice.toLocaleString()}</td>
+          <td class="p-4 sm:p-5 text-slate-600 font-medium">₹${r.maxPrice.toLocaleString()}</td>
+          <td class="p-4 sm:p-5 font-black text-amber-600 text-base sm:text-lg">₹${r.modalPrice.toLocaleString()}</td>
         </tr>
       `).join('');
     }

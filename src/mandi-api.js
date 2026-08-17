@@ -33,6 +33,56 @@ const EMOJI_MAP = {
   capsicum: '🫑',
   cucumber: '🥒',
   lemon: '🍋',
+  gram: '🫘',
+  chana: '🫘',
+  arhar: '🌱',
+  moong: '🌱',
+  urad: '🌱',
+};
+
+// English to Hindi Commodity Dictionary for Multilingual SEO & Voice Search
+const HINDI_MAP = {
+  wheat: 'गेहूँ',
+  paddy: 'धान',
+  rice: 'चावल',
+  tomato: 'टमाटर',
+  onion: 'प्याज',
+  potato: 'आलू',
+  mustard: 'सरसों',
+  garlic: 'लहसुन',
+  ginger: 'अदरक',
+  chilli: 'हरी मिर्च',
+  chili: 'हरी मिर्च',
+  apple: 'सेब',
+  banana: 'केला',
+  pomegranate: 'अनार',
+  mango: 'आम',
+  maize: 'मक्का',
+  bajra: 'बाजरा',
+  sugarcane: 'गन्ना',
+  wood: 'लकड़ी',
+  firewood: 'इमारती / जलाऊ लकड़ी',
+  tobacco: 'तंबाकू',
+  cabbage: 'पत्तागोभी',
+  cauliflower: 'फूलगोभी',
+  brinjal: 'बैंगन',
+  capsicum: 'शिमला मिर्च',
+  cucumber: 'खीरा',
+  lemon: 'नींबू',
+  gram: 'चना',
+  chana: 'चना',
+  arhar: 'अरहर',
+  tur: 'तुअर',
+  moong: 'मूंग',
+  urad: 'उड़द',
+  peas: 'मटर',
+  lentil: 'मसूर',
+  groundnut: 'मूंगफली',
+  soyabean: 'सोयाबीन',
+  jowar: 'ज्वार',
+  cotton: 'कपास',
+  sesamum: 'तिल',
+  jute: 'पटसन',
 };
 
 // Key nearby districts around Paraspur (Gonda district, UP)
@@ -55,23 +105,36 @@ export function getCommodityEmoji(commodityName = '') {
   return '🚜';
 }
 
+export function getHindiCommodityName(commodityName = '') {
+  const name = commodityName.toLowerCase();
+  for (const [key, hindi] of Object.entries(HINDI_MAP)) {
+    if (name.includes(key)) return hindi;
+  }
+  return '';
+}
+
 /**
  * Normalize and map individual API record
  */
-
 export function mapRecord(rec) {
+  const commodityEn = rec.commodity || 'N/A';
+  const commodityHindi = getHindiCommodityName(commodityEn);
+  const displayCommodity = commodityHindi ? `${commodityEn} (${commodityHindi})` : commodityEn;
+
   return {
     state: rec.state || 'Uttar Pradesh',
     district: rec.district || 'Gonda',
     market: rec.market || 'N/A',
-    commodity: rec.commodity || 'N/A',
+    commodity: commodityEn,
+    commodityHindi: commodityHindi,
+    displayCommodity: displayCommodity,
     variety: rec.variety || 'Standard',
     grade: rec.grade || 'FAQ',
     arrivalDate: rec.arrival_date || 'Today',
     minPrice: Number(rec.min_price) || 0,
     maxPrice: Number(rec.max_price) || 0,
     modalPrice: Math.round(Number(rec.modal_price) || 0),
-    emoji: getCommodityEmoji(rec.commodity)
+    emoji: getCommodityEmoji(commodityEn)
   };
 }
 
@@ -152,7 +215,7 @@ export async function fetchNearbyMandis() {
         }
       }
 
-      // Fill up to 30 records if needed
+      // Fill up to 40 records if needed
       for (const r of upRes.records) {
         const key = `${r.market}-${r.commodity}`;
         if (!existingKeys.has(key) && combinedRecords.length < 40) {
@@ -192,13 +255,15 @@ export async function fetchNearbyMandis() {
  */
 export function getFallbackMandiData() {
   const todayDate = new Date().toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
-  return [
-    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Colonelganj APMC', commodity: 'Wheat', variety: 'Dara Mill Quality', grade: 'FAQ', arrivalDate: todayDate, minPrice: 2450, maxPrice: 2450, modalPrice: 2450, emoji: '🌾' },
-    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Mustard', variety: 'Yellow/Black', grade: 'FAQ', arrivalDate: todayDate, minPrice: 6700, maxPrice: 6700, modalPrice: 6700, emoji: '🌼' },
-    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Tomato', variety: 'Hybrid', grade: 'FAQ', arrivalDate: todayDate, minPrice: 2000, maxPrice: 2000, modalPrice: 2000, emoji: '🍅' },
-    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Onion', variety: 'Nashik Red', grade: 'FAQ', arrivalDate: todayDate, minPrice: 1500, maxPrice: 1500, modalPrice: 1500, emoji: '🧅' },
-    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Gonda APMC', commodity: 'Potato', variety: 'Jyoti', grade: 'FAQ', arrivalDate: todayDate, minPrice: 1200, maxPrice: 1600, modalPrice: 1400, emoji: '🥔' },
-    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Green Chilli', variety: 'Local', grade: 'FAQ', arrivalDate: todayDate, minPrice: 6000, maxPrice: 6000, modalPrice: 6000, emoji: '🌶️' },
-    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Ginger(Green)', variety: 'Fresh', grade: 'FAQ', arrivalDate: todayDate, minPrice: 8000, maxPrice: 8000, modalPrice: 8000, emoji: '🫚' }
+  const rawFallback = [
+    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Colonelganj APMC', commodity: 'Wheat', variety: 'Dara Mill Quality', grade: 'FAQ', arrival_date: todayDate, min_price: 2450, max_price: 2450, modal_price: 2450 },
+    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Mustard', variety: 'Yellow/Black', grade: 'FAQ', arrival_date: todayDate, min_price: 6700, max_price: 6700, modal_price: 6700 },
+    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Tomato', variety: 'Hybrid', grade: 'FAQ', arrival_date: todayDate, min_price: 2000, max_price: 2000, modal_price: 2000 },
+    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Onion', variety: 'Nashik Red', grade: 'FAQ', arrival_date: todayDate, min_price: 1500, max_price: 1500, modal_price: 1500 },
+    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Gonda APMC', commodity: 'Potato', variety: 'Jyoti', grade: 'FAQ', arrival_date: todayDate, min_price: 1200, max_price: 1600, modal_price: 1400 },
+    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Green Chilli', variety: 'Local', grade: 'FAQ', arrival_date: todayDate, min_price: 6000, max_price: 6000, modal_price: 6000 },
+    { state: 'Uttar Pradesh', district: 'Gonda', market: 'Nawabganj APMC', commodity: 'Ginger(Green)', variety: 'Fresh', grade: 'FAQ', arrival_date: todayDate, min_price: 8000, max_price: 8000, modal_price: 8000 }
   ];
+
+  return rawFallback.map(mapRecord);
 }

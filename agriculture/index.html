@@ -3,173 +3,418 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agriculture Marketplace & Seeds - Paraspur Hub</title>
-  <meta name="description" content="Discover top agriculture products, buy the best seeds online, and check daily Mandi Bhav. Find local seed stores in Gonda, Lucknow, and Paraspur.">
+  <title>Agriculture Marketplace & Live Mandi Bhav - Paraspur & Gonda Hub</title>
+  <meta name="description" content="Check live Mandi Bhav for Gonda, Colonelganj, Nawabganj, and Paraspur. Discover top high-yield hybrid seeds, daily MSP rates, and local agriculture stores in UP.">
+  <meta name="keywords" content="Mandi Bhav Paraspur, Mandi Bhav Gonda, Colonelganj Mandi Rate, Wheat Price Gonda, Tomato Rate Mandi, Agriculture Seeds Gonda, Kisan Portal UP" />
   <link rel="canonical" href="https://paraspur.com/agriculture/index.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Agriculture Marketplace & Live Mandi Bhav - Paraspur & Gonda Hub" />
+  <meta property="og:description" content="Real-time daily Mandi Bhav for Gonda and nearby APMCs, high-yield hybrid seeds, and local Kisan store directory." />
+  <meta property="og:url" content="https://paraspur.com/agriculture/index.html" />
+  <meta property="og:site_name" content="Paraspur.com" />
+  <meta property="og:image" content="https://paraspur.com/paraspur-market-banner.jpg" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agriculture Marketplace & Mandi Bhav - Gonda & Paraspur" />
+  <meta name="twitter:description" content="Live government API Mandi rates and agriculture guides for farmers in Paraspur and Gonda." />
+  <meta name="twitter:image" content="https://paraspur.com/paraspur-market-banner.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
   
-  <!-- AI Search Optimized JSON-LD Schema -->
+  <!-- SEO & AEO Structured Data Schema (JSON-LD Graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Agriculture Marketplace & Seeds",
-    "description": "Find the best seeds for farming, local agriculture products, and daily Mandi Bhav.",
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Best Wheat Seed in India", "url": "https://paraspur.com/agriculture/seeds.html" },
-        { "@type": "ListItem", "position": 2, "name": "Mandi Bhav Today", "url": "https://paraspur.com/agriculture/mandi-bhav.html" },
-        { "@type": "ListItem", "position": 3, "name": "Seeds in Gonda", "url": "https://paraspur.com/agriculture/seeds-gonda.html" }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://paraspur.com/agriculture/index.html#webpage",
+        "url": "https://paraspur.com/agriculture/index.html",
+        "name": "Agriculture Marketplace & Live Mandi Bhav",
+        "description": "Find live Mandi prices, high-yield seeds, and local agriculture stores near Paraspur and Gonda.",
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://paraspur.com/agriculture/index.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://paraspur.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Agriculture Hub",
+            "item": "https://paraspur.com/agriculture/index.html"
+          }
+        ]
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://paraspur.com/agriculture/index.html#dataset",
+        "name": "Current Daily Price of Commodities in Nearby Mandis Near Paraspur",
+        "description": "Live commodity prices and arrival rates from Gonda, Colonelganj, and nearby APMCs.",
+        "publisher": {
+          "@type": "GovernmentOrganization",
+          "name": "Ministry of Agriculture and Farmers Welfare, India"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://paraspur.com/agriculture/index.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which Mandi is nearest to Paraspur for grain selling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Colonelganj APMC Mandi is the primary nearby market for Paraspur block farmers, alongside Gonda APMC Mandi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I get live Mandi Bhav for Gonda and Paraspur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can view live, real-time government Mandi Bhav on Paraspur.com powered directly by the data.gov.in API feed."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
   <div id="header-container"></div>
 
   <main>
-    <!-- Hero Section -->
-    <section class="relative py-24 bg-green-900 text-white overflow-hidden">
-      <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-      <div class="absolute top-0 right-0 w-96 h-96 bg-green-500 rounded-full blur-[120px] opacity-30 -mr-20 -mt-20"></div>
+    <!-- HERO SECTION -->
+    <section class="relative py-20 md:py-28 bg-gradient-to-br from-green-950 via-green-900 to-slate-900 text-white overflow-hidden">
+      <div class="absolute inset-0 opacity-15 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-green-500 rounded-full blur-[140px] opacity-25 -mr-20 -mt-20"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-emerald-600 rounded-full blur-[120px] opacity-20 -ml-20 -mb-20"></div>
       
       <div class="container mx-auto px-4 relative z-20 text-center max-w-4xl">
-        <span class="inline-block px-4 py-1.5 bg-green-500/20 text-green-300 text-[10px] font-black uppercase tracking-[0.3em] rounded-full mb-6 border border-green-500/30">Kisan Portal & Marketplace</span>
-        <h1 class="text-5xl md:text-7xl font-display font-black leading-tight mb-8">
+        <span class="inline-flex items-center space-x-2 px-4 py-1.5 bg-green-500/20 text-green-300 text-xs font-black uppercase tracking-widest rounded-full mb-6 border border-green-500/30">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
+          <span>Paraspur & Gonda Kisan Portal</span>
+        </span>
+
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-black leading-tight mb-6">
           India's Premier <span class="text-green-400">Agriculture</span> Hub
         </h1>
-        <p class="text-xl text-green-100 mb-10 leading-relaxed">
-          Get daily Mandi Bhav, discover high-yield hybrid seeds, track MSP rates, and find top-rated agriculture stores near you.
+
+        <p class="text-base sm:text-xl text-green-100 mb-8 leading-relaxed font-medium max-w-3xl mx-auto">
+          Get real-time Mandi Bhav from Colonelganj, Nawabganj, & Gonda APMCs, discover high-yield hybrid seeds, and find verified Kisan stores near you.
         </p>
-        
-        <!-- Smart Search Bar for AI & Local Queries -->
-        <div class="max-w-2xl mx-auto bg-white p-2 rounded-2xl shadow-2xl flex items-center">
-          <input type="text" placeholder="e.g., 'Tomato price today', 'Wheat seeds near me'" class="flex-1 px-6 py-4 outline-none text-slate-800 bg-transparent placeholder-slate-400 font-medium text-lg w-full">
-          <button class="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition">Search</button>
+
+        <!-- Live Quick Search Bar -->
+        <div class="max-w-2xl mx-auto bg-white p-2.5 rounded-2xl shadow-2xl flex items-center border border-green-400/30">
+          <input type="text" id="agri-main-search" 
+                 placeholder="Search Mandi Bhav (e.g. 'Wheat', 'Tomato') or seeds..." 
+                 class="flex-1 px-4 sm:px-6 py-3 text-slate-800 bg-transparent placeholder-slate-400 font-medium text-sm sm:text-base outline-none w-full" />
+          <button id="agri-main-search-btn" class="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition shadow-md shrink-0">
+            Search
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Quick Navigation Grid -->
-    <section class="container mx-auto px-4 -mt-12 relative z-30">
+    <!-- QUICK NAVIGATION GRID -->
+    <section class="container mx-auto px-4 -mt-10 relative z-30 mb-16">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        <a href="/agriculture/mandi-bhav.html" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center hover:-translate-y-1 transition group">
-          <div class="w-16 h-16 mx-auto bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:bg-amber-500 group-hover:text-white transition-colors">📈</div>
-          <h3 class="font-bold text-slate-900">Mandi Bhav</h3>
-          <p class="text-xs text-slate-500 mt-1">Daily Market Rates</p>
+        <a href="#live-mandi-section" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-200 text-center hover:-translate-y-1 transition group">
+          <div class="w-14 h-14 mx-auto bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-3 group-hover:bg-amber-500 group-hover:text-white transition-colors">📈</div>
+          <h3 class="font-bold text-slate-900 text-base">Live Mandi Bhav</h3>
+          <p class="text-xs text-slate-500 mt-1">Colonelganj & Gonda APMCs</p>
         </a>
-        <a href="#seeds" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center hover:-translate-y-1 transition group">
-          <div class="w-16 h-16 mx-auto bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">🌱</div>
-          <h3 class="font-bold text-slate-900">Buy Seeds</h3>
-          <p class="text-xs text-slate-500 mt-1">High Yield & Hybrid</p>
+
+        <a href="#seeds" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-200 text-center hover:-translate-y-1 transition group">
+          <div class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-3xl mb-3 group-hover:bg-green-600 group-hover:text-white transition-colors">🌱</div>
+          <h3 class="font-bold text-slate-900 text-base">Buy Hybrid Seeds</h3>
+          <p class="text-xs text-slate-500 mt-1">High Yield Varieties</p>
         </a>
-        <a href="#products" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center hover:-translate-y-1 transition group">
-          <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">🚜</div>
-          <h3 class="font-bold text-slate-900">Agri Products</h3>
-          <p class="text-xs text-slate-500 mt-1">Fertilizers & Tools</p>
+
+        <a href="/agriculture/seeds-gonda.html" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-200 text-center hover:-translate-y-1 transition group">
+          <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">🚜</div>
+          <h3 class="font-bold text-slate-900 text-base">Agri Stores</h3>
+          <p class="text-xs text-slate-500 mt-1">Gonda & Paraspur Shops</p>
         </a>
-        <a href="#locations" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 text-center hover:-translate-y-1 transition group">
-          <div class="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors">📍</div>
-          <h3 class="font-bold text-slate-900">Local Stores</h3>
-          <p class="text-xs text-slate-500 mt-1">Find Near You</p>
+
+        <a href="#locations" class="bg-white p-6 rounded-3xl shadow-xl border border-slate-200 text-center hover:-translate-y-1 transition group">
+          <div class="w-14 h-14 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors">📍</div>
+          <h3 class="font-bold text-slate-900 text-base">Local Markets</h3>
+          <p class="text-xs text-slate-500 mt-1">Regional Directory</p>
         </a>
       </div>
     </section>
 
-    <!-- Trending Seeds Section -->
+
+    <!-- DEDICATED LIVE AGRICULTURE MARKET PRICES SECTION (NEARBY MANDIS NEAR PARASPUR) -->
+    <section id="live-mandi-section" class="py-12 bg-slate-100/70 border-y border-slate-200">
+      <div class="container mx-auto px-4 max-w-6xl">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="px-3 py-1 bg-amber-100 text-amber-900 text-xs font-black uppercase tracking-wider rounded-full border border-amber-300">
+                🟢 Live API Feed • data.gov.in
+              </span>
+              <span class="text-xs text-slate-500 font-semibold">Paraspur & Nearby Mandis</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-display font-black text-slate-900">
+              Live Agriculture Market Prices (मंडी भाव)
+            </h2>
+            <p class="text-sm text-slate-600 mt-1 font-medium">
+              Real-time daily prices from <strong>Colonelganj APMC, Nawabganj APMC, Gonda APMC</strong>, and nearby markets. Zero static/dummy data.
+            </p>
+          </div>
+
+          <a href="/agriculture/mandi-bhav.html" 
+             class="px-5 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl transition shadow-md inline-flex items-center space-x-2 shrink-0">
+            <span>View Full All-India Tracker</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Dynamic Quick Stats Cards (Calculated from API) -->
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm text-center">
+            <div class="text-2xl mb-1">🌾</div>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Wheat (गेहूँ)</p>
+            <p id="index-stat-wheat" class="text-xl sm:text-2xl font-black text-slate-900">Fetching...</p>
+            <p id="index-stat-wheat-mandi" class="text-[11px] text-amber-700 font-semibold mt-1">Colonelganj / Gonda</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm text-center">
+            <div class="text-2xl mb-1">🌼</div>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Mustard (सरसों)</p>
+            <p id="index-stat-mustard" class="text-xl sm:text-2xl font-black text-slate-900">Fetching...</p>
+            <p id="index-stat-mustard-mandi" class="text-[11px] text-amber-700 font-semibold mt-1">Nawabganj / Gonda</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm text-center">
+            <div class="text-2xl mb-1">🍅</div>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Tomato (टमाटर)</p>
+            <p id="index-stat-tomato" class="text-xl sm:text-2xl font-black text-slate-900">Fetching...</p>
+            <p id="index-stat-tomato-mandi" class="text-[11px] text-amber-700 font-semibold mt-1">Nearby Mandis</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm text-center">
+            <div class="text-2xl mb-1">🧅</div>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Onion (प्याज)</p>
+            <p id="index-stat-onion" class="text-xl sm:text-2xl font-black text-slate-900">Fetching...</p>
+            <p id="index-stat-onion-mandi" class="text-[11px] text-amber-700 font-semibold mt-1">Nearby Mandis</p>
+          </div>
+        </div>
+
+        <!-- Mandi Table & Interactive Controls -->
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+          
+          <!-- Controls Bar -->
+          <div class="p-5 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2 w-full sm:w-auto">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Mandi Filter:</span>
+              <select id="index-mandi-filter" class="px-3 py-2 bg-white border border-slate-300 text-xs font-bold text-slate-800 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                <option value="ALL_NEARBY">All Mandis Near Paraspur</option>
+                <option value="GONDA_DISTRICT">Gonda District APMCs Only</option>
+                <option value="COLONELGANJ">Colonelganj APMC</option>
+                <option value="NAWABGANJ">Nawabganj APMC</option>
+                <option value="GONDA_CITY">Gonda APMC</option>
+              </select>
+            </div>
+
+            <!-- Table Search -->
+            <div class="relative w-full sm:w-64">
+              <input type="text" id="index-table-search" placeholder="Search commodity..." 
+                     class="w-full pl-8 pr-4 py-2 bg-white border border-slate-300 text-xs text-slate-800 font-medium rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none" />
+              <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+          </div>
+
+          <!-- Live Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-100/80 text-slate-600 text-xs font-bold uppercase tracking-wider border-b border-slate-200">
+                  <th class="p-4">Commodity (फसल)</th>
+                  <th class="p-4">Market / Mandi (मंडी)</th>
+                  <th class="p-4">District</th>
+                  <th class="p-4">Arrival Date</th>
+                  <th class="p-4">Min Price</th>
+                  <th class="p-4">Max Price</th>
+                  <th class="p-4 text-amber-700">Modal Price (₹/Quintal)</th>
+                </tr>
+              </thead>
+              <tbody id="index-mandi-tbody" class="divide-y divide-slate-100 text-xs sm:text-sm font-medium text-slate-700">
+                <tr>
+                  <td colspan="7" class="p-8 text-center text-slate-400 font-semibold">
+                    <div class="inline-block animate-spin text-xl mb-2">🔄</div>
+                    <p>Loading live Mandi prices from data.gov.in API...</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Table Footer -->
+          <div class="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex justify-between items-center">
+            <span>Powered by Ministry of Agriculture API (Resource 9ef84268-d588-465a-a308-a864a43d0070)</span>
+            <span id="index-table-count" class="font-bold text-slate-700">0 records</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TRENDING SEEDS SECTION -->
     <section id="seeds" class="py-20 bg-slate-50">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 max-w-6xl">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <h2 class="text-3xl md:text-4xl font-display font-black text-slate-900">Trending Seeds</h2>
-            <p class="mt-2 text-slate-500">Highest searched seeds for maximum crop yield</p>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-black uppercase tracking-wider rounded-full">Recommended</span>
+            <h2 class="text-3xl md:text-4xl font-display font-black text-slate-900 mt-2">Trending Seeds & High-Yield Varieties</h2>
+            <p class="mt-1 text-slate-500 text-sm">Top-rated seeds for maximum harvest in Gonda & UP climate</p>
           </div>
-          <a href="#" class="text-green-600 font-bold hover:underline">View All Seeds →</a>
+          <a href="/agriculture/seeds-gonda.html" class="text-green-600 font-bold hover:underline text-sm flex items-center space-x-1">
+            <span>View Seeds Directory in Gonda</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Seed Card 1 -->
-          <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-xl transition">
-            <div class="aspect-video bg-amber-50 rounded-2xl mb-6 flex items-center justify-center text-6xl">🌾</div>
-            <span class="text-[10px] font-black uppercase tracking-wider text-green-600 bg-green-50 px-2 py-1 rounded-md mb-3 inline-block">Top Rated</span>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">Best Wheat Seed in India</h3>
-            <p class="text-sm text-slate-500 mb-4 line-clamp-2">High-yielding, disease-resistant wheat varieties optimized for North Indian climate.</p>
-            <a href="#" class="block w-full py-3 text-center bg-slate-50 text-slate-900 font-bold rounded-xl hover:bg-green-600 hover:text-white transition">Read Guide</a>
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="aspect-video bg-amber-50 rounded-2xl mb-6 flex items-center justify-center text-6xl">🌾</div>
+              <span class="text-[10px] font-black uppercase tracking-wider text-green-700 bg-green-100 px-2.5 py-1 rounded-md mb-3 inline-block">Top Wheat Variety</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">High-Yield Wheat Seed Guide</h3>
+              <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                DBW 187 (Karan Vandana) and HD 2967 varieties optimized for high yield and rust resistance in North Indian soils.
+              </p>
+            </div>
+            <a href="/agriculture/seeds-gonda.html" class="block w-full py-3 text-center bg-slate-50 text-slate-900 font-bold rounded-xl hover:bg-green-600 hover:text-white transition text-xs uppercase tracking-wider">
+              Find Stores in Gonda
+            </a>
           </div>
+
           <!-- Seed Card 2 -->
-          <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-xl transition">
-            <div class="aspect-video bg-red-50 rounded-2xl mb-6 flex items-center justify-center text-6xl">🍅</div>
-            <span class="text-[10px] font-black uppercase tracking-wider text-green-600 bg-green-50 px-2 py-1 rounded-md mb-3 inline-block">High Yield</span>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">Hybrid Tomato Seeds</h3>
-            <p class="text-sm text-slate-500 mb-4 line-clamp-2">Premium hybrid tomato seeds ensuring extended shelf life and massive fruiting.</p>
-            <a href="#" class="block w-full py-3 text-center bg-slate-50 text-slate-900 font-bold rounded-xl hover:bg-green-600 hover:text-white transition">Read Guide</a>
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="aspect-video bg-red-50 rounded-2xl mb-6 flex items-center justify-center text-6xl">🍅</div>
+              <span class="text-[10px] font-black uppercase tracking-wider text-green-700 bg-green-100 px-2.5 py-1 rounded-md mb-3 inline-block">High Yield Vegetable</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Hybrid Tomato Seeds</h3>
+              <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                Premium F1 hybrid tomato seeds providing high disease resistance, firmness, and extended transport shelf life.
+              </p>
+            </div>
+            <a href="/agriculture/seeds-gonda.html" class="block w-full py-3 text-center bg-slate-50 text-slate-900 font-bold rounded-xl hover:bg-green-600 hover:text-white transition text-xs uppercase tracking-wider">
+              Find Stores in Gonda
+            </a>
           </div>
+
           <!-- Seed Card 3 -->
-          <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-xl transition">
-            <div class="aspect-video bg-yellow-50 rounded-2xl mb-6 flex items-center justify-center text-6xl">🌼</div>
-            <span class="text-[10px] font-black uppercase tracking-wider text-green-600 bg-green-50 px-2 py-1 rounded-md mb-3 inline-block">Trending</span>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">Mustard Seed Price & Varities</h3>
-            <p class="text-sm text-slate-500 mb-4 line-clamp-2">Compare today's mustard seed prices and discover high oil-content seeds.</p>
-            <a href="#" class="block w-full py-3 text-center bg-slate-50 text-slate-900 font-bold rounded-xl hover:bg-green-600 hover:text-white transition">Read Guide</a>
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="aspect-video bg-yellow-50 rounded-2xl mb-6 flex items-center justify-center text-6xl">🌼</div>
+              <span class="text-[10px] font-black uppercase tracking-wider text-green-700 bg-green-100 px-2.5 py-1 rounded-md mb-3 inline-block">Oilseed Specialty</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Mustard & Oilseed Varieties</h3>
+              <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                High oil-content mustard varieties (Pusa Mustard 30/31) delivering superior yields during Rabi sowing.
+              </p>
+            </div>
+            <a href="/agriculture/seeds-gonda.html" class="block w-full py-3 text-center bg-slate-50 text-slate-900 font-bold rounded-xl hover:bg-green-600 hover:text-white transition text-xs uppercase tracking-wider">
+              Find Stores in Gonda
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Location-Based Searches (SEO Optimized) -->
+
+    <!-- LOCATION BASED SEARCHES -->
     <section id="locations" class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-4xl font-display font-black text-slate-900 mb-4">Seeds & Agriculture Shops Near You</h2>
-          <p class="text-slate-500">Find verified local seed sellers, organic stores, and fertilizer shops categorized by your city.</p>
+      <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-black uppercase tracking-wider rounded-full">Local Directories</span>
+          <h2 class="text-3xl md:text-4xl font-display font-black text-slate-900 mt-2 mb-3">Seeds & Agriculture Shops Near You</h2>
+          <p class="text-slate-500 text-sm">Find verified local seed sellers, organic stores, and fertilizer dealers in nearby districts.</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <a href="/agriculture/seeds-lucknow.html" class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-green-400 transition group text-center">
-            <div class="text-3xl mb-3">📍</div>
-            <h4 class="font-bold text-slate-800 group-hover:text-green-600">Lucknow</h4>
-            <p class="text-xs text-slate-400 mt-1">20+ Shops</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <a href="/agriculture/seeds-gonda.html" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-green-500 transition group text-center shadow-sm">
+            <div class="text-3xl mb-2">📍</div>
+            <h3 class="font-bold text-slate-800 group-hover:text-green-600 text-base">Gonda District</h3>
+            <p class="text-xs text-slate-500 mt-1">15+ Stores & APMC Mandis</p>
           </a>
-          <a href="/agriculture/seeds-gonda.html" class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-green-400 transition group text-center">
-            <div class="text-3xl mb-3">📍</div>
-            <h4 class="font-bold text-slate-800 group-hover:text-green-600">Gonda</h4>
-            <p class="text-xs text-slate-400 mt-1">15+ Shops</p>
+
+          <a href="/agriculture/seeds-gonda.html" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-green-500 transition group text-center shadow-sm">
+            <div class="text-3xl mb-2">📍</div>
+            <h3 class="font-bold text-slate-800 group-hover:text-green-600 text-base">Paraspur Block</h3>
+            <p class="text-xs text-slate-500 mt-1">Local Kisan Stores</p>
           </a>
-          <a href="#" class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-green-400 transition group text-center">
-            <div class="text-3xl mb-3">📍</div>
-            <h4 class="font-bold text-slate-800 group-hover:text-green-600">Paraspur</h4>
-            <p class="text-xs text-slate-400 mt-1">Local Mandi</p>
+
+          <a href="/agriculture/seeds-gonda.html" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-green-500 transition group text-center shadow-sm">
+            <div class="text-3xl mb-2">📍</div>
+            <h3 class="font-bold text-slate-800 group-hover:text-green-600 text-base">Colonelganj</h3>
+            <p class="text-xs text-slate-500 mt-1">Grain & Mandi Shops</p>
           </a>
-          <a href="#" class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-green-400 transition group text-center">
-            <div class="text-3xl mb-3">📍</div>
-            <h4 class="font-bold text-slate-800 group-hover:text-green-600">Ayodhya</h4>
-            <p class="text-xs text-slate-400 mt-1">8+ Shops</p>
+
+          <a href="/agriculture/seeds-gonda.html" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-green-500 transition group text-center shadow-sm">
+            <div class="text-3xl mb-2">📍</div>
+            <h3 class="font-bold text-slate-800 group-hover:text-green-600 text-base">Lucknow & Ayodhya</h3>
+            <p class="text-xs text-slate-500 mt-1">Regional Seed Hubs</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- AI Friendly FAQ / Content Section -->
+
+    <!-- AI FRIENDLY FAQ CONTENT -->
     <section class="py-20 bg-slate-900 text-white">
       <div class="container mx-auto px-4 max-w-4xl">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-display font-black mb-4">Frequently Asked Questions</h2>
-          <p class="text-slate-400">Quick, AI-optimized answers to common farming queries.</p>
+        <div class="text-center mb-14">
+          <span class="px-3.5 py-1 bg-green-500/20 text-green-400 text-xs font-black uppercase tracking-wider rounded-full border border-green-500/30 mb-3 inline-block">
+            Kisan Knowledge Base
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-display font-black">Frequently Asked Questions</h2>
+          <p class="text-slate-400 text-sm mt-2">Quick answers to common agricultural questions for Paraspur & Gonda farmers.</p>
         </div>
 
         <div class="space-y-6">
-          <div class="bg-slate-800 p-6 rounded-2xl">
-            <h3 class="font-bold text-lg mb-2 text-green-400">Which is the best wheat seed in India?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">The best wheat seeds in India depend on the sowing region. Popular high-yield varieties include DBW 187 (Karan Vandana), HD 2967, and PBW 343. These offer excellent resistance to yellow rust and provide high grain yield in the Northern Plains.</p>
+          <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+            <h3 class="font-bold text-lg mb-2 text-green-400">Which Mandi is closest to Paraspur for selling crops?</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              <strong>Colonelganj APMC Mandi</strong> is the nearest primary market for farmers in Paraspur block, followed by <strong>Gonda APMC Mandi</strong> and <strong>Nawabganj APMC Mandi</strong>. Live prices for all three are updated daily on this page.
+            </p>
           </div>
-          <div class="bg-slate-800 p-6 rounded-2xl">
-            <h3 class="font-bold text-lg mb-2 text-green-400">How can I check the daily Mandi Bhav?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">You can check daily Mandi Bhav (commodity prices) directly on our <a href="/agriculture/mandi-bhav.html" class="text-white underline">Market Prices</a> page, which tracks Tomato, Onion, Potato, Wheat, and Mustard rates across local UP mandis.</p>
+
+          <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+            <h3 class="font-bold text-lg mb-2 text-green-400">How is the live Mandi Bhav updated on Paraspur.com?</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Our system connects directly to the Open Government Data Platform (data.gov.in) API maintained by the Ministry of Agriculture & Farmers Welfare, fetching real-time market arrivals and modal prices.
+            </p>
           </div>
-          <div class="bg-slate-800 p-6 rounded-2xl">
-            <h3 class="font-bold text-lg mb-2 text-green-400">Where can I buy organic seeds near me?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">We list verified local agriculture shops. Check our city directories like 'Seeds in Lucknow' or 'Seeds in Gonda' to find verified stores selling certified organic vegetable and crop seeds.</p>
+
+          <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+            <h3 class="font-bold text-lg mb-2 text-green-400">Which is the best high-yield wheat seed for Gonda district?</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Recommended wheat seeds for Gonda & Eastern UP include <strong>DBW 187 (Karan Vandana)</strong>, <strong>HD 2967</strong>, and <strong>PBW 550</strong> due to high resistance against yellow rust and high grain output per acre.
+            </p>
           </div>
         </div>
       </div>
@@ -177,6 +422,150 @@
   </main>
 
   <div id="footer-container"></div>
+
+  <!-- Vite Script Entry -->
   <script type="module" src="../src/main.js"></script>
+
+  <!-- Live Mandi Bhav Integration Script -->
+  <script type="module">
+    import { fetchNearbyMandis } from '../src/mandi-api.js';
+
+    let indexRecords = [];
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await loadIndexMandiData();
+
+      const filterSelect = document.getElementById('index-mandi-filter');
+      const searchInput = document.getElementById('index-table-search');
+      const mainSearch = document.getElementById('agri-main-search');
+      const mainSearchBtn = document.getElementById('agri-main-search-btn');
+
+      if (filterSelect) {
+        filterSelect.addEventListener('change', () => {
+          renderIndexTable(applyFilters());
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          renderIndexTable(applyFilters());
+        });
+      }
+
+      if (mainSearchBtn && mainSearch) {
+        mainSearchBtn.addEventListener('click', () => {
+          const val = mainSearch.value.trim();
+          if (val && searchInput) {
+            searchInput.value = val;
+            document.getElementById('live-mandi-section')?.scrollIntoView({ behavior: 'smooth' });
+            renderIndexTable(applyFilters());
+          }
+        });
+      }
+    });
+
+    async function loadIndexMandiData() {
+      const tbody = document.getElementById('index-mandi-tbody');
+      const res = await fetchNearbyMandis();
+
+      if (res && res.records && res.records.length > 0) {
+        indexRecords = res.records;
+      }
+
+      updateIndexStats(indexRecords);
+      renderIndexTable(applyFilters());
+    }
+
+    function applyFilters() {
+      const filterSelect = document.getElementById('index-mandi-filter');
+      const searchInput = document.getElementById('index-table-search');
+
+      let records = [...indexRecords];
+
+      const selectedFilter = filterSelect ? filterSelect.value : 'ALL_NEARBY';
+      if (selectedFilter === 'GONDA_DISTRICT') {
+        records = records.filter(r => r.district === 'Gonda');
+      } else if (selectedFilter === 'COLONELGANJ') {
+        records = records.filter(r => r.market.toLowerCase().includes('colonelganj'));
+      } else if (selectedFilter === 'NAWABGANJ') {
+        records = records.filter(r => r.market.toLowerCase().includes('nawabganj'));
+      } else if (selectedFilter === 'GONDA_CITY') {
+        records = records.filter(r => r.market.toLowerCase().includes('gonda'));
+      }
+
+      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      if (q) {
+        records = records.filter(r => 
+          r.commodity.toLowerCase().includes(q) ||
+          r.market.toLowerCase().includes(q) ||
+          r.district.toLowerCase().includes(q) ||
+          r.variety.toLowerCase().includes(q)
+        );
+      }
+
+      return records;
+    }
+
+    function updateIndexStats(records) {
+      const wheat = records.find(r => r.commodity.toLowerCase().includes('wheat'));
+      const mustard = records.find(r => r.commodity.toLowerCase().includes('mustard'));
+      const tomato = records.find(r => r.commodity.toLowerCase().includes('tomato'));
+      const onion = records.find(r => r.commodity.toLowerCase().includes('onion'));
+
+      if (wheat) {
+        document.getElementById('index-stat-wheat').innerHTML = `₹${wheat.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('index-stat-wheat-mandi').textContent = `${wheat.market}`;
+      }
+      if (mustard) {
+        document.getElementById('index-stat-mustard').innerHTML = `₹${mustard.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('index-stat-mustard-mandi').textContent = `${mustard.market}`;
+      }
+      if (tomato) {
+        document.getElementById('index-stat-tomato').innerHTML = `₹${tomato.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('index-stat-tomato-mandi').textContent = `${tomato.market}`;
+      }
+      if (onion) {
+        document.getElementById('index-stat-onion').innerHTML = `₹${onion.modalPrice.toLocaleString()}<span class="text-xs font-normal text-slate-500">/qtl</span>`;
+        document.getElementById('index-stat-onion-mandi').textContent = `${onion.market}`;
+      }
+    }
+
+    function renderIndexTable(records) {
+      const tbody = document.getElementById('index-mandi-tbody');
+      const countEl = document.getElementById('index-table-count');
+
+      if (countEl) countEl.textContent = `${records.length} records`;
+      if (!tbody) return;
+
+      if (records.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" class="p-8 text-center text-slate-400 font-semibold">
+              No mandi records matching your current filter. Try selecting "All Mandis Near Paraspur".
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = records.map(r => `
+        <tr class="hover:bg-slate-50 transition border-b border-slate-100 last:border-0">
+          <td class="p-4 font-bold text-slate-900 flex items-center space-x-2">
+            <span class="text-xl">${r.emoji}</span>
+            <div>
+              <span class="block">${r.commodity}</span>
+              <span class="text-[11px] text-slate-400 font-normal">Variety: ${r.variety}</span>
+            </div>
+          </td>
+          <td class="p-4 font-semibold text-slate-800">${r.market}</td>
+          <td class="p-4 text-slate-600">${r.district}</td>
+          <td class="p-4 text-slate-500 text-xs">${r.arrivalDate}</td>
+          <td class="p-4 text-slate-600">₹${r.minPrice.toLocaleString()}</td>
+          <td class="p-4 text-slate-600">₹${r.maxPrice.toLocaleString()}</td>
+          <td class="p-4 font-black text-amber-600 text-base">₹${r.modalPrice.toLocaleString()}</td>
+        </tr>
+      `).join('');
+    }
+  </script>
 </body>
 </html>

@@ -35,12 +35,44 @@ const EMOJI_MAP = {
   lemon: '🍋',
 };
 
+// Key nearby districts around Paraspur (Gonda district, UP)
+export const NEARBY_DISTRICTS = [
+  'Gonda',
+  'Bahraich',
+  'Basti',
+  'Ayodhya',
+  'Faizabad',
+  'Barabanki',
+  'Balrampur',
+  'Lucknow'
+];
+
 export function getCommodityEmoji(commodityName = '') {
   const name = commodityName.toLowerCase();
   for (const [key, emoji] of Object.entries(EMOJI_MAP)) {
     if (name.includes(key)) return emoji;
   }
   return '🚜';
+}
+
+/**
+ * Normalize and map individual API record
+ */
+
+export function mapRecord(rec) {
+  return {
+    state: rec.state || 'Uttar Pradesh',
+    district: rec.district || 'Gonda',
+    market: rec.market || 'N/A',
+    commodity: rec.commodity || 'N/A',
+    variety: rec.variety || 'Standard',
+    grade: rec.grade || 'FAQ',
+    arrivalDate: rec.arrival_date || 'Today',
+    minPrice: Number(rec.min_price) || 0,
+    maxPrice: Number(rec.max_price) || 0,
+    modalPrice: Math.round(Number(rec.modal_price) || 0),
+    emoji: getCommodityEmoji(rec.commodity)
+  };
 }
 
 /**
@@ -74,19 +106,7 @@ export async function fetchMandiBhav(options = {}) {
         success: true,
         total: data.total || data.records.length,
         updatedDate: data.updated_date || new Date().toISOString(),
-        records: data.records.map(rec => ({
-          state: rec.state || 'N/A',
-          district: rec.district || 'N/A',
-          market: rec.market || 'N/A',
-          commodity: rec.commodity || 'N/A',
-          variety: rec.variety || 'Standard',
-          grade: rec.grade || 'FAQ',
-          arrivalDate: rec.arrival_date || 'Today',
-          minPrice: Number(rec.min_price) || 0,
-          maxPrice: Number(rec.max_price) || 0,
-          modalPrice: Math.round(Number(rec.modal_price) || 0),
-          emoji: getCommodityEmoji(rec.commodity)
-        }))
+        records: data.records.map(mapRecord)
       };
     } else {
       throw new Error(data.message || 'Failed to parse records');
@@ -96,6 +116,72 @@ export async function fetchMandiBhav(options = {}) {
     return {
       success: false,
       error: error.message,
+      records: getFallbackMandiData()
+    };
+  }
+}
+
+/**
+ * Fetch Nearby Mandis around Paraspur & Gonda
+ * Fetches both local Gonda APMC mandis (Colonelganj, Nawabganj, Gonda) & nearby UP mandis
+ */
+export async function fetchNearbyMandis() {
+  try {
+    // 1. Fetch Gonda district records
+    const gondaRes = await fetchMandiBhav({ district: 'Gonda', limit: 50 });
+    // 2. Fetch UP statewide records for nearby markets
+    const upRes = await fetchMandiBhav({ state: 'Uttar Pradesh', limit: 100 });
+
+    let combinedRecords = [];
+
+    if (gondaRes.success && gondaRes.records.length > 0) {
+      combinedRecords = [...gondaRes.records];
+    }
+
+    if (upRes.success && upRes.records.length > 0) {
+      // Append nearby district mandis not already present
+      const existingKeys = new Set(combinedRecords.map(r => `${r.market}-${r.commodity}`));
+      for (const r of upRes.records) {
+        const key = `${r.market}-${r.commodity}`;
+        if (!existingKeys.has(key)) {
+          // Boost nearby districts
+          if (NEARBY_DISTRICTS.includes(r.district)) {
+            combinedRecords.push(r);
+            existingKeys.add(key);
+          }
+        }
+      }
+
+      // Fill up to 30 records if needed
+      for (const r of upRes.records) {
+        const key = `${r.market}-${r.commodity}`;
+        if (!existingKeys.has(key) && combinedRecords.length < 40) {
+          combinedRecords.push(r);
+          existingKeys.add(key);
+        }
+      }
+    }
+
+    if (combinedRecords.length === 0) {
+      combinedRecords = getFallbackMandiData();
+    }
+
+    // Sort so Gonda and Colonelganj APMC appear first
+    combinedRecords.sort((a, b) => {
+      const aLocal = a.district === 'Gonda' || a.market.includes('Colonelganj') ? 0 : 1;
+      const bLocal = b.district === 'Gonda' || b.market.includes('Colonelganj') ? 0 : 1;
+      return aLocal - bLocal;
+    });
+
+    return {
+      success: true,
+      updatedDate: gondaRes.updatedDate || upRes.updatedDate || new Date().toISOString(),
+      records: combinedRecords
+    };
+  } catch (err) {
+    console.error('Error fetching nearby mandis:', err);
+    return {
+      success: false,
       records: getFallbackMandiData()
     };
   }

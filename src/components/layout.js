@@ -92,7 +92,7 @@ export const Header = `
   </div>
   
   <!-- Mobile Menu Drawer -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 fixed inset-x-0 top-20 bottom-14 z-50 overflow-y-auto shadow-2xl animate-in slide-in-from-top duration-300">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 fixed inset-x-0 top-20 bottom-16 z-[9998] overflow-y-auto shadow-2xl animate-in slide-in-from-top duration-300">
     <div class="p-5 space-y-6">
       
       <!-- Drawer Header Bar -->
@@ -160,7 +160,7 @@ export const Header = `
 `;
 
 export const MobileBottomNav = `
-<nav id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl md:hidden px-2 py-1 flex items-center justify-around">
+<nav id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 z-[9999] bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl md:hidden px-2 py-1 flex items-center justify-around pointer-events-auto touch-manipulation">
   <a href="/" data-bottom-nav="home" class="flex flex-col items-center justify-center w-full py-1 text-slate-500 hover:text-primary-600 transition group">
     <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
     <span class="text-[10px] font-bold tracking-tight">Home</span>

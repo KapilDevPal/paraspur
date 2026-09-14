@@ -41,9 +41,12 @@
         </div>
       </header>
 
+      <!-- Reader Controls & Theme Toolbar -->
+      <div id="reader-bar-container"></div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <!-- Main Content -->
-        <div class="lg:col-span-8 space-y-12">
+        <div id="main-reading-col" class="lg:col-span-8 space-y-12 transition-all duration-300">
 
           <!-- Significance & Navadurga -->
           <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
@@ -152,7 +155,7 @@
                 </p>
               </div>
 
-              <div class="p-5 bg-rose-50/60 rounded-2xl border border-rose-200 space-y-2">
+              <div class="chalisa-text bg-rose-50/60 rounded-2xl border border-rose-200 space-y-2 transition-all duration-300">
                 <span class="text-xs font-bold text-rose-800 uppercase">Verses 35 – 40 (Protective Benediction)</span>
                 <p class="text-base font-bold text-slate-900 font-serif">
                   शरण पड़े की लाज बचाओ। अरि दल दल बल तुरंत नशाओ॥३५॥<br>
@@ -168,13 +171,13 @@
           </section>
 
           <!-- FAQs Section -->
-          <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-4">Frequently Asked Questions (FAQs)</h2>
+          <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-4">Frequently Asked Questions</h2>
 
             <div class="space-y-4">
               <div>
-                <h3 class="font-bold text-slate-900 text-base mb-1">Q1. Which days are most auspicious for Durga Chalisa recitation?</h3>
-                <p class="text-slate-600 text-sm">While daily recitation is highly beneficial, Fridays, Tuesdays, and all days during Chaitra & Sharad Navratri hold special significance.</p>
+                <h3 class="font-bold text-slate-900 text-base mb-1">Q1. When is the best time to recite Durga Chalisa?</h3>
+                <p class="text-slate-600 text-sm">During early morning Brahma Muhurta or sunset Sandhya time. Reciting 108 or 11 times during Navratri is considered highly beneficial.</p>
               </div>
 
               <div>
@@ -206,7 +209,7 @@
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-4 space-y-6">
+        <div id="sidebar-col" class="lg:col-span-4 space-y-6 transition-all duration-300">
           <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
             <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">Quick Links</h3>
             <ul class="space-y-3 text-xs font-bold text-slate-600">

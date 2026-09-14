@@ -42,9 +42,12 @@
         </div>
       </header>
 
+      <!-- Reader Controls & Theme Toolbar -->
+      <div id="reader-bar-container"></div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <!-- Main Content -->
-        <div class="lg:col-span-8 space-y-12">
+        <div id="main-reading-col" class="lg:col-span-8 space-y-12 transition-all duration-300">
 
           <!-- Step-by-Step Aarti Vidhi Section -->
           <section id="aarti-vidhi" class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
@@ -191,13 +194,13 @@
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-4 space-y-6">
+        <div id="sidebar-col" class="lg:col-span-4 space-y-6 transition-all duration-300">
           <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
             <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">Jump to Aarti</h3>
             <ul class="space-y-3 text-xs font-bold text-slate-600">
               <li><a href="#hanuman-aarti" class="hover:text-amber-600 flex items-center justify-between"><span>Hanuman Ji Aarti</span> <span>→</span></a></li>
               <li><a href="#durga-aarti" class="hover:text-rose-600 flex items-center justify-between"><span>Durga Ji Aarti</span> <span>→</span></a></li>
-              <li><a href="#ganesh-aarti" class="hover:text-amber-600 flex items-center justify-between"><span>Ganesh Ji Aarti</span> <span>→</span></a></li>
+              <li><a href="/devotional/ganesh-aarti.html" class="hover:text-amber-600 flex items-center justify-between"><span>Ganesh Ji Aartis (Full 5)</span> <span>→</span></a></li>
               <li><a href="#aarti-vidhi" class="hover:text-amber-600 flex items-center justify-between"><span>Aarti Rotation Vidhi</span> <span>→</span></a></li>
               <li><a href="/devotional/hanuman-jayanti.html" class="hover:text-amber-600 flex items-center justify-between"><span>Hanuman Jayanti Guide</span> <span>→</span></a></li>
             </ul>
@@ -209,6 +212,13 @@
   </main>
 
   <div id="footer-container"></div>
+  
+  <script type="module">
+    import { initDevotionalReader } from '../src/components/reader.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      initDevotionalReader();
+    });
+  </script>
   <script type="module" src="../src/main.js"></script>
 </body>
 </html>

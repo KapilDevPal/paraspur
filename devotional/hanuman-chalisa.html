@@ -41,9 +41,12 @@
         </div>
       </header>
 
+      <!-- Reader Controls & Theme Toolbar -->
+      <div id="reader-bar-container"></div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <!-- Main Content -->
-        <div class="lg:col-span-8 space-y-12">
+        <div id="main-reading-col" class="lg:col-span-8 space-y-12 transition-all duration-300">
           
           <!-- Introduction & Spiritual Significance -->
           <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
@@ -105,7 +108,7 @@
             </div>
 
             <!-- Opening Dohas -->
-            <div class="bg-amber-50/70 p-6 rounded-2xl border border-amber-200 space-y-4">
+            <div class="chalisa-text bg-amber-50/70 p-6 rounded-2xl border border-amber-200 space-y-4 transition-all duration-300">
               <span class="text-xs font-black uppercase tracking-widest text-amber-800">Opening Dohas (प्रारंभिक दोहा)</span>
               
               <div class="space-y-2">
@@ -268,7 +271,7 @@
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-4 space-y-6">
+        <div id="sidebar-col" class="lg:col-span-4 space-y-6 transition-all duration-300">
           <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
             <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">Quick Navigation</h3>
             <ul class="space-y-3 text-xs font-bold text-slate-600">
@@ -304,6 +307,13 @@
   </main>
 
   <div id="footer-container"></div>
+
+  <script type="module">
+    import { initDevotionalReader } from '../src/components/reader.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      initDevotionalReader();
+    });
+  </script>
   <script type="module" src="../src/main.js"></script>
 </body>
 </html>

@@ -76,22 +76,12 @@
         </div>
       </header>
 
-      <!-- Reader Controls Banner -->
-      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm mb-10 flex flex-wrap items-center justify-between gap-4">
-        <div class="flex items-center space-x-3">
-          <span class="text-xs font-bold uppercase text-slate-500 tracking-wider">Text Size:</span>
-          <button id="btn-font-dec" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-lg transition" title="Decrease font size">A-</button>
-          <button id="btn-font-reset" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-lg transition" title="Reset font size">Reset</button>
-          <button id="btn-font-inc" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-lg transition" title="Increase font size">A+</button>
-        </div>
-        <div class="flex items-center space-x-2 text-xs font-semibold text-slate-500">
-          <span>🚩 Ideal for daily morning/evening Aarti & Ganesh Chaturthi Puja</span>
-        </div>
-      </div>
+      <!-- Reader Controls & Theme Toolbar -->
+      <div id="reader-bar-container"></div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <!-- Main Aarti Texts Column -->
-        <div class="lg:col-span-8 space-y-12">
+        <div id="main-reading-col" class="lg:col-span-8 space-y-12 transition-all duration-300">
 
           <!-- 1. Jai Ganesh Jai Ganesh Deva -->
           <section id="jai-ganesh-jai-ganesh-deva" class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 scroll-mt-24">
@@ -437,7 +427,7 @@
         </div>
 
         <!-- Sidebar Navigation & Related Links -->
-        <div class="lg:col-span-4 space-y-6">
+        <div id="sidebar-col" class="lg:col-span-4 space-y-6 transition-all duration-300">
           
           <!-- Jump to Aarti Box -->
           <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 sticky top-24">
@@ -532,32 +522,14 @@
         console.error('Copy failed', err);
       });
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const lyricsBoxes = document.querySelectorAll('.aarti-text');
-      let currentSize = 1.125; // rem (text-lg)
-
-      document.getElementById('btn-font-inc')?.addEventListener('click', () => {
-        if (currentSize < 1.75) {
-          currentSize += 0.125;
-          lyricsBoxes.forEach(box => box.style.fontSize = currentSize + 'rem');
-        }
-      });
-
-      document.getElementById('btn-font-dec')?.addEventListener('click', () => {
-        if (currentSize > 0.875) {
-          currentSize -= 0.125;
-          lyricsBoxes.forEach(box => box.style.fontSize = currentSize + 'rem');
-        }
-      });
-
-      document.getElementById('btn-font-reset')?.addEventListener('click', () => {
-        currentSize = 1.125;
-        lyricsBoxes.forEach(box => box.style.fontSize = '');
-      });
-    });
   </script>
 
+  <script type="module">
+    import { initDevotionalReader } from '../src/components/reader.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      initDevotionalReader();
+    });
+  </script>
   <script type="module" src="../src/main.js"></script>
 </body>
 </html>

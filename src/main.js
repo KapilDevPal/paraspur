@@ -28,10 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerContainer) headerContainer.innerHTML = processLinks(Header + AdBanner);
   if (footerContainer) footerContainer.innerHTML = processLinks(Footer);
 
-  // Inject Mobile Bottom Navigation Bar
-  const bottomNavElement = document.createElement('div');
-  bottomNavElement.innerHTML = processLinks(MobileBottomNav);
-  document.body.appendChild(bottomNavElement.firstElementChild);
+  // Inject Mobile Bottom Navigation Bar directly into document.body
+  document.body.insertAdjacentHTML('beforeend', processLinks(MobileBottomNav));
 
   // Global Link Fixer for all other links in the document
   if (isGitHubPages) {
@@ -51,13 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile menu drawer toggle & controls
+  // Mobile menu drawer toggle & touch controls
   const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
   const bottomNavMenuBtn = document.querySelector('#bottom-nav-menu-btn');
   const mobileMenuCloseBtn = document.querySelector('#mobile-menu-close-btn');
   const mobileMenu = document.querySelector('#mobile-menu');
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     if (mobileMenu) {
       mobileMenu.classList.toggle('hidden');
       if (!mobileMenu.classList.contains('hidden')) {
@@ -66,11 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-  if (bottomNavMenuBtn) bottomNavMenuBtn.addEventListener('click', toggleMobileMenu);
+  const bindToggle = (btn) => {
+    if (!btn) return;
+    btn.addEventListener('click', toggleMobileMenu);
+    btn.addEventListener('touchend', toggleMobileMenu);
+  };
+
+  bindToggle(mobileMenuBtn);
+  bindToggle(bottomNavMenuBtn);
+
   if (mobileMenuCloseBtn) {
-    mobileMenuCloseBtn.addEventListener('click', () => {
+    const closeMenu = (e) => {
+      if (e) e.preventDefault();
       if (mobileMenu) mobileMenu.classList.add('hidden');
+    };
+    mobileMenuCloseBtn.addEventListener('click', closeMenu);
+    mobileMenuCloseBtn.addEventListener('touchend', closeMenu);
+  }
+
+  // Close mobile drawer when any link inside it is clicked/tapped
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
   }
 

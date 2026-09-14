@@ -24,7 +24,8 @@ export const Header = `
             <a href="/devotional/durga-chalisa.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Durga Chalisa</a>
             <a href="/devotional/ganesh-aarti.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Ganesh Aarti</a>
             <a href="/devotional/aarti-collection.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Aarti Collection</a>
-            <a href="/directory/banks.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Banks</a>
+            <a href="/directory/jobs.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Jobs & Careers</a>
+            <a href="/directory/government-jobs.html" class="block px-4 py-2.5 text-[13px] font-bold text-red-600 hover:bg-primary-50 rounded-xl transition font-black">Govt Jobs & Sarkari Result</a>
             <a href="/directory/businesses.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Businesses & Shops</a>
             <a href="/gonda/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-primary-600 hover:bg-primary-50 rounded-xl transition">Gonda District Guide</a>
             <a href="/lucknow/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-amber-600 hover:bg-primary-50 rounded-xl transition">Lucknow Capital Guide</a>
@@ -222,6 +223,7 @@ export const Footer = `
       <div>
         <h4 class="text-white font-bold mb-6">Directory</h4>
         <ul class="space-y-4 text-sm">
+          <li><a href="/directory/government-jobs.html" class="hover:text-amber-400 transition font-bold text-amber-400">Govt Jobs & Sarkari Result</a></li>
           <li><a href="/directory/schools.html" class="hover:text-primary-400 transition">Schools in Paraspur</a></li>
           <li><a href="/directory/hospitals.html" class="hover:text-primary-400 transition">Hospitals in Paraspur</a></li>
           <li><a href="/directory/colleges.html" class="hover:text-primary-400 transition">Colleges in Paraspur</a></li>

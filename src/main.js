@@ -130,6 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchNews(newsContainer);
   }
 
+  // Live Govt Job & Exam Google News fetch logic
+  const govtJobNewsContainer = document.querySelector('#live-govt-news-container');
+  if (govtJobNewsContainer) {
+    fetchGovtJobNews(govtJobNewsContainer);
+  }
+
   // Mobile search toggle
   const mobileSearchBtn = document.querySelector('#mobile-search-btn');
   const mobileSearchBar = document.querySelector('#mobile-search-bar');
@@ -331,6 +337,45 @@ async function fetchNews(container) {
   } catch (error) {
     console.error('Error fetching news:', error);
     container.innerHTML = '<p class="text-slate-400 text-sm">Latest news updates will appear here soon.</p>';
+  }
+}
+
+async function fetchGovtJobNews(container) {
+  try {
+    const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=Sarkari+Result+UP+Police+UPSSSC+UPPSC+when:3d&hl=hi&gl=IN&ceid=IN:hi');
+    const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`);
+    const data = await response.json();
+    
+    if (data.status === 'ok' && data.items && data.items.length > 0) {
+      container.innerHTML = data.items.slice(0, 8).map(item => `
+        <div class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-red-400 hover:shadow-md transition flex flex-col md:flex-row items-start md:items-center justify-between gap-4 group">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="px-2.5 py-0.5 bg-red-100 text-red-700 text-[10px] font-black uppercase tracking-wider rounded-full">Google News Live</span>
+              <span class="text-[10px] font-bold text-slate-400">${new Date(item.pubDate).toLocaleString('hi-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</span>
+            </div>
+            <h4 class="font-bold text-slate-900 group-hover:text-red-600 transition text-base leading-snug">
+              <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a>
+            </h4>
+            <p class="text-xs text-slate-500 mt-1.5 line-clamp-2">${item.description.replace(/<[^>]*>?/gm, '')}</p>
+          </div>
+          <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="shrink-0 px-4 py-2 bg-red-50 text-red-700 hover:bg-red-600 hover:text-white font-bold text-xs rounded-xl transition">
+            Read News →
+          </a>
+        </div>
+      `).join('');
+    } else {
+      container.innerHTML = `
+        <div class="p-4 bg-white rounded-xl text-slate-500 text-xs font-semibold">
+          Live exam news sync completed. Stay tuned for instant UP Police & UPSSSC notifications.
+        </div>`;
+    }
+  } catch (error) {
+    console.error('Error fetching live govt job news:', error);
+    container.innerHTML = `
+      <div class="p-4 bg-white rounded-xl text-slate-500 text-xs font-semibold">
+        Live news updates will sync automatically upon connection.
+      </div>`;
   }
 }
 

@@ -22,6 +22,7 @@ export const Header = `
             <a href="/agarbatti-dhoop/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-orange-600 hover:bg-primary-50 rounded-xl transition">Agarbatti & Dhoop Hub</a>
             <a href="/devotional/hanuman-chalisa.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Hanuman Chalisa</a>
             <a href="/devotional/durga-chalisa.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Durga Chalisa</a>
+            <a href="/devotional/ganesh-aarti.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Ganesh Aarti</a>
             <a href="/devotional/aarti-collection.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Aarti Collection</a>
             <a href="/directory/banks.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Banks</a>
             <a href="/directory/businesses.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Businesses & Shops</a>
@@ -153,6 +154,7 @@ export const Footer = `
           <li><a href="/directory/hospitals.html" class="hover:text-primary-400 transition">Hospitals in Paraspur</a></li>
           <li><a href="/directory/colleges.html" class="hover:text-primary-400 transition">Colleges in Paraspur</a></li>
           <li><a href="/directory/temples.html" class="hover:text-primary-400 transition">Temples & Tourism</a></li>
+          <li><a href="/devotional/ganesh-aarti.html" class="hover:text-orange-400 transition font-bold text-orange-400">Ganesh Aarti Sangrah</a></li>
           <li><a href="/directory/best-beauty-parlour-in-paraspur.html" class="hover:text-primary-400 transition">Beauty Parlours</a></li>
           <li><a href="/directory/best-ladies-boutique-in-paraspur.html" class="hover:text-primary-400 transition">Ladies Boutique</a></li>
           <li><a href="/paraspur-market.html" class="hover:text-primary-400 transition font-bold text-white">Paraspur Market</a></li>

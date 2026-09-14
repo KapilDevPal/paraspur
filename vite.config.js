@@ -49,6 +49,7 @@ export default defineConfig({
         devotional_hanuman_chalisa: resolve(__dirname, 'devotional/hanuman-chalisa.html'),
         devotional_durga_chalisa: resolve(__dirname, 'devotional/durga-chalisa.html'),
         devotional_aarti_collection: resolve(__dirname, 'devotional/aarti-collection.html'),
+        devotional_ganesh_aarti: resolve(__dirname, 'devotional/ganesh-aarti.html'),
         devotional_hanuman_jayanti: resolve(__dirname, 'devotional/hanuman-jayanti.html'),
         devotional_hanuman_puja_vidhi: resolve(__dirname, 'devotional/hanuman-puja-vidhi.html'),
         agarbatti_index: resolve(__dirname, 'agarbatti-dhoop/index.html'),

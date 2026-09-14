@@ -1,0 +1,89 @@
+{
+  "deity": "Shri Ganesha",
+  "collection": "Verified Traditional Ganesh Aartis",
+  "version": 3,
+  "updated": "2026-09-14",
+  "text_policy": {
+    "original_only": true,
+    "generated_lyrics": false,
+    "notes": "Only established traditional aartis are included. Generic prayers, chants, and non-Ganesh-specific closing prayers have been removed."
+  },
+  "items": [
+    {
+      "id": "jai-ganesh-jai-ganesh-deva",
+      "title": "Jai Ganesh Jai Ganesh Deva",
+      "title_hindi": "जय गणेश जय गणेश देवा",
+      "type": "aarti",
+      "deity": "Ganesha",
+      "language": "Hindi",
+      "lyrics": "जय गणेश जय गणेश जय गणेश देवा।\nमाता जाकी पार्वती पिता महादेवा॥\n\nएकदन्त दयावन्त चारभुजाधारी।\nमाथे पर तिलक सोहे, मूसे की सवारी॥\nपान चढ़े, फूल चढ़े और चढ़े मेवा।\nलड्डुअन का भोग लगे, सन्त करें सेवा॥\n\nजय गणेश जय गणेश जय गणेश देवा।\nमाता जाकी पार्वती पिता महादेवा॥\n\nअँधे को आँख देत, कोढ़िन को काया।\nबाँझन को पुत्र देत, निर्धन को माया॥\n'सूर' श्याम शरण आए, सफल कीजे सेवा।\nमाता जाकी पार्वती पिता महादेवा॥",
+      "source": {
+        "type": "traditional",
+        "reference": "Bhajan India, traditional lyrics transcription",
+        "url": "https://www.youtube.com/watch?v=JDC-AxrFJnc"
+      },
+      "note": "Traditional aarti. Published versions contain minor wording variations such as 'तिलक/सिन्दूर' and optional extra lines; this record preserves one established traditional version."
+    },
+    {
+      "id": "sukhkarta-dukhharta",
+      "title": "Sukhkarta Dukhharta",
+      "title_hindi": "सुखकर्ता दुःखहर्ता",
+      "type": "aarti",
+      "deity": "Ganesha",
+      "language": "Marathi",
+      "lyrics": "सुखकर्ता दुःखहर्ता वार्ता विघ्नाची।\nनुरवी पुरवी प्रेम कृपा जयाची॥\nसर्वांगी सुंदर उटि शेंदुराची।\nकंठी झळके माळ मुक्ताफळांची॥\n\nजय देव जय देव जय मंगलमूर्ती।\nदर्शनमात्रे मनकामना पुरती॥\n\nरत्नखचित फरा तुज गौरीकुमरा।\nचंदनाची उटी कुंकुमकेशरा।\nहिरेजडित मुगुट शोभतो बरा।\nरुणझुणती नूपरें चरणीं घागरिया॥\n\nजय देव जय देव जय मंगलमूर्ती।\nदर्शनमात्रे मनकामना पुरती॥\n\nलंबोदर पीतांबर फणिवरबंधना।\nसरळ सोंड वक्रतुंड त्रिनयना।\nदास रामाचा वाट पाहे सदना।\nसंकटीं पावावें निर्वाणीं रक्षावें सुरवर वंदना॥\n\nजय देव जय देव जय मंगलमूर्ती।\nदर्शनमात्रे मनकामना पुरती॥",
+      "composer_tradition": "Traditionally attributed to Samarth Ramdas",
+      "source": {
+        "type": "traditional",
+        "reference": "MarathiMati — Ganpati Aarti",
+        "url": "https://www.marathimati.com/2018/07/sukhakarta-dukhaharta-aarti.html"
+      },
+      "note": "This is the commonly sung three-stanza version. Longer editions found online are not treated as the canonical text here."
+    },
+    {
+      "id": "shendur-lal-chadhayo",
+      "title": "Shendur Lal Chadhayo",
+      "title_hindi": "शेंदूर लाल चढ़ायो",
+      "type": "aarti",
+      "deity": "Ganesha",
+      "language": "Hindi",
+      "lyrics": "शेंदूर लाल चढ़ायो अच्छा गजमुख को।\nदोंदिल लाल बिराजे सुत गौरिहर को।\nहाथ लिए गुड़ लड्डू सांई सुरवर को।\nमहिमा कहे न जाय लागत हूँ पद को॥\n\nजय जय श्री गणराज, विद्या सुखदाता।\nधन्य तुम्हारा दर्शन, मेरा मन रमता॥\n\nअष्टौ सिद्धि दासी, संकट को बैरी।\nविघ्न विनाशक मंगल मूरत अधिकारी।\nकोटि सूरज प्रकाश, ऐसी छबी तेरी।\nगंडस्थल मदमस्तक झूले, शशिबिहारी॥\n\nजय जय श्री गणराज, विद्या सुखदाता।\nधन्य तुम्हारा दर्शन, मेरा मन रमता॥\n\nभाव भगत से कोई शरणागत आवे।\nसंतत संपत सबही भरपूर पावे।\nऐसे तुम महाराज, मोको अति भावे।\nगोसावीवंदन निशिदिन गुण गावे॥\n\nजय जय जी गणराज विद्या सुखदाता।\nधन्य तुम्हारा दर्शन, मेरा मन रमता॥",
+      "source": {
+        "type": "traditional",
+        "reference": "Traditional Ganapati aarti text; cross-checked against published Marathi/Hindi aarti collections",
+        "url": "https://facebooksanskrit.blogspot.com/"
+      },
+      "note": "Traditional text has spelling and refrain variations across editions; this preserves a documented traditional form rather than creating a new composite."
+    },
+    {
+      "id": "nana-parimal-durva-shendur-shamipatre",
+      "title": "Nana Parimal Durva Shendur Shamipatre",
+      "title_hindi": "नाना परिमल दुर्वा शेंदूर शमीपत्रे",
+      "type": "aarti",
+      "deity": "Ganesha",
+      "language": "Marathi",
+      "lyrics": "नाना परिमल दुर्वा शेंदूर शमीपत्रे।\nलाडू मोदक अन्ने परिपूरित पात्रे।\nऐसे पूजन केल्या बीजाक्षरमंत्रे।\nअष्टही सिद्धी नवनिधी देसी क्षणमात्रे॥\n\nजयदेव जयदेव जय मंगलमूर्ती।\nतुझे गुण वर्णाया मज कैची स्फूर्ती॥\n\nतुझे ध्यान निरंतर जे कोणी करिती।\nत्यांची सकलही पापे विघ्नेही हरती।\nवाजी वारण शिबिका सेवक सुत युवती।\nसर्वही पावुनी अंती भवसागर तरती॥\n\nजयदेव जयदेव।\n\nशरणागत सर्वस्वे भजती तव चरणी।\nकीर्ती तयांची राहे जोवरी शशि-तरणी।\nत्रेलोक्यी ते विजयी अद्भुत हे करणी।\nगोसावीनंदन रात नाम स्मरणी॥\n\nजयदेव जयदेव॥",
+      "source": {
+        "type": "traditional",
+        "reference": "Traditional Ganpati Aarti — Nana Parimal Durva Shendur Shamipatre",
+        "url": "https://96kulimaratha.com/2024/09/101-mahatwachya-aratya-nitya-arati-sangrah/"
+      },
+      "note": "Traditional Marathi text. Spelling/punctuation varies by printed and online editions."
+    },
+    {
+      "id": "siddhivinayakachi-aarti",
+      "title": "Siddhivinayakachi Aarti",
+      "title_hindi": "सिद्धिविनायकाची आरती",
+      "type": "aarti",
+      "deity": "Ganesha",
+      "language": "Marathi",
+      "lyrics": "सच्चिद्धन चिंतामणि जय जय ओंकारा।\nविष्णुमहेश्वरजनका जय विश्वधारा।\nविद्याऽविद्यारमणा सच्चीत सुखसारा।\nस्वानंदेशा भगवन दे चरणी थारा॥\n\nजय जय देव जय मंगलमूर्ती।\nतव दर्शनमात्रें हो भक्तेक्षितपूर्ति।\nजय देव जय देव॥\n\nआद्य ब्रह्माधीशा योगिहृदरामा।\nकरुणापारा वारा हे मंगलधामा।\nमत्सरमुखदनुजारे परिपूरित कामा।\nस्वामिन विघ्नाधीशा दे निजसुख आम्हां॥\n\nजय जय देव जय मंगलमूर्ती।\nतव दर्शनमात्रें हो भक्तेक्षितपूर्ति।\nजय देव जय देव॥\n\nश्रीमन्मुद्गलशुकमुख दत्तादिक योगी।\nनारायण गिरिजाधव रविमुख स्वर्भोगी।\nतैसे सत रत तव पदकमली भोगी।\nभववैद्या शरणांकुशधारी भवरोगी॥\n\nजय जय देव जय मंगलमूर्ती।\nतव दर्शनमात्रें हो भक्तेक्षितपूर्ति।\nजय देव जय देव॥\n\nश्रीमद्गणेश दक्ष, दक्षांकिवास।\nत्रिनयनशशिभालत्वही शितपित सुवास।\nविद्याविद्या तुम ही तत्त्वं पदवास।\nअंकुशधारी असिपति गणमय करियास॥\n\nजय देवी जय देवी सिद्धि दी माते।\nद्वंवाभेदे आरती करतो तुम्हाते।\nजय देव जय देव॥",
+      "source": {
+        "type": "traditional",
+        "reference": "Siddhivinayak Aarti — traditional temple text",
+        "url": "https://www.bhaktitak.com/2024/08/shri-siddhivinayak-aarti-jai-dev-jai-dev.html"
+      },
+      "note": "This is the traditional Siddhivinayak temple aarti text. Published editions may differ in spelling and punctuation."
+    }
+  ]
+}

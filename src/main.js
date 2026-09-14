@@ -1,5 +1,5 @@
 import './style.css';
-import { Header, Footer, AdBanner } from './components/layout.js';
+import { Header, Footer, AdBanner, MobileBottomNav } from './components/layout.js';
 
 // Global AdSense Injector
 const adsenseScript = document.createElement('script');
@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerContainer) headerContainer.innerHTML = processLinks(Header + AdBanner);
   if (footerContainer) footerContainer.innerHTML = processLinks(Footer);
 
+  // Inject Mobile Bottom Navigation Bar
+  const bottomNavElement = document.createElement('div');
+  bottomNavElement.innerHTML = processLinks(MobileBottomNav);
+  document.body.appendChild(bottomNavElement.firstElementChild);
+
   // Global Link Fixer for all other links in the document
   if (isGitHubPages) {
     document.querySelectorAll('a[href^="/"]').forEach(link => {
@@ -46,14 +51,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile menu toggle
+  // Mobile menu drawer toggle & controls
   const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
+  const bottomNavMenuBtn = document.querySelector('#bottom-nav-menu-btn');
+  const mobileMenuCloseBtn = document.querySelector('#mobile-menu-close-btn');
   const mobileMenu = document.querySelector('#mobile-menu');
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
+
+  const toggleMobileMenu = () => {
+    if (mobileMenu) {
       mobileMenu.classList.toggle('hidden');
+      if (!mobileMenu.classList.contains('hidden')) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  };
+
+  if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+  if (bottomNavMenuBtn) bottomNavMenuBtn.addEventListener('click', toggleMobileMenu);
+  if (mobileMenuCloseBtn) {
+    mobileMenuCloseBtn.addEventListener('click', () => {
+      if (mobileMenu) mobileMenu.classList.add('hidden');
     });
   }
+
+  // Active state highlighter for Mobile Bottom Navigation
+  const bottomNavItems = document.querySelectorAll('[data-bottom-nav]');
+  bottomNavItems.forEach(item => {
+    const key = item.getAttribute('data-bottom-nav');
+    let isActive = false;
+    if (key === 'home' && (pathname.endsWith('/') || pathname.endsWith('/index.html') || pathname === repoName || pathname === repoName + '/')) {
+      isActive = true;
+    } else if (key === 'bhakti' && pathname.includes('/devotional/')) {
+      isActive = true;
+    } else if (key === 'directory' && (pathname.includes('/directory/') || pathname.includes('/villages/'))) {
+      isActive = true;
+    } else if (key === 'gonda' && pathname.includes('/gonda/')) {
+      isActive = true;
+    }
+
+    if (isActive) {
+      item.classList.remove('text-slate-500');
+      item.classList.add('text-primary-600', 'font-black');
+    }
+  });
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

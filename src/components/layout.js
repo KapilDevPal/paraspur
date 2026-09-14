@@ -91,33 +91,105 @@ export const Header = `
     </div>
   </div>
   
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-full shadow-2xl z-50 transition-all duration-300 origin-top">
-    <nav class="flex flex-col px-6 py-6 space-y-6 max-h-[80vh] overflow-y-auto">
-      <a href="/" class="text-lg font-semibold text-slate-800 hover:text-primary-600">Home</a>
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 fixed inset-x-0 top-20 bottom-14 z-50 overflow-y-auto shadow-2xl animate-in slide-in-from-top duration-300">
+    <div class="p-5 space-y-6">
       
-      <div class="border-t border-slate-100 pt-6">
-        <span class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 block">Directory</span>
-        <div class="grid grid-cols-2 gap-y-4 gap-x-4">
-          <a href="/directory/schools.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Schools</a>
-          <a href="/directory/hospitals.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Hospitals</a>
-          <a href="/directory/colleges.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Colleges</a>
-          <a href="/directory/temples.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Temples</a>
-          <a href="/directory/banks.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Banks</a>
-          <a href="/directory/businesses.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Businesses</a>
-          <a href="/directory/agriculture.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Agriculture</a>
-          <a href="/villages/index.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Villages</a>
+      <!-- Drawer Header Bar -->
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Navigation Menu</span>
+        <button id="mobile-menu-close-btn" class="p-2 text-slate-400 hover:text-slate-700 bg-slate-100 rounded-full transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Bhakti & Devotional Section -->
+      <div class="bg-gradient-to-br from-amber-500/10 to-orange-500/10 p-4 rounded-2xl border border-amber-200/60 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-black text-amber-800 uppercase tracking-wider flex items-center gap-1.5">
+            <span>🛕</span> Bhakti & Devotional Hub
+          </span>
+          <span class="text-[9px] font-black bg-amber-500 text-white px-2 py-0.5 rounded-full uppercase">POPULAR</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-800">
+          <a href="/devotional/index.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-amber-600 transition flex items-center justify-between"><span>Bhakti Portal</span> <span>→</span></a>
+          <a href="/devotional/ganesh-aarti.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-orange-600 transition flex items-center justify-between"><span>Ganesh Aarti</span> <span class="text-[9px] bg-orange-100 text-orange-700 px-1 rounded">NEW</span></a>
+          <a href="/devotional/hanuman-chalisa.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-amber-600 transition flex items-center justify-between"><span>Hanuman Chalisa</span> <span>→</span></a>
+          <a href="/devotional/durga-chalisa.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-rose-600 transition flex items-center justify-between"><span>Durga Chalisa</span> <span>→</span></a>
+          <a href="/devotional/aarti-collection.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-amber-600 transition flex items-center justify-between col-span-2"><span>Complete Aarti Sangrah</span> <span>→</span></a>
         </div>
       </div>
-      
-      <div class="border-t border-slate-100 pt-6 flex flex-col space-y-4">
-        <a href="/info/news.html" class="text-lg font-semibold text-slate-800 hover:text-primary-600">Local News</a>
-        <a href="/paraspur-market.html" class="text-lg font-semibold text-slate-800 hover:text-primary-600">Market</a>
-        <a href="/info/history.html" class="text-lg font-semibold text-slate-800 hover:text-primary-600">History</a>
+
+      <!-- Directories Section -->
+      <div class="space-y-3">
+        <span class="text-xs font-black text-slate-400 uppercase tracking-widest block">Paraspur Directory</span>
+        <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+          <a href="/directory/schools.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏫</span> Schools</a>
+          <a href="/directory/hospitals.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏥</span> Hospitals</a>
+          <a href="/directory/colleges.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🎓</span> Colleges</a>
+          <a href="/directory/temples.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🛕</span> Temples</a>
+          <a href="/directory/banks.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏦</span> Banks</a>
+          <a href="/directory/businesses.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🛍️</span> Shops & Market</a>
+          <a href="/directory/agriculture.html" class="p-3 bg-slate-50 rounded-xl hover:bg-green-50 hover:text-green-600 transition flex items-center gap-2"><span>🌾</span> Agriculture</a>
+          <a href="/villages/index.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏡</span> 91 Villages</a>
+        </div>
       </div>
-    </nav>
+
+      <!-- Regional & Guides -->
+      <div class="space-y-3">
+        <span class="text-xs font-black text-slate-400 uppercase tracking-widest block">Regional Guides</span>
+        <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+          <a href="/gonda/index.html" class="p-3 bg-primary-50 text-primary-700 rounded-xl hover:bg-primary-100 transition flex items-center justify-between"><span>Gonda Guide</span> <span>→</span></a>
+          <a href="/lucknow/index.html" class="p-3 bg-amber-50 text-amber-700 rounded-xl hover:bg-amber-100 transition flex items-center justify-between"><span>Lucknow Guide</span> <span>→</span></a>
+          <a href="/paraspur-market.html" class="p-3 bg-slate-100 text-slate-900 rounded-xl hover:bg-slate-200 transition flex items-center justify-between col-span-2"><span>Paraspur Market Bazar</span> <span>→</span></a>
+          <a href="/agarbatti-dhoop/index.html" class="p-3 bg-orange-50 text-orange-700 rounded-xl hover:bg-orange-100 transition flex items-center justify-between col-span-2"><span>Agarbatti & Dhoop Store</span> <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- Info & News -->
+      <div class="border-t border-slate-100 pt-4 flex items-center justify-between text-xs font-bold text-slate-600">
+        <a href="/info/news.html" class="hover:text-primary-600">Local News</a>
+        <a href="/info/history.html" class="hover:text-primary-600">History</a>
+        <a href="/info/pin-code.html" class="hover:text-primary-600">Pin Code</a>
+        <a href="/contact.html" class="text-primary-600 hover:underline">Contact</a>
+      </div>
+
+    </div>
   </div>
 </header>
+`;
+
+export const MobileBottomNav = `
+<nav id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl md:hidden px-2 py-1 flex items-center justify-around">
+  <a href="/" data-bottom-nav="home" class="flex flex-col items-center justify-center w-full py-1 text-slate-500 hover:text-primary-600 transition group">
+    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    <span class="text-[10px] font-bold tracking-tight">Home</span>
+  </a>
+
+  <a href="/directory/schools.html" data-bottom-nav="directory" class="flex flex-col items-center justify-center w-full py-1 text-slate-500 hover:text-primary-600 transition group">
+    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+    <span class="text-[10px] font-bold tracking-tight">Directory</span>
+  </a>
+
+  <a href="/devotional/index.html" data-bottom-nav="bhakti" class="flex flex-col items-center justify-center w-full py-1 text-amber-600 hover:text-amber-700 transition group relative">
+    <span class="absolute -top-0.5 right-3 flex h-2 w-2">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+    </span>
+    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+    <span class="text-[10px] font-black uppercase tracking-tight">Bhakti</span>
+  </a>
+
+  <a href="/gonda/index.html" data-bottom-nav="gonda" class="flex flex-col items-center justify-center w-full py-1 text-slate-500 hover:text-primary-600 transition group">
+    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+    <span class="text-[10px] font-bold tracking-tight">Gonda</span>
+  </a>
+
+  <button id="bottom-nav-menu-btn" data-bottom-nav="menu" class="flex flex-col items-center justify-center w-full py-1 text-slate-500 hover:text-primary-600 transition group">
+    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+    <span class="text-[10px] font-bold tracking-tight">Menu</span>
+  </button>
+</nav>
 `;
 
 export const AdBanner = `

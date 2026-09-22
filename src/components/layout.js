@@ -12,34 +12,27 @@ export const Header = `
           Directory
           <svg class="ml-1 w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
-        <div class="absolute top-full left-0 mt-2 w-56 bg-white shadow-2xl rounded-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left scale-95 group-hover:scale-100">
+        <div class="absolute top-full left-0 mt-2 w-64 bg-white shadow-2xl rounded-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left scale-95 group-hover:scale-100">
           <div class="py-3 px-1 max-h-[70vh] overflow-y-auto custom-scrollbar">
-            <a href="/directory/schools.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Schools</a>
-            <a href="/directory/hospitals.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Hospitals</a>
-            <a href="/directory/colleges.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Colleges</a>
-            <a href="/directory/temples.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Temples</a>
-            <a href="/devotional/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-amber-600 hover:bg-primary-50 rounded-xl transition">Bhakti & Devotional Hub</a>
-            <a href="/agarbatti-dhoop/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-orange-600 hover:bg-primary-50 rounded-xl transition">Agarbatti & Dhoop Hub</a>
-            <a href="/devotional/hanuman-chalisa.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Hanuman Chalisa</a>
-            <a href="/devotional/durga-chalisa.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Durga Chalisa</a>
-            <a href="/devotional/ganesh-aarti.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Ganesh Aarti</a>
-            <a href="/devotional/aarti-collection.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Aarti Collection</a>
-            <a href="/directory/jobs.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Jobs & Careers</a>
-            <a href="/directory/government-jobs.html" class="block px-4 py-2.5 text-[13px] font-bold text-red-600 hover:bg-primary-50 rounded-xl transition font-black">Govt Jobs & Sarkari Result</a>
-            <a href="/directory/businesses.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Businesses & Shops</a>
-            <a href="/gonda/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-primary-600 hover:bg-primary-50 rounded-xl transition">Gonda District Guide</a>
-            <a href="/lucknow/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-amber-600 hover:bg-primary-50 rounded-xl transition">Lucknow Capital Guide</a>
-            <a href="/paraspur-market.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Market Guide</a>
-            <a href="/villages/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 border-t border-slate-50 mt-2 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">Village Directory</a>
+            <a href="/directory/schools.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🏫 Schools in Paraspur</a>
+            <a href="/directory/hospitals.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🏥 Hospitals & CHC</a>
+            <a href="/directory/colleges.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🎓 Colleges & Institutes</a>
+            <a href="/directory/banks.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🏦 Banks & ATMs</a>
+            <a href="/directory/libraries.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">📚 Libraries & Study Centers</a>
+            <a href="/directory/temples.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🛕 Temples & Heritage</a>
+            <a href="/paraspur-market.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🛍️ Paraspur Market Guide</a>
+            <a href="/directory/businesses.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🏪 Shops & Services</a>
+            <a href="/directory/jobs.html" class="block px-4 py-2.5 text-[13px] font-semibold text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">💼 Local Jobs & Careers</a>
+            <a href="/directory/government-jobs.html" class="block px-4 py-2.5 text-[13px] font-bold text-primary-600 hover:bg-primary-50 rounded-xl transition">🏛️ Govt Jobs & Exams</a>
+            <a href="/villages/index.html" class="block px-4 py-2.5 text-[13px] font-bold text-slate-900 border-t border-slate-50 mt-2 hover:bg-primary-50 hover:text-primary-600 rounded-xl transition">🏡 Village & Gram Panchayat Directory</a>
           </div>
         </div>
       </div>
-      <a href="/devotional/index.html" class="text-xs font-bold text-amber-600 hover:text-amber-700 uppercase tracking-wider transition">Bhakti Corner</a>
-      <a href="/agarbatti-dhoop/index.html" class="text-xs font-bold text-orange-600 hover:text-orange-700 uppercase tracking-wider transition">Agarbatti & Dhoop</a>
-      <a href="/blog/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Blogs</a>
+      <a href="/paraspur-market.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Market</a>
+      <a href="/agriculture/index.html" class="text-xs font-bold text-green-700 hover:text-green-800 uppercase tracking-wider transition">Agriculture & Mandi</a>
+      <a href="/directory/temples.html" class="text-xs font-bold text-amber-700 hover:text-amber-800 uppercase tracking-wider transition">Heritage & Sukarkhet</a>
       <a href="/gonda/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Gonda Guide</a>
-      <a href="/lucknow/index.html" class="text-xs font-bold text-slate-600 hover:text-amber-500 uppercase tracking-wider transition">Lucknow Guide</a>
-      <a href="/agriculture/index.html" class="text-xs font-bold text-green-600 hover:text-green-500 uppercase tracking-wider transition">Agriculture</a>
+      <a href="/blog/index.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">Blogs</a>
       <a href="/info/news.html" class="text-xs font-bold text-slate-600 hover:text-primary-600 uppercase tracking-wider transition">News</a>
     </nav>
 
@@ -49,7 +42,7 @@ export const Header = `
         <input 
           type="text" 
           id="global-search-input"
-          placeholder="Search villages, schools, news..." 
+          placeholder="Search schools, hospitals, market, villages..." 
           class="w-full h-11 pl-11 pr-4 bg-slate-50 border-none rounded-2xl text-xs font-medium focus:ring-2 focus:ring-primary-500/20 focus:bg-white transition-all"
         >
         <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary-500 transition-colors">
@@ -79,7 +72,7 @@ export const Header = `
       <input 
         type="text" 
         id="mobile-search-input"
-        placeholder="Search villages, schools..." 
+        placeholder="Search schools, hospitals, villages..." 
         class="w-full h-11 pl-11 pr-4 bg-slate-50 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary-500/20 rotate-0 transition-all font-medium"
       >
       <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
@@ -104,20 +97,19 @@ export const Header = `
         </button>
       </div>
 
-      <!-- Bhakti & Devotional Section -->
-      <div class="bg-gradient-to-br from-amber-500/10 to-orange-500/10 p-4 rounded-2xl border border-amber-200/60 space-y-3">
+      <!-- Quick Action Shortcuts -->
+      <div class="bg-gradient-to-br from-primary-50 to-primary-100/50 p-4 rounded-2xl border border-primary-200/60 space-y-3">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-black text-amber-800 uppercase tracking-wider flex items-center gap-1.5">
-            <span>🛕</span> Bhakti & Devotional Hub
+          <span class="text-xs font-black text-primary-800 uppercase tracking-wider flex items-center gap-1.5">
+            <span>⭐</span> Essential Local Hubs
           </span>
-          <span class="text-[9px] font-black bg-amber-500 text-white px-2 py-0.5 rounded-full uppercase">POPULAR</span>
+          <span class="text-[9px] font-black bg-primary-600 text-white px-2 py-0.5 rounded-full uppercase">VERIFIED</span>
         </div>
         <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-800">
-          <a href="/devotional/index.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-amber-600 transition flex items-center justify-between"><span>Bhakti Portal</span> <span>→</span></a>
-          <a href="/devotional/ganesh-aarti.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-orange-600 transition flex items-center justify-between"><span>Ganesh Aarti</span> <span class="text-[9px] bg-orange-100 text-orange-700 px-1 rounded">NEW</span></a>
-          <a href="/devotional/hanuman-chalisa.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-amber-600 transition flex items-center justify-between"><span>Hanuman Chalisa</span> <span>→</span></a>
-          <a href="/devotional/durga-chalisa.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-rose-600 transition flex items-center justify-between"><span>Durga Chalisa</span> <span>→</span></a>
-          <a href="/devotional/aarti-collection.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-amber-100 hover:text-amber-600 transition flex items-center justify-between col-span-2"><span>Complete Aarti Sangrah</span> <span>→</span></a>
+          <a href="/paraspur-market.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-primary-100 hover:text-primary-600 transition flex items-center justify-between"><span>🛍️ Market Guide</span> <span>→</span></a>
+          <a href="/agriculture/mandi-bhav.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-primary-100 hover:text-green-600 transition flex items-center justify-between"><span>🌾 Mandi Rates</span> <span>→</span></a>
+          <a href="/directory/hospitals.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-primary-100 hover:text-red-600 transition flex items-center justify-between"><span>🏥 CHC & Doctors</span> <span>→</span></a>
+          <a href="/directory/temples.html" class="p-2.5 bg-white rounded-xl shadow-sm border border-primary-100 hover:text-amber-600 transition flex items-center justify-between"><span>🛕 Sukarkhet Paska</span> <span>→</span></a>
         </div>
       </div>
 
@@ -128,11 +120,11 @@ export const Header = `
           <a href="/directory/schools.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏫</span> Schools</a>
           <a href="/directory/hospitals.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏥</span> Hospitals</a>
           <a href="/directory/colleges.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🎓</span> Colleges</a>
-          <a href="/directory/temples.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🛕</span> Temples</a>
-          <a href="/directory/banks.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏦</span> Banks</a>
-          <a href="/directory/businesses.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🛍️</span> Shops & Market</a>
+          <a href="/directory/banks.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏦</span> Banks & ATMs</a>
+          <a href="/directory/libraries.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>📚</span> Libraries</a>
+          <a href="/directory/businesses.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🛍️</span> Shops & Bazar</a>
           <a href="/directory/agriculture.html" class="p-3 bg-slate-50 rounded-xl hover:bg-green-50 hover:text-green-600 transition flex items-center gap-2"><span>🌾</span> Agriculture</a>
-          <a href="/villages/index.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏡</span> 91 Villages</a>
+          <a href="/villages/index.html" class="p-3 bg-slate-50 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition flex items-center gap-2"><span>🏡</span> Villages Guide</a>
         </div>
       </div>
 
@@ -141,9 +133,8 @@ export const Header = `
         <span class="text-xs font-black text-slate-400 uppercase tracking-widest block">Regional Guides</span>
         <div class="grid grid-cols-2 gap-2 text-xs font-bold">
           <a href="/gonda/index.html" class="p-3 bg-primary-50 text-primary-700 rounded-xl hover:bg-primary-100 transition flex items-center justify-between"><span>Gonda Guide</span> <span>→</span></a>
-          <a href="/lucknow/index.html" class="p-3 bg-amber-50 text-amber-700 rounded-xl hover:bg-amber-100 transition flex items-center justify-between"><span>Lucknow Guide</span> <span>→</span></a>
-          <a href="/paraspur-market.html" class="p-3 bg-slate-100 text-slate-900 rounded-xl hover:bg-slate-200 transition flex items-center justify-between col-span-2"><span>Paraspur Market Bazar</span> <span>→</span></a>
-          <a href="/agarbatti-dhoop/index.html" class="p-3 bg-orange-50 text-orange-700 rounded-xl hover:bg-orange-100 transition flex items-center justify-between col-span-2"><span>Agarbatti & Dhoop Store</span> <span>→</span></a>
+          <a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="p-3 bg-amber-50 text-amber-700 rounded-xl hover:bg-amber-100 transition flex items-center justify-between"><span>Tulsidas History</span> <span>→</span></a>
+          <a href="/directory/government-jobs.html" class="p-3 bg-slate-100 text-slate-900 rounded-xl hover:bg-slate-200 transition flex items-center justify-between col-span-2"><span>Govt Jobs & Alerts</span> <span>→</span></a>
         </div>
       </div>
 
@@ -172,18 +163,14 @@ export const MobileBottomNav = `
     <span class="text-[10px] font-bold tracking-tight">Directory</span>
   </a>
 
-  <a href="/devotional/index.html" data-bottom-nav="bhakti" class="flex flex-col items-center justify-center w-full py-1 text-amber-600 hover:text-amber-700 transition group relative">
-    <span class="absolute -top-0.5 right-3 flex h-2 w-2">
-      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-      <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-    </span>
-    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-    <span class="text-[10px] font-black uppercase tracking-tight">Bhakti</span>
+  <a href="/paraspur-market.html" data-bottom-nav="market" class="flex flex-col items-center justify-center w-full py-1 text-primary-600 hover:text-primary-700 transition group">
+    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+    <span class="text-[10px] font-black uppercase tracking-tight">Market</span>
   </a>
 
-  <a href="/gonda/index.html" data-bottom-nav="gonda" class="flex flex-col items-center justify-center w-full py-1 text-slate-500 hover:text-primary-600 transition group">
-    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-    <span class="text-[10px] font-bold tracking-tight">Gonda</span>
+  <a href="/agriculture/mandi-bhav.html" data-bottom-nav="mandi" class="flex flex-col items-center justify-center w-full py-1 text-green-600 hover:text-green-700 transition group">
+    <svg class="w-5 h-5 mb-0.5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+    <span class="text-[10px] font-bold tracking-tight">Mandi</span>
   </a>
 
   <button id="bottom-nav-menu-btn" data-bottom-nav="menu" class="flex flex-col items-center justify-center w-full py-1 text-slate-500 hover:text-primary-600 transition group">
@@ -193,19 +180,8 @@ export const MobileBottomNav = `
 </nav>
 `;
 
-export const AdBanner = `
-<div class="bg-primary-600 text-white py-3">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-    <p class="text-sm font-bold tracking-wide">
-      <span class="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase mr-2">Ad Placement</span>
-      Want to promote your business or school here? Place your ad now!
-    </p>
-    <a href="mailto:veerexa0@gmail.com" class="mt-2 md:mt-0 text-sm font-black underline hover:text-primary-100 transition">
-      Contact: veerexa0@gmail.com
-    </a>
-  </div>
-</div>
-`;
+// Empty placeholder banner removed to prevent Google AdSense "Placeholder ads / ad intent without content" policy flag
+export const AdBanner = ``;
 
 export const Footer = `
 <footer class="bg-slate-900 text-slate-300 py-16">
@@ -216,81 +192,68 @@ export const Footer = `
           <span class="text-2xl font-display font-black text-white">PARASPUR</span>
           <span class="text-xs font-bold text-slate-500 tracking-widest uppercase">Gonda, Uttar Pradesh</span>
         </a>
-        <p class="mt-6 text-sm leading-relaxed">
-          Your complete guide to Paraspur, Gonda. Find schools, hospitals, local news, and villages in our beautiful block.
+        <p class="mt-4 text-sm leading-relaxed text-slate-400">
+          The verified community directory and regional information portal for Paraspur block and Gonda district. Connecting citizens with local schools, healthcare, markets, agriculture, and cultural heritage.
         </p>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-6">Directory</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="/directory/government-jobs.html" class="hover:text-amber-400 transition font-bold text-amber-400">Govt Jobs & Sarkari Result</a></li>
-          <li><a href="/directory/schools.html" class="hover:text-primary-400 transition">Schools in Paraspur</a></li>
-          <li><a href="/directory/hospitals.html" class="hover:text-primary-400 transition">Hospitals in Paraspur</a></li>
-          <li><a href="/directory/colleges.html" class="hover:text-primary-400 transition">Colleges in Paraspur</a></li>
-          <li><a href="/directory/temples.html" class="hover:text-primary-400 transition">Temples & Tourism</a></li>
-          <li><a href="/devotional/ganesh-aarti.html" class="hover:text-orange-400 transition font-bold text-orange-400">Ganesh Aarti Sangrah</a></li>
-          <li><a href="/directory/best-beauty-parlour-in-paraspur.html" class="hover:text-primary-400 transition">Beauty Parlours</a></li>
-          <li><a href="/directory/best-ladies-boutique-in-paraspur.html" class="hover:text-primary-400 transition">Ladies Boutique</a></li>
-          <li><a href="/paraspur-market.html" class="hover:text-primary-400 transition font-bold text-white">Paraspur Market</a></li>
-          <li><a href="/villages/index.html" class="hover:text-primary-400 transition">All 91 Villages</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-6">Quick Links</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="/info/pin-code.html" class="hover:text-primary-400 transition">Pin Code (271504)</a></li>
-          <li><a href="/villages/index.html" class="hover:text-primary-500 transition">All 91 Villages</a></li>
-          <li><a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-primary-500 transition">Tulsidas & Paraspur</a></li>
-          <li><a href="/directory/businesses.html" class="hover:text-primary-500 transition">Market Guide</a></li>
-          <li><a href="/info/population.html" class="hover:text-primary-400 transition">Population Data</a></li>
-          <li><a href="/info/politicians.html" class="hover:text-primary-400 transition font-bold text-white">Politicians & Leaders</a></li>
-          <li><a href="/directory/restaurants-paraspur.html" class="hover:text-primary-400 transition">Food & Restaurants</a></li>
-          <li><a href="/directory/local-startups.html" class="hover:text-primary-400 transition">Local Startups</a></li>
-          <li><a href="/info/history.html" class="hover:text-primary-400 transition">About Paraspur</a></li>
-          <li><a href="/gonda/index.html" class="hover:text-primary-400 transition font-bold text-primary-400">Gonda District Guide</a></li>
-          <li><a href="/gonda/history.html" class="hover:text-primary-400 transition">History of Gonda</a></li>
-          <li><a href="/lucknow/index.html" class="hover:text-amber-400 transition font-bold text-amber-400">Lucknow Capital Guide</a></li>
-          <li><a href="/lucknow/history.html" class="hover:text-amber-400 transition">History of Lucknow</a></li>
-          <li><a href="/agriculture/index.html" class="hover:text-green-400 transition font-bold text-green-400">Agriculture Hub</a></li>
-          <li><a href="/agriculture/mandi-bhav.html" class="hover:text-green-400 transition">Daily Mandi Bhav</a></li>
-          <li><a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-6">Latest blogs</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="/blog/index.html" class="hover:text-primary-400 transition">All Local Blogs</a></li>
-          <li><a href="/blog/all-villages-in-paraspur-block.html" class="hover:text-primary-400 transition">Detailed Village Guide</a></li>
-          <li><a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-primary-400 transition">Tulsidas & Sukarkhet</a></li>
-          <li><a href="/blog/beauty-parlours-in-paraspur-gonda.html" class="hover:text-primary-400 transition">Beauty Salon Guide</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-6">Space & Tech Apps</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="https://indianspacehub.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">India Space Hub Website</a></li>
-          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.indiaspacehub" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-amber-400">🚀 India Space Hub App (Google Play)</a></li>
-          <li><a href="https://space.veerexa.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">ISRO Mission Tracker</a></li>
-          <li><a href="https://play.google.com/store/apps/details?id=com.kapildevpal.hanuman_chalisa" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition font-bold text-white">Hanuman Chalisa App</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-6">Connect</h4>
-        <p class="text-sm mb-4">Subscribe to our newsletter for latest local updates.</p>
-        <div class="flex">
-          <input type="email" placeholder="Email address" class="bg-slate-800 border-none rounded-l-lg px-4 py-2 w-full focus:ring-1 focus:ring-primary-500">
-          <button class="bg-primary-600 px-4 py-2 rounded-r-lg hover:bg-primary-700 transition">Go</button>
+        <div class="mt-6 text-xs text-slate-400 space-y-1">
+          <p>📍 <strong>Block HQ:</strong> Paraspur, Gonda (UP) - 271504</p>
+          <p>✉️ <strong>Editorial:</strong> veerexa0@gmail.com</p>
         </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-6">Directory & Services</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/directory/schools.html" class="hover:text-primary-400 transition">Schools & Academies</a></li>
+          <li><a href="/directory/hospitals.html" class="hover:text-primary-400 transition">Hospitals & Emergency CHC</a></li>
+          <li><a href="/directory/colleges.html" class="hover:text-primary-400 transition">Colleges & Degree Institutes</a></li>
+          <li><a href="/directory/banks.html" class="hover:text-primary-400 transition">Banks & IFSC Directory</a></li>
+          <li><a href="/directory/libraries.html" class="hover:text-primary-400 transition">Libraries & Study Centers</a></li>
+          <li><a href="/paraspur-market.html" class="hover:text-primary-400 transition font-bold text-white">Paraspur Market & Bazaar</a></li>
+          <li><a href="/directory/businesses.html" class="hover:text-primary-400 transition">Local Shops & Traders</a></li>
+          <li><a href="/villages/index.html" class="hover:text-primary-400 transition">Village & Gram Panchayat Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-6">Regional Knowledge</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/agriculture/mandi-bhav.html" class="hover:text-green-400 transition font-bold text-green-400">Daily Mandi Rates (Gonda)</a></li>
+          <li><a href="/agriculture/index.html" class="hover:text-green-400 transition">Farmer & Agriculture Guide</a></li>
+          <li><a href="/directory/temples.html" class="hover:text-amber-400 transition">Sukarkhet Paska & Temples</a></li>
+          <li><a href="/blog/tulsidas-ayodhya-paraspur-connection.html" class="hover:text-amber-400 transition">Tulsidas & Paraspur Heritage</a></li>
+          <li><a href="/info/pin-code.html" class="hover:text-primary-400 transition">Postal PIN Code (271504)</a></li>
+          <li><a href="/info/population.html" class="hover:text-primary-400 transition">Demographics & Census Data</a></li>
+          <li><a href="/gonda/index.html" class="hover:text-primary-400 transition">Gonda District Guide</a></li>
+          <li><a href="/directory/government-jobs.html" class="hover:text-primary-400 transition">Sarkari Result & UP Jobs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-6">Civic & Emergency</h4>
+        <div class="space-y-3 text-xs text-slate-300 mb-6">
+          <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+            <strong class="text-white block mb-0.5">🚨 Emergency Helplines</strong>
+            <p class="text-slate-400">Ambulance: <a href="tel:108" class="text-red-400 font-bold hover:underline">108</a> / <a href="tel:102" class="text-red-400 font-bold hover:underline">102</a></p>
+            <p class="text-slate-400">Police Assistance: <a href="tel:112" class="text-amber-400 font-bold hover:underline">112</a></p>
+            <p class="text-slate-400">Women Helpline: <a href="tel:1090" class="text-primary-400 font-bold hover:underline">1090</a></p>
+          </div>
+          <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+            <strong class="text-white block mb-0.5">🏛️ Administrative Unit</strong>
+            <p class="text-slate-400">Block: Paraspur | Tehsil: Colonelganj</p>
+            <p class="text-slate-400">District: Gonda | State: Uttar Pradesh</p>
+          </div>
+        </div>
+        <a href="/contact.html" class="inline-block w-full py-2.5 px-4 bg-primary-600 hover:bg-primary-500 text-white font-bold text-center text-xs uppercase tracking-wider rounded-xl transition">
+          Submit Directory Listing →
+        </a>
       </div>
     </div>
     <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
-      <p>&copy; 2026 Paraspur.com. All rights reserved. Regional Local Information Portal for Gonda, Uttar Pradesh.</p>
+      <p>&copy; 2026 Paraspur.com. All rights reserved. Independent regional directory for Paraspur Block, Gonda (UP).</p>
       <div class="flex flex-wrap gap-4 mt-4 md:mt-0 justify-center">
+        <a href="/about-website.html" class="hover:text-primary-400 transition">About Us</a>
+        <a href="/contact.html" class="hover:text-primary-400 transition">Contact</a>
         <a href="/privacy-policy.html" class="hover:text-primary-400 transition">Privacy Policy</a>
         <a href="/terms.html" class="hover:text-primary-400 transition">Terms of Service</a>
         <a href="/disclaimer.html" class="hover:text-primary-400 transition">Disclaimer</a>
-        <a href="/about-website.html" class="hover:text-primary-400 transition">About Us</a>
-        <a href="/contact.html" class="hover:text-primary-400 transition">Contact Us</a>
         <a href="/sitemap.xml" class="hover:text-primary-400 transition">Sitemap</a>
       </div>
     </div>

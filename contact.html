@@ -3,12 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Paraspur.com | Email & Community Support</title>
-  <meta name="description" content="Get in touch with Paraspur.com team via direct email. Submit business listings, local news updates, school and hospital corrections, or general inquiries for Paraspur block, Gonda.">
+  <title>Contact Us - Paraspur.com | Editorial Desk & Directory Support</title>
+  <meta name="description" content="Contact the editorial team of Paraspur.com. Submit business listings, institutional updates, local news tips, or general inquiries for Paraspur block, Gonda district (UP).">
   <link rel="canonical" href="https://paraspur.com/contact.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Paraspur.com",
+    "description": "Official communication channels and contact details for Paraspur.com regional portal.",
+    "url": "https://paraspur.com/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Paraspur.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paraspur",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "271504",
+        "addressCountry": "IN"
+      },
+      "email": "veerexa0@gmail.com"
+    }
+  }
+  </script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
   <div id="header-container"></div>
@@ -17,27 +39,76 @@
     <div class="container mx-auto px-4 max-w-5xl">
       <!-- Hero -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-xs font-black uppercase tracking-widest rounded-full mb-4">Direct Email Contact</span>
+        <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-xs font-black uppercase tracking-widest rounded-full mb-4">Editorial Desk & Inquiries</span>
         <h1 class="text-4xl md:text-6xl font-display font-black text-slate-900 mb-6">Get in Touch with <span class="text-primary-600">Paraspur.com</span></h1>
-        <p class="text-lg text-slate-600 leading-relaxed">Have information to add, a local business to list, or news updates for Paraspur block and Gonda? Reach out directly to our editorial team via email.</p>
+        <p class="text-lg text-slate-600 leading-relaxed">Have a business to list, school/hospital details to verify, or local community news to submit for Paraspur block and Gonda? Reach out directly to our editorial team.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <!-- Main Email Card -->
-        <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-sm">
-          <div class="w-14 h-14 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-          </div>
+        
+        <!-- Contact Form & Email Card -->
+        <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-sm space-y-8">
           
-          <h2 class="text-2xl font-bold text-slate-900 mb-3">Send Us an Email</h2>
-          <p class="text-sm text-slate-600 mb-6">
-            Automated contact forms are currently disabled as server SMTP is not configured. Please use your preferred email client or app to message us directly.
-          </p>
+          <div>
+            <div class="w-14 h-14 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Send an Inquiry or Submission</h2>
+            <p class="text-sm text-slate-600">
+              Fill out the form below to connect directly with our regional editor. We review all submissions within 24 to 48 hours.
+            </p>
+          </div>
 
-          <!-- Email Address Highlight -->
-          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <!-- Interactive Form -->
+          <form id="contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
             <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-1">Official Email Address</span>
+              <label for="contact-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Your Name *</label>
+              <input type="text" id="contact-name" required placeholder="Enter your full name" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-primary-500/20 focus:bg-white focus:border-primary-500 transition">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contact-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Email Address *</label>
+                <input type="email" id="contact-email" required placeholder="name@example.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-primary-500/20 focus:bg-white focus:border-primary-500 transition">
+              </div>
+              <div>
+                <label for="contact-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
+                <input type="tel" id="contact-phone" placeholder="+91 98765 43210" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-primary-500/20 focus:bg-white focus:border-primary-500 transition">
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-category" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Topic / Category *</label>
+              <select id="contact-category" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-primary-500/20 focus:bg-white focus:border-primary-500 transition">
+                <option value="Business Listing">Add New Business / Shop Listing</option>
+                <option value="Directory Update">Update School / Hospital / Bank Data</option>
+                <option value="News Tip">Submit Local News / Event Announcement</option>
+                <option value="Village Data">Village / Gram Panchayat Correction</option>
+                <option value="General Inquiry">General Inquiry / Feedback</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Message / Details *</label>
+              <textarea id="contact-message" required rows="4" placeholder="Provide full details, shop name, address, or details of updates..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-primary-500/20 focus:bg-white focus:border-primary-500 transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 px-6 bg-primary-600 hover:bg-primary-700 text-white font-black text-xs uppercase tracking-widest rounded-xl transition shadow-lg shadow-primary-500/20">
+              Submit Message →
+            </button>
+          </form>
+
+          <div id="form-success-banner" class="hidden p-5 bg-green-50 border border-green-200 rounded-2xl text-green-900 text-sm">
+            <div class="flex items-center gap-2 font-bold mb-1">
+              <span>✅ Message Prepared Successfully!</span>
+            </div>
+            <p class="text-xs text-green-800">Your email client has been launched with your inquiry. Our editorial desk at <strong>veerexa0@gmail.com</strong> will respond within 24 to 48 hours.</p>
+          </div>
+
+          <!-- Official Direct Email Highlight -->
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-1">Official Editorial Email</span>
               <span id="email-text" class="text-xl md:text-2xl font-black text-primary-600 select-all break-all">veerexa0@gmail.com</span>
             </div>
             <button id="copy-email-btn" class="w-full sm:w-auto px-5 py-3 bg-primary-600 text-white text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-primary-700 transition flex items-center justify-center space-x-2 shrink-0">
@@ -47,35 +118,27 @@
           </div>
 
           <!-- Quick Mailto Actions by Topic -->
-          <h3 class="text-base font-bold text-slate-900 mb-4">Quick Email Templates (Click to open your Mail App):</h3>
-          <div class="space-y-3">
+          <div class="space-y-3 pt-4 border-t border-slate-100">
+            <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider">Quick Mail Templates:</h3>
             <a href="mailto:veerexa0@gmail.com?subject=Business%20Listing%20Request%20-%20Paraspur.com&body=Hello%20Paraspur.com%20Team,%0A%0AI%20would%20like%20to%20list%20my%20business/shop.%0A%0ABusiness%20Name:%20%0ACategory:%20%0AAddress:%20%0APhone/Contact:%20" 
-               class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 transition group">
+               class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 transition group">
               <div>
-                <h4 class="text-sm font-bold text-slate-800 group-hover:text-primary-600">List My Shop or Business</h4>
-                <p class="text-xs text-slate-500">Request inclusion in Paraspur market & service directory</p>
+                <h4 class="text-xs font-bold text-slate-800 group-hover:text-primary-600">List My Shop or Business</h4>
+                <p class="text-[11px] text-slate-500">Request inclusion in Paraspur market & service directory</p>
               </div>
-              <svg class="w-5 h-5 text-slate-400 group-hover:text-primary-600 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              <span class="text-xs text-primary-600 font-bold">Open Email →</span>
             </a>
 
             <a href="mailto:veerexa0@gmail.com?subject=News%20or%20Event%20Submission%20-%20Paraspur.com&body=Hello%20Paraspur.com%20Team,%0A%0AI%20have%20a%20local%20news%20tip/event%20to%20share.%0A%0AHeadline:%20%0ADetails:%20%0ALocation:%20" 
-               class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 transition group">
+               class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 transition group">
               <div>
-                <h4 class="text-sm font-bold text-slate-800 group-hover:text-primary-600">Submit Local News or Event</h4>
-                <p class="text-xs text-slate-500">Press releases, announcements, photos from Paraspur/Gonda</p>
+                <h4 class="text-xs font-bold text-slate-800 group-hover:text-primary-600">Submit Local News or Event</h4>
+                <p class="text-[11px] text-slate-500">Press releases, announcements, photos from Paraspur/Gonda</p>
               </div>
-              <svg class="w-5 h-5 text-slate-400 group-hover:text-primary-600 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-
-            <a href="mailto:veerexa0@gmail.com?subject=School%20or%20Hospital%20Data%20Correction&body=Hello%20Paraspur.com%20Team,%0A%0AI%20noticed%20an%20update/correction%20needed%20for:%0A%0AInstitution%20Name:%20%0ACorrect%20Details:%20" 
-               class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 transition group">
-              <div>
-                <h4 class="text-sm font-bold text-slate-800 group-hover:text-primary-600">Data Correction / Updates</h4>
-                <p class="text-xs text-slate-500">Update school, college, hospital, or village listings</p>
-              </div>
-              <svg class="w-5 h-5 text-slate-400 group-hover:text-primary-600 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              <span class="text-xs text-primary-600 font-bold">Open Email →</span>
             </a>
           </div>
+
         </div>
 
         <!-- Sidebar Info -->
@@ -87,20 +150,26 @@
             <h3 class="text-xl font-bold text-slate-900 mb-2">Regional Headquarters</h3>
             <p class="text-sm text-slate-600 font-medium">Paraspur Town, Block Headquarters</p>
             <p class="text-xs text-slate-500 mt-1">District Gonda, Uttar Pradesh – 271504, India</p>
+            <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500">
+              <p>📍 Tehsil: Colonelganj</p>
+              <p>📍 Police Station: Paraspur (Near Main Chowk)</p>
+            </div>
           </div>
 
           <div class="bg-primary-600 text-white p-8 rounded-3xl shadow-lg">
-            <h3 class="text-lg font-bold mb-2">Response Commitment</h3>
-            <p class="text-sm text-primary-100 leading-relaxed">We review all incoming emails daily and aim to update directory details or respond within 24 to 48 hours.</p>
+            <h3 class="text-lg font-bold mb-2">Editorial Response SLA</h3>
+            <p class="text-sm text-primary-100 leading-relaxed">
+              We review all incoming inquiries daily. Directory corrections, shop updates, and community news submissions are typically verified and published within 24 to 48 business hours.
+            </p>
           </div>
 
           <div class="bg-slate-900 text-slate-300 p-8 rounded-3xl">
-            <h3 class="text-base font-bold text-white mb-2">What to include in your email:</h3>
+            <h3 class="text-base font-bold text-white mb-2">Submission Guidelines:</h3>
             <ul class="text-xs space-y-2 text-slate-400 list-disc list-inside">
-              <li>Clear subject line (e.g. "Shop Addition - Paraspur")</li>
-              <li>Your name and contact phone number</li>
-              <li>Exact address or village location</li>
-              <li>Any high-resolution photo attachments if submitting news</li>
+              <li>Clear subject line mentioning your shop/institution name</li>
+              <li>Complete address with landmark and contact number</li>
+              <li>Verification contact for business ownership</li>
+              <li>Original photographs for news coverage</li>
             </ul>
           </div>
         </div>
@@ -110,7 +179,38 @@
 
   <div id="footer-container"></div>
   <script type="module" src="src/main.js"></script>
+
   <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const phone = document.getElementById('contact-phone').value || 'Not provided';
+      const category = document.getElementById('contact-category').value;
+      const message = document.getElementById('contact-message').value;
+
+      const subject = encodeURIComponent(`${category} - Paraspur.com [from ${name}]`);
+      const body = encodeURIComponent(
+        `Hello Paraspur.com Editorial Team,\n\n` +
+        `Sender Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n` +
+        `Category: ${category}\n\n` +
+        `Details / Message:\n${message}\n\n` +
+        `-- Sent via Paraspur.com Contact Desk`
+      );
+
+      // Trigger mail client
+      window.location.href = `mailto:veerexa0@gmail.com?subject=${subject}&body=${body}`;
+
+      // Show confirmation banner
+      const banner = document.getElementById('form-success-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       const copyBtn = document.getElementById('copy-email-btn');
       if (copyBtn) {

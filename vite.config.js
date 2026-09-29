@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import { readFileSync } from 'fs'
+import { seoPlugin, listHtmlFiles } from './seo-plugin.js'
 
-export default defineConfig({
-  base: './',
-  build: {
-    rollupOptions: {
-      input: {
+const manual = {
         index: resolve(__dirname, 'index.html'),
         schools: resolve(__dirname, 'directory/schools.html'),
         hospitals: resolve(__dirname, 'directory/hospitals.html'),
@@ -58,7 +56,25 @@ export default defineConfig({
         agri_index: resolve(__dirname, 'agriculture/index.html'),
         agri_mandi: resolve(__dirname, 'agriculture/mandi-bhav.html'),
         agri_gonda: resolve(__dirname, 'agriculture/seeds-gonda.html'),
-      }
+}
+
+// Auto-register every indexable page so new pages are built (and land in the sitemap) without editing this list
+const registered = new Set(Object.values(manual).map((p) => resolve(p)))
+const discovered = {}
+for (const f of listHtmlFiles(__dirname)) {
+  const full = resolve(__dirname, f)
+  if (registered.has(full)) continue
+  // noindex pages are skipped unless indexable pages link to them (village profiles), so links never 404
+  if (!f.startsWith('villages/') && /<meta[^>]+name="robots"[^>]+noindex/i.test(readFileSync(full, 'utf-8'))) continue
+  discovered[f.replace(/\.html$/, '').replace(/[^a-zA-Z0-9]+/g, '_')] = full
+}
+
+export default defineConfig({
+  base: './',
+  plugins: [seoPlugin()],
+  build: {
+    rollupOptions: {
+      input: { ...manual, ...discovered }
     }
   }
 })

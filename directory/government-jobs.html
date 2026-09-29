@@ -90,10 +90,7 @@
 
         <!-- Category Pills Bar -->
         <div class="flex items-center gap-3 overflow-x-auto pb-4 mb-10 text-xs font-bold scrollbar-none">
-          <a href="#live-news" class="shrink-0 px-4 py-2 bg-red-600 text-white rounded-full shadow flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-            Live Google News
-          </a>
+          <a href="#official-portals" class="shrink-0 px-4 py-2 bg-red-600 text-white rounded-full shadow">🏛️ Official Portals</a>
           <a href="#latest-jobs" class="shrink-0 px-4 py-2 bg-primary-600 text-white rounded-full shadow">🔥 Latest Jobs</a>
           <a href="#admit-cards" class="shrink-0 px-4 py-2 bg-white text-slate-700 hover:bg-slate-100 rounded-full border border-slate-200">🎫 Admit Cards</a>
           <a href="#results" class="shrink-0 px-4 py-2 bg-white text-slate-700 hover:bg-slate-100 rounded-full border border-slate-200">🏆 Results & Keys</a>
@@ -101,27 +98,35 @@
           <a href="#official-links" class="shrink-0 px-4 py-2 bg-white text-slate-700 hover:bg-slate-100 rounded-full border border-slate-200">🌐 Portals</a>
         </div>
 
-        <!-- Live Google News Section -->
-        <div id="live-news" class="mb-14 bg-gradient-to-br from-red-50/80 to-orange-50/80 border-2 border-red-200 rounded-3xl p-6 md:p-8 shadow-sm">
-          <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center space-x-3">
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
-              </span>
-              <div>
-                <span class="text-[10px] font-black uppercase tracking-widest text-red-600 block">Real-Time Google News Live Feed</span>
-                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Live Exam & Sarkari Result News (लाइव समाचार)</h2>
-              </div>
+        <!-- Official recruitment portals -->
+        <div id="official-portals" class="mb-14 bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm">
+          <span class="text-[10px] font-black uppercase tracking-widest text-primary-600 block">Official Sources</span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">Where to Verify Every Recruitment Notice (आधिकारिक पोर्टल)</h2>
+          <p class="text-sm text-slate-600 mb-6">Always confirm vacancies, dates and fees on the official board website before paying any fee or sharing documents. Paraspur.com never charges for job information.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+              <span class="px-2.5 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold uppercase rounded-full">UP Police Board</span>
+              <h3 class="font-bold text-slate-900 text-sm mt-2">UP Police Recruitment & Promotion Board (UPPRPB)</h3>
+              <p class="text-xs text-slate-600 mt-1">Constable, Sub-Inspector and Computer Operator recruitment notifications.</p>
+              <a href="https://uppbpb.gov.in" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-xs font-bold text-red-700 hover:underline">uppbpb.gov.in →</a>
             </div>
-            <span class="px-3 py-1 bg-red-600 text-white text-[10px] font-black uppercase tracking-wider rounded-full shadow">Live Fetch</span>
-          </div>
-
-          <!-- Container dynamically populated by fetchGovtJobNews() -->
-          <div id="live-govt-news-container" class="space-y-4">
-            <div class="flex items-center justify-center p-8 text-slate-400 font-medium">
-              <svg class="w-6 h-6 animate-spin mr-2 text-primary-600" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-              <span>Fetching live Government Job & Exam News from Google News...</span>
+            <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+              <span class="px-2.5 py-0.5 bg-primary-100 text-primary-800 text-[10px] font-bold uppercase rounded-full">Subordinate Services</span>
+              <h3 class="font-bold text-slate-900 text-sm mt-2">UP Subordinate Services Selection Commission (UPSSSC)</h3>
+              <p class="text-xs text-slate-600 mt-1">Preliminary Eligibility Test (PET), Junior Assistant and Lekhpal examinations.</p>
+              <a href="https://upsssc.gov.in" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-xs font-bold text-primary-700 hover:underline">upsssc.gov.in →</a>
+            </div>
+            <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+              <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase rounded-full">Public Service Commission</span>
+              <h3 class="font-bold text-slate-900 text-sm mt-2">UP Public Service Commission (UPPSC)</h3>
+              <p class="text-xs text-slate-600 mt-1">PCS, RO/ARO and other state-level gazetted service examinations.</p>
+              <a href="https://uppsc.up.nic.in" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-xs font-bold text-amber-700 hover:underline">uppsc.up.nic.in →</a>
+            </div>
+            <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+              <span class="px-2.5 py-0.5 bg-green-100 text-green-800 text-[10px] font-bold uppercase rounded-full">District Administration</span>
+              <h3 class="font-bold text-slate-900 text-sm mt-2">Gonda District Portal</h3>
+              <p class="text-xs text-slate-600 mt-1">District-level vacancies, outsourced posts and administrative notices.</p>
+              <a href="https://gonda.nic.in" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-xs font-bold text-green-700 hover:underline">gonda.nic.in →</a>
             </div>
           </div>
         </div>
